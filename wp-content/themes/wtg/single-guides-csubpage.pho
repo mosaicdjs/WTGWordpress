@@ -1,0 +1,955 @@
+<?php
+$current_fp = get_query_var('fpage');
+//echo $current_fp.'<br/>';
+$postid = get_the_ID();
+//echo $postid;
+$title = get_the_title($postid);
+$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+$language = get_field('language','options');
+$dom  = new DOMDocument;
+$xmlpath = '/var/www/columbus-xml/filtered/cities-full-'.$language.'.xml';
+//echo $xmlpath;
+switch ($current_fp) {
+    case 'history' :
+        //wtg_chistory($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-history.xsl';
+        break;
+    case 'weather' :
+        //wtg_cweather($postid);
+        //wtg_cforecast_table($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-weather.xsl';
+        break;
+        
+    case 'pictures' :
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-gallery.xsl';
+        break;
+    case 'videos' :
+        
+        break;
+    case 'gettingaround' :
+        //wtg_cgettingaround($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-gettingaround.xsl';
+        break;
+    case 'things-to-see' :
+        //echo '<h1>Things to see in '.get_the_title($postid).'</h1>';
+        //wtg_touristoffices($postid);
+        //wtg_attractions($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-thingssee.xsl';
+        break;
+    case 'tours-excursions' :
+        //echo '<h1>'.get_the_title($postid).' tours and excursions</h1>';
+        //wtg_tours($postid);
+        //wtg_excursions($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-tours.xsl';
+        break;
+    case 'things-to-do-0' :
+        //wtg_activities($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-thingsdo.xsl';
+        break;
+    case 'shopping' :
+        //wtg_cshopping($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-shopping.xsl';
+        break;
+    case 'restaurants' :
+        //wtg_crestaurants($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-restaurants.xsl';
+        break;
+    case 'nightlife' :
+        //wtg_cnightlife($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-nightlife.xsl';
+        break;
+    case 'city-events' :
+        //wtg_cevents($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-events.xsl';
+        break;
+    case 'travel-to' :
+        //echo '<h1>Travel to '.get_the_title($postid).'</h1>';
+        //wtg_cflying($postid);
+        //wtg_cairports($postid);
+        //wtg_croad($postid);
+        //wtg_crail($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-gettingthere.xsl';
+        break;
+    case 'hotels' :
+        //wtg_chotels($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-hotels.xsl';
+        break;
+    //default:
+      //  $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-overview.xsl';
+}
+
+$dom->load($xmlpath);
+
+$xp    = new DOMXPath($dom);
+$elements = $xp->query('//City');
+
+$xsl  = new DOMDocument;
+$xsl->load($xslpath);
+$xslt = new XSLTProcessor();
+$xslt->importStylesheet($xsl);
+//$xslt->setParameter(NULL, 'id', $lagacy_id);
+//print $xslt->transformToXML($dom);
+
+if (!is_null($elements)) {
+    foreach ($elements as $element) {
+        $title = $element->getAttribute('title');
+        $nid = $element->getAttribute('nid');
+        if($legacy_id == $nid){
+            //print $xslt->transformToXML($element);
+            //print $element;
+            //echo $element->saveHTML();
+            $region_Doc = new DOMDocument();
+            $cloned = $element->cloneNode(TRUE);
+            $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+            $regionpath = new DOMXPath($region_Doc);
+            
+            //overview
+            //$content_tag = $regionpath->query("//Content/Overview/Overview");
+            //$content = trim($content_tag->item(0)->nodeValue);
+            print $xslt->transformToXML($region_Doc);
+            //echo $content;
+        }
+    }
+}
+if($current_fp=='weather')
+{
+    wtg_cforecast_table($postid);
+}
+
+?>
+<div id='div-gpt-ad-1492512001379-3' style="margin-top:10px;">
+		<script>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1492512001379-3'); });
+		</script>
+		</div>
+<?php
+function wtg_cweather($postID)
+{
+    $title = get_the_title($postID);
+    $bttv = apply_filters('the_content', get_post_meta($postID, 'city_best_time_to_visit', true));
+    ?>
+    <h1>Weather in <?php echo $title;?></h1>
+    <?php
+    echo "<h4>Best time to visit:</h4>$bttv";
+}
+
+function wtg_chistory($postID)
+{
+    $title = get_the_title($postID);
+    $history = apply_filters('the_content', get_post_meta($postID, 'city_history', true));
+
+    ?>
+    <h1>History of <?php echo $title;?></h1>
+    <?php echo $history;
+    
+}
+function wtg_cevents($postID)
+{
+    $title = get_the_title($postID);
+    ?><h2><?php echo $title;?> Events</h2><?php
+    $html = '';
+    if ( have_rows('city_events_item', $postID)):
+        while (have_rows('city_events_item', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $from = date_create(get_sub_field('from_date',$postID));
+            $from_clean = date_format( $from, 'l d F');
+            $from_iso8601 = date_format( $from, "Y-m-d");
+            $to = get_sub_field('to_date',$postID);
+            $dateTBC = get_sub_field('date_tbc',$postID);
+            $body = get_sub_field('body',$postID);
+            $venue = get_sub_field('venue_name',$postID);
+            $cost = get_sub_field('event_cost',$postID);
+            $website = get_sub_field('website',$postID);
+            $website_tidy = str_replace('http://', '', $website);
+            $address = '';
+            //if ( have_rows('address', $postID)):
+                //while (have_rows('address', $postID)) :the_row();
+                    $address = get_sub_field('address2',$postID).', '.
+                                get_sub_field('city',$postID).', '.
+                                get_sub_field('country',$postID).', '.
+                                get_sub_field('postcode',$postID);
+                //endwhile;
+            //endif;
+            if(!empty($name)){
+                $html .= '<section itemscope itemtype="http://schema.org/Event">';
+                    $html .= "<h3 itemprop='name'>$name</h3>";
+                    if ($dateTBC == 1){
+                        $html .= '<div><b>Date (to be confirmed): </b><span itemprop="startDate" content="'.$from_iso8601.'">'.$from_clean.'</span></div>';
+                    }else{
+                        $html .= '<div><b>Date: </b><span itemprop="startDate" content="'.$from_iso8601.'">'.$from_clean.'</span></div>';
+                    }
+                    $html .= "<div itemprop='description'>$body</div>";
+                    $html .= "<div itemprop='location' itemscope itemtype='http://schema.org/Place'>";
+                        $html .= "<div><b>Venue: </b><span itemprop='name'>$venue</span></div>";
+                        if($address != ', , , '){$html .= "<div><b>Address: </b><span itemprop='address'>$address</span></div>";}
+                    $html .= '</div>';
+                    if(!empty($website)){
+                        $html .= '<div><b>Website: </b><a itemprop="url" href="'.$website.'">'.$website_tidy.'</a></div>';
+                    }
+                    if(!empty($cost)){
+                        $html .= '<div><b>Cost: </b><span itemprop="price">'.$cost.'</span></div>';
+                    } else {
+                        $html .= '<div><b>Cost: </b><span>Free</span></div>';
+                    }
+                    
+                $html .= '</section>';
+                
+                
+            }
+            
+        endwhile;
+        echo $html;
+    endif;
+}
+
+function wtg_cgettingaround($postID)
+{
+    $title = get_the_title($postID);
+    $ptransport = apply_filters('the_content', get_post_meta($postID, 'getting_around_public_transport', true));
+    $taxis = apply_filters('the_content', get_post_meta($postID, 'getting_around_taxis', true));
+    $driving = apply_filters('the_content', get_post_meta($postID, 'getting_around_driving', true));
+    $carHire = apply_filters('the_content', get_post_meta($postID, 'getting_around_car_hire', true));
+    $bicycle = apply_filters('the_content', get_post_meta($postID, 'getting_around_bicycle_hire', true));
+    ?>
+    <h1>Getting around <?php echo $title;?></h1>
+    <h3>Public transport</h3>
+    <?php echo $ptransport;?>
+    <h3>Taxis</h3>
+    <?php echo $taxis;?>
+    <h3>Driving</h3>
+    <?php echo $driving;?>
+    <h3>Car hire</h3>
+    <?php echo $carHire;?>
+    <h3>Bicycle hire</h3>
+    <?php echo $bicycle;
+    
+}
+
+function wtg_attractions($postID)
+{
+    ?><h2>Attractions</h2><?php
+    
+    if ( have_rows('attraction', $postID)):
+        while (have_rows('attraction', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $open = get_sub_field('opening_times',$postID);
+            $website = get_sub_field('website',$postID);
+            $body = get_sub_field('body',$postID);
+            $fees = get_sub_field('admission_fees',$postID);
+            $disabled = get_sub_field('disabled_access',$postID);
+            $disabledText = '';
+            $unesco = get_sub_field('unesco',$postID);
+            $address = '';
+            //if ( have_rows('address', $postID)):
+                //while (have_rows('address', $postID)) :the_row();
+                    $address = get_sub_field('address2',$postID).', '.
+                                get_sub_field('city',$postID).', '.
+                                get_sub_field('country',$postID).', '.
+                                get_sub_field('postcode',$postID);
+                //endwhile;
+            //endif;
+            if(!empty($name)){
+                echo '<h3>'.$name.'</h3>';
+                echo $body;
+                echo'<b>Opening Hours:</b>  '.$open;
+                echo'<b>Admission Fees:</b>  '.$fees;
+                switch($disabled){
+                    case 1:
+                        $disabledText = 'Yes';
+                        break;
+                    case 0:
+                        $disabledText = 'No';
+                        break;
+                }
+                echo'<b>Disabled Access:</b>  '.$disabledText.'<br/>';
+                switch($unesco){
+                    case 1:
+                        $unescoText = 'Yes';
+                        break;
+                    case 0:
+                        $unescoText = 'No';
+                        break;
+                }
+                echo'<b>UNESCO:</b>  '.$unescoText.'<br/>';
+                if($address != ', , , '){echo'<b>Address:</b>  '.$address.'<br/>';}
+                echo'<b>Website:</b>  <a href="'.$website.'">'.$website.'</a><br/><br/>';
+            }
+            
+        endwhile;
+    endif;
+}
+
+function wtg_activities($postID)
+{
+    $title = get_the_title($postID);
+    ?><h1>Things to do in <?php echo $title;?></h1><?php
+    
+    if ( have_rows('activity', $postID)):
+        while (have_rows('activity', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $body = get_sub_field('body',$postID);
+            if(!empty($name)){
+                echo '<h3>'.$name.'</h3>';
+                echo $body.'<br/>';
+            }
+            
+            
+        endwhile;
+    endif;
+}
+
+function wtg_crestaurants($postID)
+{
+    $title = get_the_title($postID);
+    ?><h1>Restaurants in <?php echo $title;?></h1><?php
+    $intro = apply_filters('the_content', get_post_meta($postID, 'city_restaurants', true));
+    echo $intro.'<br/>';
+    $html = '';
+    
+    if ( have_rows('city_restaurant_item', $postID)):
+        while (have_rows('city_restaurant_item', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $cuisine = get_sub_field('restaurant_cuisine',$postID);
+            $website = get_sub_field('website',$postID);
+            $website_tidy1 = str_replace('http://', '', $website);
+            $website_tidy = str_replace('https://', '', $website_tidy1);
+            $body = get_sub_field('body',$postID);
+            $price = get_sub_field('restaurant_type',$postID);
+            $tel = get_sub_field('telephone',$postID);
+            $address = '';
+            //if ( have_rows('address', $postID)):
+                //while (have_rows('address', $postID)) :the_row();
+                    $address = get_sub_field('address2',$postID).', '.
+                                get_sub_field('city',$postID).', '.
+                                get_sub_field('postcode',$postID);
+                //endwhile;
+            //endif;
+            if(!empty($name)){
+                $html .= '<section itemscope itemtype="http://schema.org/Restaurant">';
+                    $html .= "<h3 itemprop='name'>$name</h3>";
+                    $html .= "<div><b>Price: </b><span itemprop='priceRange'>$price</span></div>";
+                    if (!empty($cuisine)){$html .= '<div><b>Cuisine: </b><span itemprop="servesCuisine">'.$cuisine.'</span></div>';}
+                    $html .= "<div itemprop='description'>$body</div>";
+                    $html .= "<div itemprop='address' itemscope itemtype='http://schema.org/PostalAddress'>$address</div>";
+                    $html .= "<div><b>Tel: </b><span itemprop='telephone'>$tel</span></div>";
+                    $html .= "<div><b>Website: </b><span itemprop='url'><a href='$website'>$website_tidy</a></span></div>";
+                $html .= '</section>';
+
+            }
+            
+            
+        endwhile;
+        echo $html;
+    endif;
+}
+
+function wtg_cnightlife($postID)
+{
+    $title = get_the_title($postID);
+    ?><h1><?php echo $title;?> Nightlife</h1><?php
+    $intro = apply_filters('the_content', get_post_meta($postID, 'city_nightlife', true));
+    echo $intro.'<br/>';
+    
+    $clubArray = array();
+    $barsArray = array();
+    $musicArray = array();
+    $classicArray = array();
+    $danceArray = array();
+    $theatreArray = array();
+    $musicDanceArray = array();
+    
+    if ( have_rows('city_nightlife_item', $postID)):
+        while (have_rows('city_nightlife_item', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $type = get_sub_field('type',$postID);
+            $website = get_sub_field('website',$postID);
+            $website_tidy = str_replace('http://', '', $website);
+            $body = get_sub_field('body',$postID);
+            $tel = get_sub_field('telephone',$postID);
+            $addresst = '';
+            //if ( have_rows('address', $postID)):
+                //while (have_rows('address', $postID)) :the_row();
+                    $addresst = get_sub_field('neighborhood',$postID).', '.
+                                get_sub_field('locality',$postID).', '.
+                                //get_sub_field('country',$postID).', '.
+                                get_sub_field('postcode',$postID);
+                //endwhile;
+            //endif;
+            if($addresst != ', , , '){$address ='<b>Address:</b>  '.$addresst.'<br/>';}
+            
+            if (0 === strpos($website, 'http://www.worldtravelguide.net/block')) {
+                // It has a url that was accidenally added during the first import :P
+            } else {
+                // the items we want
+                $html = "<h3>$name</h3>$body $address<b>Tel:</b>  $tel<br/><b>Website:</b>  <a href='$website'>$website_tidy</a><br/><br/>";
+            }
+             
+            
+            switch ($type) {
+                case 'Clubs':
+                    array_push($clubArray, $html);
+                    break;
+                case 'Bars':
+                    array_push($barsArray, $html);
+                    break;
+                case 'Live Music':
+                    array_push($musicArray, $html);
+                    break;
+                case 'Classical Music':
+                    array_push($classicArray, $html);
+                    break;
+                case 'Dance':
+                    array_push($danceArray, $html);
+                    break;
+                case 'Theatre':
+                    array_push($theatreArray, $html);
+                    break;
+                case 'Music and Dance':
+                    array_push($musicDanceArray, $html);
+                    break;
+                default;
+                    break;
+            }
+
+        endwhile;
+    endif;
+    
+    if(!empty($barsArray)){
+        echo "<h2>Bars in $title</h2>";
+        asort ($barsArray);
+        foreach(array_unique($barsArray) as $bar){
+            echo $bar;
+        }
+    }
+    if(!empty($clubArray)){
+        echo "<h2>Clubs in $title</h2>";
+        asort ($clubArray);
+        foreach(array_unique($clubArray) as $club){
+            echo $club;
+        }
+    }
+    if(!empty($musicArray)){
+        echo "<h2>Live music in $title</h2>";
+        asort ($musicArray);
+        foreach(array_unique($musicArray) as $music){
+            echo $music;
+        }
+    }
+    if(!empty($classicArray)){
+        echo "<h2>Classical music in $title</h2>";
+        foreach(array_unique($classicArray) as $classic){
+            echo $classic;
+        }
+    }
+    if(!empty($danceArray)){
+        asort($danceArray);
+        echo "<h2>Dance in $title</h2>";
+        foreach(array_unique($danceArray) as $dance){
+            echo $dance;
+        }
+    }
+    if(!empty($theatreArray)){
+        echo "<h2>Theatre in $title</h2>";
+        foreach(array_unique($theatreArray) as $theatre){
+            echo $theatre;
+        }
+    }
+    if(!empty($musicDanceArray)){
+        echo "<h2>Music and Dance in $title</h2>";
+        asort($musicDanceArray);       
+        foreach(array_unique($musicDanceArray) as $md){
+            echo $md;
+        }
+    }
+}
+
+function wtg_cshopping($postID)
+{
+    $title = get_the_title($postID);
+    $intro = apply_filters('the_content', get_post_meta($postID, 'city_shopping_introduction', true));
+    $keyareas = apply_filters('the_content', get_post_meta($postID, 'city_shopping_key_areas', true));
+    $markets = apply_filters('the_content', get_post_meta($postID, 'city_shopping_markets', true));
+    $centres = apply_filters('the_content', get_post_meta($postID, 'city_shopping_centres', true));
+    $times = apply_filters('the_content', get_post_meta($postID, 'city_shopping_times', true));
+    $souvenirs = apply_filters('the_content', get_post_meta($postID, 'city_shopping_souvenirs', true));
+    $tax = apply_filters('the_content', get_post_meta($postID, 'city_shopping_taxinfo', true));
+    ?>
+    <h1>Shopping in <?php echo $title;?></h1>
+    <?php echo $intro;?>
+    <h3>Key areas</h3>
+    <?php echo $keyareas;?>
+    <h3>Markets</h3>
+    <?php echo $markets;?>
+    <h3>Shopping centres</h3>
+    <?php echo $centres;?>
+    <h3>Opening hours</h3>
+    <?php echo $times;
+    if(!empty($souvenirs)){?>
+        <h3>Souvenirs</h3>
+        <?php echo $souvenirs;
+    }
+    if(!empty($tax)){?>
+        <h3>Tax information</h3>
+        <?php echo $tax;
+    }
+}
+
+function wtg_tours($postID)
+{
+    $title = get_the_title($postID);
+    ?><h2><?php echo $title;?> tours</h2><?php
+    
+    if ( have_rows('city_tours', $postID)):
+        while (have_rows('city_tours', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $body = get_sub_field('body',$postID);
+            $tel = get_sub_field('telephone',$postID);
+            $website = get_sub_field('website',$postID);
+            
+            if(!empty($name)){
+                echo '<h4>'.$name.'</h4>';
+                echo $body.'<br/>';
+                echo'<b>Tel:</b>  '.$tel.'<br/>';
+                echo'<b>Website:</b>  <a href="'.$website.'">'.$website.'</a><br/><br/><br/>';
+            }
+        endwhile;
+    endif;
+}
+
+function wtg_excursions($postID)
+{
+    $title = get_the_title($postID);
+    ?><h2>Excursions from <?php echo $title;?></h2><?php
+    $index = 0;
+    if ( have_rows('city_excursion', $postID)):
+        while (have_rows('city_excursion', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $body = get_sub_field('body',$postID);
+            $tel = get_sub_field('telephone',$postID);
+            $website = get_sub_field('website',$postID);
+                
+                if(!empty($name)){
+                    echo '<h3>'.$name.'</h3>';
+                    echo $body.'<br/>';
+                    echo'<b>Tel:</b>  '.$tel.'<br/>';
+                    echo'<b>Website:</b>  <a href="'.$website.'">'.$website.'</a><br/><br/><br/>';
+                    //echo get_row_index();
+                }
+                
+                
+            $index++;
+        endwhile;
+    endif;
+    
+    //echo $index;
+}
+
+function wtg_cflying($postID)
+{
+    $title = get_the_title($postID);
+    $intro = apply_filters('the_content', get_post_meta($postID, 'city_flights_intro', true));
+    $flights = apply_filters('the_content', get_post_meta($postID, 'city_flights_times', true));
+    
+    ?><h2>Flying to <?php echo $title;?></h2>
+    <?php echo $intro;?>
+    <h3>Flight times:</h3>
+    <?php echo $flights;
+   
+}
+
+function wtg_croad($postID)
+{
+    $title = get_the_title($postID);
+    $summary = apply_filters('the_content', get_post_meta($postID, 'road_summary', true));
+    $breakdown = apply_filters('the_content', get_post_meta($postID, 'road_emergency', true));
+    $routes = apply_filters('the_content', get_post_meta($postID, 'road_routes', true));
+    $times = apply_filters('the_content', get_post_meta($postID, 'road_driving_times', true));
+    $coaches = apply_filters('the_content', get_post_meta($postID, 'road_coaches', true));
+    
+    ?><h2>Travel by road</h2>
+    <h3>Summary:</h3>
+    <?php echo $summary;
+    if(!empty($breakdown)){?>
+        <h3>Emergency breakdown service:</h3>
+        <?php echo $breakdown;
+    }
+    if(!empty($routes)){?>
+        <h3>Routes:</h3>
+        <?php echo $routes;
+    }
+    if(!empty($times)){?>
+        <h3>Driving times:</h3>
+        <?php echo $times;
+    }
+    if(!empty($coaches)){?>
+        <h3>Coaches:</h3>
+        <?php echo $coaches;
+    }
+}
+
+function wtg_crail($postID)
+{
+    $title = get_the_title($postID);
+    $summary = apply_filters('the_content', get_post_meta($postID, 'rail_services', true));
+    $breakdown = apply_filters('the_content', get_post_meta($postID, 'rail_operators', true));
+    $routes = apply_filters('the_content', get_post_meta($postID, 'rail_journey_times', true));
+    
+    ?><h2>Travel by rail</h2>
+    <h3>Services:</h3>
+    <?php echo $summary;
+    if(!empty($breakdown)){?>
+        <h3>Operators:</h3>
+        <?php echo $breakdown;
+    }
+    if(!empty($routes)){?>
+        <h3>Journey times:</h3>
+        <?php echo $routes;
+    }
+}
+
+function wtg_chotels($postID)
+{
+    $title = get_the_title($postID);
+    $hotels = apply_filters('the_content', get_post_meta($postID, 'city_hotels', true));
+    ?><h1><?php echo $title;?> Hotels</h1><?php
+    echo $hotels;
+    if ( have_rows('city_hotel_item', $postID)):
+        while (have_rows('city_hotel_item', $postID)) :the_row();
+            $name = get_sub_field('hotel_name');
+            $body = get_sub_field('hotel_body');
+            $cat = get_sub_field('category');
+            $thorough = get_sub_field('thoroughfare');
+            $hood = get_sub_field('neighborhood');
+            $locality = get_sub_field('locality');
+            $subAdmin = get_sub_field('sub_admin_area');
+            $admin = get_sub_field('admin_area');
+            $postcode = get_sub_field('postcode');
+            $country = get_sub_field('country');
+            $tel = get_sub_field('telephone');
+            $website = get_sub_field('website');
+            
+            $address = $thorough.', '.$hood.', '.$locality.', '.$country.', '.$postcode;
+            if(!empty($name)){
+                echo '<section itemscope itemtype="http://schema.org/Hotel" >';
+                    echo '<h3 itemprop="name" >'.$name.'</h3>';
+                    echo '<div><b>Category: </b>'.$cat.'</div>';
+                    echo '<div><b>Address: </b><span itemprop="address">'.$address.'</span></div>';
+                    echo '<div><b>Tel: </b><span itemprop="telephone">'.$tel.'</span></div>';
+                    echo '<div><b>Website: </b><span><a itemprop"url" href="'.$website.'">'.$website.'</a></span></div>';
+                    echo '<div itemprop="description">'.$body.'</div>';
+                echo '</section>';
+            }
+            
+        endwhile;
+    endif;
+}
+
+function wtg_cforecast_table($postID)
+{
+    
+    //$forecastArray = array();
+	//$count = 0
+   $locationID = get_post_meta($postID,'7_day_id',true);
+    //echo "location ID: $locationID";
+	//if ( have_rows('forecast', $postID)):
+    if (get_post_meta($postID,'forecast_0_pressure',true) != ''):
+     ?>
+    <table class="views-table cols-9">
+        <thead>
+            <tr>
+                <th class="views-field views-field-date"></th>
+                <th class="views-field views-field-overhead-icon">Weather (day)</th>
+                <th class="views-field views-field-overhead"></th>
+                <th class="views-field views-field-night-min">Temp (max day)</th>
+                <th class="views-field views-field-precipitation">Rain (mm) </th>
+                <th class="views-field views-field-wind-dir">Wind (mph) </th>
+                <th class="views-field views-field-visibility">Humidity Pressure Visibility </th>
+            </tr>
+        </thead>
+        <tbody>
+    <?php
+        //$day_array = array('0','2','4','8','10','12','14');
+        //$night_array = array('1','3','5','7','9','11','13');
+        
+        $max = 7;
+        for($i1 = 0; $i1< $max; $i1++){
+            //if ($i1%2==0){
+
+                $i = (string) $i1;
+                $pressure_string = 'forecast_'.$i.'_pressure';
+                $pressure       = get_post_meta($postID,$pressure_string,true);
+                
+                $visibility_string  = 'forecast_'.$i.'_visibility';
+                $visibility         = get_post_meta($postID,$visibility_string,true);
+                
+                $cloudcover_string  = 'forecast_'.$i.'_cloudcover';
+                $cloudcover         = get_post_meta($postID,$cloudcover_string,true);
+                
+                $date_string        = 'forecast_'.$i.'_date';
+                $date               = get_post_meta($postID,$date_string,true);
+                
+                $precipitation_string  = 'forecast_'.$i.'_precipitation';
+                $precipitation         = get_post_meta($postID,$precipitation_string,true);
+                
+                $windspeedkph_string  = 'forecast_'.$i.'_windspeedkph';
+                $windspeedkph         = get_post_meta($postID,$windspeedkph_string,true);
+                
+                $overhead_string  = 'forecast_'.$i.'_overhead';
+                $overhead         = get_post_meta($postID,$overhead_string,true);
+                
+                $day_string  = 'forecast_'.$i.'_day';
+                $day         = get_post_meta($postID,$day_string,true);
+                
+                $windspeedmph_string  = 'forecast_'.$i.'_windspeedmph';
+                $windspeedmph         = get_post_meta($postID,$windspeedmph_string,true);
+                
+                $forecastid_string  = 'forecast_'.$i.'_forecastid';
+                $forecastid         = get_post_meta($postID,$forecastid_string,true);
+                
+                $humidity_string  = 'forecast_'.$i.'_humidity';
+                $humidity         = get_post_meta($postID,$humidity_string,true);
+                
+                //$nightmin_string  = 'forecast_'.$day.'_pressure';
+                //$nightmin         = get_post_meta($postID,$nightmin_string,true);
+                
+                $forecastname_string  = 'forecast_'.$i.'_forecastname';
+                $forecastname         = get_post_meta($postID,$forecastname_string,true);
+                
+                $locationid_string  = 'forecast_'.$i.'_locationid';
+                $locationid         = get_post_meta($postID,$locationid_string,true);
+                
+                $overheadicon_string  = 'forecast_'.$i.'_overhead_icon';
+                $overheadicon         = get_post_meta($postID,$overheadicon_string,true);
+                //echo $overheadicon_string;
+                
+                $daymax_string  = 'forecast_'.$i.'_daymax';
+                $daymax         = get_post_meta($postID,$daymax_string,true);
+    
+                $winddir_string  = 'forecast_'.$i.'_wind_dir';
+                $winddir         = get_post_meta($postID,$winddir_string,true);
+                
+                $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $overheadicon);
+                
+                $tDate = '';
+                $ttDate='';
+                if(!empty($date)){
+                    $date_elements = explode("/", $date );
+                    $date_format = $date_elements[2].'-'.$date_elements[1].'-'.$date_elements[0];
+                    $tDate=date_create($date_format);
+                    $ttDate =  date_format($tDate,'l');
+                    //$tDate = getWeekday($date);
+                }
+                //$tDate = date('l d F', $date);
+    
+                    //if(strstr($date, '/')){
+                        echo "<tr class='odd views-row-first'>
+                            <td class='views-field views-field-date'>$ttDate</td>
+                            
+                            <td class='views-field views-field-overhead-icon'>
+                                <div class='weatherIconWithDescription'>
+                                    <div class='weatherIconWrapper'>
+                                        <div class='weatherIcon $withoutExt'>$withoutExt</div>
+                                    </div>
+                                </div>
+                            </td>
+                            
+                            <td class='views-field views-field-overhead'>
+                              <span class='textWeatherDescription'>$overhead</span>
+                            </td>
+                            
+                            <td class='views-field views-field-night-min'>
+                      
+                                <div class='tempNoIcon'>
+                                    <div class='tempUnit digit_0'>$daymax</div>
+                                    <div class='tempDegrees'>°C</div>
+                                </div>
+                            </td>
+                            
+                            <td class='views-field views-field-precipitation'>$precipitation </td>
+                            
+                            <td class='views-field views-field-wind-dir'>
+                                <div class='windDirectionIcon wind-dir-$winddir'>
+                                    <div class='windSpeedIcon wind-speed-3'>$windspeedmph</div>
+                                </div>
+                      
+                                <div class='windDirectionText'>$winddir</div>
+                            </td>
+                            
+                            <td class='views-field views-field-visibility'>$cloudcover%<br>$pressure mb<br>$visibility</td>
+                        </tr>";
+            
+        }
+		//while (have_rows('forecast', $postID)) :the_row();
+			//$daymax = get_sub_field('daymax');
+			//if($daymax!=''){
+                
+                /*
+				$pressure       = get_sub_field('pressure');
+                $visibility     = get_sub_field('visibility');
+                $cloudcover     = get_sub_field('cloudcover');
+                $date           = get_sub_field('date');
+                $precipitation  = get_sub_field('precipitation');
+                $windspeedkph   = get_sub_field('windspeedkph');
+                $overhead       = get_sub_field('overhead');
+                $day            = get_sub_field('day');
+                $windspeedmph   = get_sub_field('windspeedmph');
+                $forecastid     = get_sub_field('forecast_id');
+                $humidity       = get_sub_field('humidity');
+                $nightmin       = get_sub_field('nightmin');
+                $forecastname   = get_sub_field('forecast_name');
+                $locationid     = get_sub_field('location_id');
+                $overheadicon   = get_sub_field('overhead_icon');
+                $daymax         = get_sub_field('daymax');
+                $updatedate      = get_sub_field('updated_at');
+                $winddir        = get_sub_field('wind_dir');
+                */
+                /*
+                $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $overheadicon);
+
+                //if(strstr($date, '/')){
+                    echo "<tr class='odd views-row-first'>
+                        <td class='views-field views-field-date'>$date</td>
+                        
+                        <td class='views-field views-field-overhead-icon'>
+                            <div class='weatherIconWithDescription'>
+                                <div class='weatherIconWrapper'>
+                                    <div class='weatherIcon $withoutExt'>$withoutExt</div>
+                                </div>
+                            </div>
+                        </td>
+                        
+                        <td class='views-field views-field-overhead'>
+                          <span class='textWeatherDescription'>$overhead</span>
+                        </td>
+                        
+                        <td class='views-field views-field-night-min'>
+                  
+                            <div class='tempNoIcon'>
+                                <div class='tempUnit digit_0'>$daymax</div>
+                                <div class='tempDegrees'>°C</div>
+                            </div>
+                        </td>
+                        
+                        <td class='views-field views-field-precipitation'>$precipitation </td>
+                        
+                        <td class='views-field views-field-wind-dir'>
+                            <div class='windDirectionIcon wind-dir-$winddir'>
+                                <div class='windSpeedIcon wind-speed-3'>$windspeedmph</div>
+                            </div>
+                  
+                            <div class='windDirectionText'>$winddir</div>
+                        </td>
+                        
+                        <td class='views-field views-field-visibility'>$cloudcover%<br>$pressure mb<br>$visibility</td>
+                    </tr>";
+                //}
+                */
+                
+                
+                
+			//}
+			//$count++;
+		//endwhile;
+    ?>
+        </tbody>
+      </table>
+
+<div class="cityWeatherHelpRow">
+    <div class="cityWeatherLastUpdated">
+          <span class="toggleArrowRight"></span>
+          <?php
+            $updatedate_string  = 'forecast_0_updated_at';
+            $updatedate         = get_post_meta($postID,$updatedate_string,true);
+            $updated = date('Y-m-d H:i:s',$updatedate);
+          ?>
+          
+    </div>
+    <span class="cityWeatherHelpButton weatherHelpClosed">View help </span>
+    <span class="cityWeatherHelpButton weatherHelpOpen weatherHelpClose">Close help </span>
+</div>
+<div id="city-weather-help">
+
+    <div>
+        <strong>Last updated:</strong> <?php echo $updated;?><br/>
+        We update the weather data for <?php echo $title;?> from our weather partner every four hours.
+        The time the last update was received is detailed here. </div>
+    
+    <div>Actual <strong>Forecast Location:</strong> We have 830+ weather locations on the worldtravelguide.net website.
+    Where no exact location is available we have used the nearest appropriate forecast point. </div>
+    
+    <div><strong>Symbols</strong> indicate the predominant weather for the day in question,
+    calculated based on a weighting of different types of weather.
+    So if a day is forecast to be sunny with the possibility of a brief shower,
+    then we will see a sunny or partly cloudy symbol rather than a rain cloud.</div>
+    
+    <div>The maximum <strong>temperature</strong> is the highest temperature forecast between dawn and dusk,
+    and the minimum temperature is the lowest temperature expected from dusk on the day
+    in question to dawn the next day.
+    The temperature is in &deg;C, or Celsius. </div>
+    
+    <div><strong>Wind speed and direction</strong> are the conditions expected at midday.
+    Wind direction is based on a 16 point compass. W, SW, SSW, etc.
+    The wind direction states where the wind originates.
+    Wind speed is listed in MPH or miles per hour. </div>
+    
+    <div><strong>Humidity</strong> levels indicates how much water vapour the air
+    contains compared to the maximum it could contain at that temperature.
+    As a general guide: </div>
+
+    <ul>
+        <li>0 to 30 is very low </li>
+        <li>31 to 50 is low </li>
+        <li>51 to 70 is moderate to low </li>
+        <li>71 to 80 is moderate </li>
+        <li>81 to 90 is moderate to high</li>
+        <li>91 to 100 is high</li>
+    </ul>
+    <div>Pressure is measured in millibars (mb) </div>
+
+    <div><strong>Visibility</strong> based on whether the human eye can see the following distances: </div>
+    <ul>
+        <li>Very poor - less than 1km </li>
+        <li>Poor - between 1km and 4km </li>
+        <li>Moderate - between 4km and 10km </li>
+        <li>Good - between 10km and 20km </li>
+        <li>Very good - between 20km and 40km </li>
+        <li>Excellent - more than 40km</li>
+    </ul>
+    
+    <div class="cityWeatherHelpButton weatherHelpClose">Close<span class="toggleArrowUp"></span>
+    </div>
+
+</div>
+<script>
+    (function( $ ){
+        $('#city-weather-help').hide();
+        $('.cityWeatherHelpButton.weatherHelpOpen').hide();
+        
+        $('.cityWeatherHelpButton.weatherHelpClosed').click(function(){
+            $('#city-weather-help').show();
+            $('.cityWeatherHelpButton.weatherHelpOpen').show();
+            $('.cityWeatherHelpButton.weatherHelpClosed').hide();
+            
+            $('.cityWeatherHelpButton.weatherHelpClose').click(function(){
+                $('#city-weather-help').hide();
+                $('.cityWeatherHelpButton.weatherHelpOpen').hide();
+                $('.cityWeatherHelpButton.weatherHelpClosed').show();
+            });
+        });
+        
+        
+    })( jQuery );
+</script>
+
+    <?php
+	endif;
+    ?>
+    
+    
+    
+    <?php
+    function getWeekday($date) {
+        return date('l', $date);
+    }
+    
+}

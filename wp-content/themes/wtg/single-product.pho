@@ -1,0 +1,17 @@
+<?php
+get_header();
+global $product;
+the_post();
+echo '<section class="section-page-content">';
+	echo '<div class="container box_list articles  last">';
+        echo '<div class="row">';
+            echo '<h2><i class="icon icon_1"></i>'.get_the_title().'</h2>';
+		echo '</div>';
+        echo '<div class="row">';
+                the_content();
+
+		echo '</div>';
+    echo '</div>';
+    echo '</section>';
+    get_footer();
+?>

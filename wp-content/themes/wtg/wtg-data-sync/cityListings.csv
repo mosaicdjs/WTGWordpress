@@ -1,0 +1,211 @@
+Abu Dhabi,9,9,8,10
+Dubai,10,10,10,10
+Doha,9,9,9,11
+Amman,9,9,11,6
+Damascus,7,5,7,8
+Jerusalem,10,9,9,10
+Tel Aviv,8,10,9,14
+Eilat,6,6,7,6
+Beirut,9,9,9,10
+Kuwait City,10,10,9,10
+Muscat,9,9,9,10
+Hangzhou,8,11,9,11
+Beijing,9,11,10,12
+Shanghai,9,9,9,10
+Hong Kong,10,9,9,12
+Macau city,9,9,9,10
+Singapore,7,10,8,11
+Kathmandu,8,9,9,10
+Chiang Mai,9,9,9,10
+Bangkok,9,9,9,11
+Ho Chi Minh City,9,11,10,10
+Hanoi,9,11,11,10
+Kuala Lumpur,9,9,9,10
+Nagoya,9,9,11,10
+Osaka,9,9,9,10
+Tokyo,9,9,9,10
+Kyoto,9,9,9,10
+Jakarta,9,9,9,10
+Manila,9,9,9,10
+Seoul,9,9,9,10
+Mumbai (Bombay),9,9,9,10
+Bengaluru (Bangalore),10,10,10,11
+Chennai (Madras),9,9,9,10
+Delhi,9,9,14,15
+Kolkata (Calcutta),9,9,9,10
+Phnom Penh,9,9,9,7
+Taipei,9,9,9,10
+Auckland,9,10,10,10
+Christchurch,10,9,9,10
+Wellington,9,9,9,10
+Queenstown,9,5,9,4
+Darwin,9,9,10,10
+Perth,8,9,10,10
+Brisbane,12,10,12,10
+Cairns,9,9,11,10
+Melbourne,9,9,9,10
+Sydney,9,9,9,10
+Adelaide,9,9,10,10
+Montevideo,9,9,10,10
+Quito,9,9,9,10
+Buenos Aires,9,9,9,10
+Lima,9,9,9,10
+Cusco,9,9,8,9
+Sao Paulo,8,9,9,10
+Rio de Janeiro,9,9,12,15
+Santiago,9,9,9,10
+Bogotá,9,9,10,10
+Caracas,9,9,11,8
+Ljubljana,10,12,10,12
+Monte Carlo,9,9,9,10
+Lisbon,9,10,9,10
+Porto,9,9,12,13
+Oslo,8,10,9,11
+Stavanger,9,9,9,10
+Bergen,9,9,12,11
+Paris,9,9,9,9
+Avignon,8,9,9,10
+Marseille,9,9,9,10
+Lyon,6,8,15,10
+Lille,5,9,13,10
+Aix en Provence,9,9,9,10
+Cannes,9,9,9,10
+Nice,9,9,9,12
+Toulouse,9,9,9,10
+Bordeaux,9,9,9,10
+Strasbourg,9,8,9,9
+Dublin,9,9,9,10
+Cork,9,9,17,12
+Cracow,9,9,9,9
+Warsaw,11,11,11,11
+Palermo,9,9,9,10
+Milan,9,9,9,10
+Turin,9,9,9,10
+Siena,9,9,10,10
+Florence,9,9,9,10
+Naples,9,9,12,10
+Verona,9,8,11,10
+Bologna,9,9,9,10
+Venice,9,9,8,10
+Rome,9,11,9,11
+Athens,9,10,8,10
+Belgrade,9,9,9,10
+Munich,9,9,12,11
+Cologne,9,9,9,10
+Hanover,9,9,9,10
+Frankfurt,9,9,13,11
+Düsseldorf,7,9,15,10
+Stuttgart,9,9,9,10
+Hamburg,9,8,9,10
+Berlin,9,9,9,10
+The Hague,9,9,9,10
+Amsterdam,9,9,14,15
+Tallinn,8,9,15,10
+Dubrovnik,10,9,9,10
+Zagreb,9,11,15,11
+Split,9,9,9,10
+Copenhagen,7,11,8,11
+Glasgow,8,7,11,16
+Edinburgh,9,8,9,10
+Aberdeen,9,9,9,10
+Belfast,9,9,9,10
+Cardiff,9,10,14,11
+Manchester,9,9,9,10
+London,10,11,10,12
+Liverpool,9,9,9,10
+Cambridge,9,9,9,10
+Oxford,9,9,9,10
+York,6,9,10,10
+Newcastle,9,9,9,10
+Bath,9,9,8,8
+Leeds,7,9,12,7
+Brighton,9,9,9,10
+Southampton,9,9,9,10
+Madrid,9,9,9,10
+Granada,9,9,9,10
+Toledo,9,9,8,10
+Bilbao,9,9,9,10
+Alicante,9,9,8,9
+Málaga,9,9,9,10
+Valencia,9,9,9,10
+Seville,10,9,9,10
+Santiago de Compostela,9,9,9,10
+Barcelona,9,9,9,10
+Palma de Mallorca,9,9,9,10
+Helsinki,9,9,12,13
+Antwerp,11,11,9,10
+Brussels,10,8,9,10
+Bruges,11,11,11,10
+Pristina,7,6,10,8
+Istanbul,9,8,9,11
+Ankara,9,9,9,10
+Moscow,9,8,9,10
+St Petersburg,9,9,9,10
+Prague,9,9,11,10
+Bratislava,9,9,9,10
+Bern,10,9,9,10
+Geneva,9,9,12,13
+Basel,9,9,9,10
+Zurich,9,9,9,11
+Stockholm,10,10,9,11
+Gothenburg,9,8,13,10
+Riga,8,7,13,13
+Vilnius,10,9,11,11
+Vienna,8,9,15,10
+Salzburg,9,9,9,10
+Valletta,8,8,10,11
+Reykjavik,10,10,11,12
+Bucharest,10,9,10,9
+Kyiv (Kiev),9,7,10,12
+Sofia,9,9,9,10
+Budapest,9,9,15,13
+Havana,9,9,12,10
+Washington, DC,9,9,15,18
+Philadelphia,10,9,9,10
+Atlanta,9,9,9,10
+Houston,9,9,13,10
+Dallas,9,9,9,10
+Austin,9,9,13,8
+Cleveland,9,9,11,8
+Chicago,9,9,9,10
+Salt Lake City,9,9,13,10
+Albuquerque,9,3,9,13
+Santa Fe,6,9,12,10
+Las Vegas,9,9,9,10
+Detroit,9,9,11,7
+Denver,9,9,12,10
+Los Angeles,9,10,9,10
+San Francisco,9,9,9,10
+San Diego,9,9,9,10
+Orlando,9,9,11,5
+Miami,9,9,9,11
+Seattle,9,9,8,10
+Minneapolis-St Paul,8,12,16,15
+Boston,9,9,11,10
+Phoenix,7,9,9,10
+New York City,9,9,9,10
+Honolulu,9,11,10,9
+New Orleans,9,9,7,10
+Baltimore,9,18,9,10
+Nashville,9,9,13,13
+Memphis,10,9,10,11
+Mexico City,9,11,9,10
+Panama City,9,9,10,10
+Toronto,9,9,9,10
+Ottawa,9,9,9,10
+Calgary,9,9,9,10
+Vancouver,9,9,9,10
+Quebec City,9,8,10,10
+Montreal,9,9,10,14
+San Jose,9,9,12,10
+Johannesburg,7,13,15,12
+Durban,9,9,12,9
+Cape Town,10,6,9,10
+Tunis,8,10,8,7
+Dar es Salaam,9,9,7,8
+Marrakech,9,9,9,10
+Casablanca,7,9,9,10
+Fes,9,9,5,10
+Nairobi,9,9,9,10
+Tripoli,5,5,1,7
+Cairo,9,10,9,12

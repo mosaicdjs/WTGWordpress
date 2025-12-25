@@ -1,0 +1,155 @@
+<?php
+
+$current_fp = get_query_var('fpage');
+//echo $current_fp.'<br/>';
+$postid = get_the_ID();
+//echo $postid;
+switch ($current_fp) {
+    case 'apres-ski' :
+        //wtg_sresort($postid);
+        wtg_sresort_xml($postid);
+        break;
+
+    case 'pictures' :
+        wtg_sgallery_xml($postid);
+        break;
+
+}
+
+function wtg_sresort_xml($postid)
+{
+    $title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/source-data/ski_resorts-full-en.xml';
+	$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-en/ski/ski-resortinfo.xsl';
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+	$xslt->importStylesheet($xsl);
+	//$xslt->setParameter(NULL, 'id', $lagacy_id);
+	//print $xslt->transformToXML($dom);
+	
+	
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//SkiResort');
+
+    if (!is_null($elements)) {
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+			if($legacy_id == $nid){
+				//print $xslt->transformToXML($element);
+				//print $element;
+				//echo $element->saveHTML();
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+				
+				//overview
+                //$content_tag = $regionpath->query("//Content/Overview/Overview");
+                //$content = trim($content_tag->item(0)->nodeValue);
+				print $xslt->transformToXML($region_Doc);
+				//echo $content;
+			}
+		}
+	}
+}
+
+function wtg_sgallery_xml($postid)
+{
+    $title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/source-data/ski_resorts-full-en.xml';
+	$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-en/ski/ski-gallery.xsl';
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+	$xslt->importStylesheet($xsl);
+	//$xslt->setParameter(NULL, 'id', $lagacy_id);
+	//print $xslt->transformToXML($dom);
+	
+	
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//SkiResort');
+
+    if (!is_null($elements)) {
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+			if($legacy_id == $nid){
+				//print $xslt->transformToXML($element);
+				//print $element;
+				//echo $element->saveHTML();
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+				
+				//overview
+                //$content_tag = $regionpath->query("//Content/Overview/Overview");
+                //$content = trim($content_tag->item(0)->nodeValue);
+				print $xslt->transformToXML($region_Doc);
+				//echo $content;
+			}
+		}
+	}
+}
+
+function wtg_sresort($postID)
+{
+    $title = get_the_title($postID);
+    $apres = apply_filters('the_content', get_post_meta($postID, 'apres_ski_-_apres_ski', true));
+    $eatout = apply_filters('the_content', get_post_meta($postID, 'apres_ski_-_eating_out', true));
+    
+    $beyond = apply_filters('the_content', get_post_meta($postID, 'ski_resort_beyond_the_slopes', true));
+    $family = apply_filters('the_content', get_post_meta($postID, 'ski_resort_family_fun', true));
+    $retail = apply_filters('the_content', get_post_meta($postID, 'ski_resort_retail_therapy', true));
+    $splash = apply_filters('the_content', get_post_meta($postID, 'ski_resort_splashing_out', true));
+    
+    $hotelinfo = apply_filters('the_content', get_post_meta($postID, 'hotels_-_introduction', true));
+    
+    echo "<h1></h1>
+            <h2>Apres-ski</h2>
+            $apres
+            <h3>Eating out</h3>
+            $eatout
+            
+            <h2>Resort Information</h2>
+            <h3>Beyond the slopes:</h3>
+            $beyond
+            <h3>Family fun</h3>
+            $family
+            <h3>Retail therapy</h3>
+            $retail
+            <h3>Splashing out</h3>
+            $splash
+            
+            <h2>Hotels</h2>
+            $hotelinfo";
+    if ( have_rows('hotels_-_hotels', $postID)):
+        while (have_rows('hotels_-_hotels', $postID)) :the_row();
+            $title = get_sub_field('title',$postID);
+            $type = get_sub_field('hotel_type',$postID);
+            $body = get_sub_field('body',$postID);
+            $tel = get_sub_field('telephone',$postID);
+            $web = get_sub_field('website',$postID);
+            //$address = get_sub_field('address2',$postID);
+            echo "<h3>$title</h3>
+                    <span><b>Telephone: </b>$tel | <b>Website: </b><a href='$web'>$web</a> | <b>$type</b></span>
+                    $body";
+        endwhile;
+    endif;
+    
+}
+
+
+?>

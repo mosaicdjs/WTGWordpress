@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fn="http://www.w3.org/2005/xpath-functions" exclude-result-refixes="fn">
+  <xsl:output method="html" />
+  <xsl:param name="id"></xsl:param>
+       	<xsl:template match="//Region">
+			<h1><xsl:value-of select="@title"/> Public Holidays</h1>
+				<b><i class="publicholidays">Below are listed Public Holidays in <xsl:value-of select="@title"/></i></b>
+					<xsl:for-each select="Content/PublicHolidays/PublicHolidayTable/PublicHolidayRow">
+					  <xsl:if test="./StartDate/text() != ''">
+						<div>
+							<xsl:variable name="day" select="substring(./text(), 6,2)" />
+							<xsl:variable name="month" select="substring(./text(), 9,2)" />
+							<xsl:variable name="year" select ="substring(./text(), 0,4)"/>
+
+							
+							<h3><xsl:value-of select="@title"/></h3>
+								<xsl:apply-templates select="concat($day,' - ',$month,' - ',$year)"  mode="cleanDate">
+									<xsl:with-param name="label">Date from</xsl:with-param>
+								</xsl:apply-templates>
+							<xsl:if test="./EndDate/text() != ''">
+								<xsl:apply-templates select="./EndDate" mode="cleanDate">
+									<xsl:with-param name="label">End Date</xsl:with-param>
+								</xsl:apply-templates>
+							</xsl:if>
+							<xsl:if test="./TBC/text() = '1'">
+								<b>Date to be confirmed: </b>yes
+							</xsl:if>
+						</div>
+					  </xsl:if>
+					</xsl:for-each>
+       	</xsl:template>
+		
+		<xsl:template match="StartDate|EndDate" mode="cleanDate">
+			<xsl:param name="label"/>
+			<strong><xsl:value-of select="$label"/>: </strong>
+			<xsl:choose>
+				<xsl:when test="contains(./text(), 'T')">
+					<xsl:value-of select="substring-before(./text(), 'T')" disable-output-escaping="yes"/><br/>
+				</xsl:when>
+				<xsl:when test="contains(./text(), ' ')">
+					<xsl:value-of select="substring-before(./text(), ' ')" disable-output-escaping="yes"/><br/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="./text()" disable-output-escaping="yes"/><br/>
+				</xsl:otherwise>
+			</xsl:choose>
+		
+		</xsl:template>
+		
+</xsl:stylesheet>

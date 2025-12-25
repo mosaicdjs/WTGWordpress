@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ColumbusTravelData language="nl">
+	<Continent nid="8331685" title="Europe">
+		<Places>
+			<Region nid="8331686" title="France">
+				<Content>
+					<DutyFree>
+						<Overview><![CDATA[<p>&nbsp;Overview of Dutch language duty free</p>]]></Overview>
+						<ImportRestrictions><![CDATA[<p>وتشمل الأصناف المحظورة أو التي تتطلب ترخيصا الأسلحة والذخائر والمخدرات (غير تلك المقررة للاستخدام الشخصي) والحيوانات الحية والمنتجات النباتية والقطع الأثرية الثقافية والأنواع المهددة بالانقراض.</p>]]></ImportRestrictions>
+						<ExportRestrictions><![CDATA[<p>Export restrictions for for Dutch language duty free</p>]]></ExportRestrictions>
+						<ImportRegulations><![CDATA[<p>&nbsp;Overview of Import regulations for Dutch language duty free</p>]]></ImportRegulations>
+						<BannedImports><![CDATA[<p>禁止或需要许可证的物品包括武器和弹药，药物（非个人使用的药物），活体动物，植物产品，文物和濒危物种。</p>]]></BannedImports>
+						<BannedExports><![CDATA[<p>Overview of Import regulations for Dutch language duty free</p>]]></BannedExports>
+						<ExportRegulations><![CDATA[<p>Export regulations for for Dutch language duty free</p>]]></ExportRegulations>
+						<ImportExportEu><![CDATA[<p>test</p>]]></ImportExportEu>
+						<EU><![CDATA[<p>EU for Dutch language duty free</p>]]></EU>
+						<Note><![CDATA[<p>Notes. for Dutch language duty free</p>]]></Note>
+						<LastModified><![CDATA[2018-07-11 23:00:00]]></LastModified>
+					</DutyFree>
+				</Content>
+			</Region>
+		</Places>
+	</Continent>
+</ColumbusTravelData>

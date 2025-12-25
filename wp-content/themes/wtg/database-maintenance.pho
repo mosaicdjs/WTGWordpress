@@ -1,0 +1,1133 @@
+<?php
+/*
+* Template Name: Custom Table Maintenance V1
+*/
+get_header();
+
+//wtg_corrected_airportby_AZ_static();
+//update_cruises();
+//wtg_region_redirects();
+//wtg_city_redirects();
+//wtg_airport_redirects();
+//city_timezones();
+//update_regions();
+//update_cities();
+//update_airports();
+//wtg_airport_maps();
+//dbm_update_beaches();
+//update_ski_resorts();
+//update_cruises();
+//update_attractions();
+//list_out_airports();
+//get_data();
+//get_airports_with_code();
+//xml_airport_destinations();
+//xml_region_destinations();
+//xml_city_destinations();
+//view_cruises();
+get_footer();
+
+function dbm_update_beaches()
+{
+	global $wpdb;
+
+	$wpdb->show_errors();
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'beach-resort',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = $wpdb->query("TRUNCATE wtg_beaches");
+						$result = true;
+						if($postsQuery->have_posts() && $result):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								echo '<p>'.get_the_title().'</p>';								
+								$pID = get_the_ID();
+								$regionID = wp_get_post_parent_id( $pID ); 
+								$gpParentID = wp_get_post_parent_id( $regionID );
+								if ($gpParentID == 0) {echo ' setting '.$gpParentID.' to '.$regionID; $gpParentID = $regionID;}
+								$link = get_the_permalink();
+								$title = get_the_title();
+								echo $title.' - '.' ID '.$pID.' - '.$regionID.' - '.$gpParentID;
+								$terms = get_the_terms($pdID, 'wtg_continent');								
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$legacyID = get_field('guide_legacy_id');
+								if (!$legacyID) $legacyID =0;
+								$legactContinent = 0;
+								$result = 								
+								$wpdb->insert( 'wtg_beaches', array('WP_ID' => $pID, 'Legacy_ID' => $legacyID, 'WP_Continent' => $termID , 'WP_Region_ID' => $regionID, 'WP_Parent_Region_ID' => $gpParentID, 'Beach_Title' => $title, 'Beach_Link' => $link),
+											  array('%d','%d','%d','%d','%d','%s','%s'));
+								echo '<br />The insert result is '.$result;
+								
+								// $wpdb->print_error();
+								
+							endwhile;
+						endif;
+
+}
+
+function update_regions()
+{
+	global $wpdb;
+    global $post;
+    $wpdb->show_errors();
+
+
+							$args = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'region',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($args);
+						$count = 0;
+						$result = $wpdb->query("TRUNCATE wtg_regions"); 			
+						if($postsQuery->have_posts() && $result):
+							while ($postsQuery->have_posts()):$postsQuery->the_post();
+								$pID = $post->ID;
+								$firstID = get_gallery_attachments($pID,'home_carousel')[0];
+                                $postImageURL = wp_get_attachment_image_src($firstID, 'listingGallery')[0]; 
+                                echo ' The post image URL is '.$postImageURL;
+								$parentID = $post->post_parent;
+								echo '<br /> the post ID is '.get_the_title($post->ID);
+								$args = array (
+									'post_parent'=>$pID, 
+									'post_type' => 'guides', 
+									'tax_query'             => array(
+										array(
+														'taxonomy' => 'wtg_guide_type',
+														'field'    => 'slug',
+														'terms'    => 'region',
+													 
+										),
+									),);
+							$children = get_children ($args);
+							$hasChildren = false;
+							if ($children) $hasChildren = true;
+							if ($children && ($parentID == 0)) echo 'Top level region with children'; 
+								$link = get_the_permalink();
+								$title = get_the_title();
+								$terms = get_the_terms($pdID, 'wtg_continent');
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$legacyID = get_field('guide_legacy_id');
+								$legactContinent = 0;
+                                echo '<br />Regions insert: WP_ID: '.$pID.' Legacy ID'.$legacyID.' Continent '.$termID.' Parent ID: '.$parentID;
+                                $result =
+                                $wpdb->insert
+                                ( 
+                                    'wtg_regions', 
+                                    array
+                                    (
+                                        'WP_ID' => $pID, 
+                                        'Legacy_ID' => $legacyID,                                         
+                                        'WP_Continent' => $termID , 
+                                        'WP_Parent_ID' => $parentID,  
+                                        'has_children' => $hasChildren, 
+                                        'Title' => $title, 
+                                        'Link' => $link, 
+                                        'Image' =>  $postImageURL,    
+
+                                    ),
+                                    array('%d','%d','%d','%d','%d','%s','%s', '%s',)
+                                );
+                                echo 'The result is '.$result;
+                                $wpdb->print_error();
+							endwhile;
+						endif;
+
+}
+
+function update_cities()
+{
+    global $wpdb;
+    $wpdb->show_errors();
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'city',
+											 
+								),
+							),
+						);
+						$pID = 0;
+						$pParentID = 0; 
+						$gpParentID = 0;	
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = $wpdb->query("TRUNCATE wtg_cities");
+						$result = true;
+						if($postsQuery->have_posts() && $result):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();
+								echo '<p>'.get_the_title().'</p>';								
+								$pID = get_the_ID();
+								$firstID = get_gallery_attachments($pID,'home_carousel')[0];
+								$postImageURL = wp_get_attachment_image_src($firstID, 'listingGallery')[0]; 
+								$regionID = wp_get_post_parent_id( $pID ); 
+								$gpParentID = wp_get_post_parent_id( $regionID );
+								if ($gpParentID == 0) {echo ' setting '.$gpParentID.' to '.$regionID; $gpParentID = $regionID;}
+								$link = get_the_permalink();
+								$title = get_the_title();
+								echo $title.' - '.' ID '.$pID.' - '.$regionID.' - '.$gpParentID.' : '.$link;
+								$terms = get_the_terms($pdID, 'wtg_continent');								
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$legacyID = get_field('guide_legacy_id');
+								$legactContinent = 0;
+								$result = 
+                                $wpdb->insert
+                                ( 'wtg_cities', 
+                                    array(
+                                    'WP_ID' => $pID,                                    
+                                    'Legacy_ID' => $legacyID, 
+                                    'WP_Continent' => $termID , 
+                                    'WP_Region_ID' => $regionID, 
+                                    'WP_Parent_Region_ID' => $gpParentID, 
+                                    'City_Title' => $title, 
+                                    'City_Link' => $link,
+                                    'CIty_Image' => $postImageURL, 
+                                    
+                                    ),
+											  array('%d','%d','%d','%d','%d','%s','%s', '%s'));
+                                echo '<br /> - the result is '.$result;
+                                $wpdb->print_error();
+							endwhile;
+						endif;
+
+}
+
+
+function xml_airport_destinations()
+{
+	$aargs = array(
+		'post_type'             => 'guides',
+		'posts_per_page' 		=> -1,
+		'order' 		=> 'ASC',
+		'orderby'       => 'title',
+		'tax_query'             => array(
+			array(
+						  'taxonomy' => 'wtg_guide_type',
+						  'field'    => 'slug',
+						  'terms'    => 'airport',
+			),
+		),
+	);
+		
+
+	echo '<h1> These are the NIDS!</h1>';
+	$postsQuery = new WP_Query($aargs);
+	if($postsQuery->have_posts()):
+		while ($postsQuery->have_posts()):
+			$postsQuery->the_post();								
+			$pID = get_the_ID();
+			echo '<br /><span><</span>Destination title="'.get_the_title().'"<span>></span>'.get_field('guide_legacy_id', $pID).'<span><</span>/Destination<span>></span>';
+		endwhile;
+	endif;
+
+}
+
+function xml_region_destinations()
+{
+
+	$aargs = array(
+		'post_type'             => 'guides',
+		'posts_per_page' 		=> -1,
+		'order' 		=> 'ASC',
+		'orderby'       => 'title',
+		'tax_query'             => array(
+			array(
+						  'taxonomy' => 'wtg_guide_type',
+						  'field'    => 'slug',
+						  'terms'    => 'region',
+			),
+		),
+	);
+		
+
+	echo '<h1> These are the NIDS!</h1>';
+	$postsQuery = new WP_Query($aargs);
+	if($postsQuery->have_posts()):
+		while ($postsQuery->have_posts()):
+			$postsQuery->the_post();								
+			$pID = get_the_ID();
+			echo '<br /><span><</span>Destination title="'.get_the_title().'"<span>></span>'.get_field('guide_legacy_id', $pID).'<span><</span>/Destination<span>></span>';
+		endwhile;
+	endif;
+
+	
+}
+
+function xml_city_destinations()
+{
+
+	$aargs = array(
+		'post_type'             => 'guides',
+		'posts_per_page' 		=> -1,
+		'order' 		=> 'ASC',
+		'orderby'       => 'title',
+		'tax_query'             => array(
+			array(
+						  'taxonomy' => 'wtg_guide_type',
+						  'field'    => 'slug',
+						  'terms'    => 'city',
+			),
+		),
+	);
+		
+
+	echo '<h1> These are the NIDS!</h1>';
+	$postsQuery = new WP_Query($aargs);
+	if($postsQuery->have_posts()):
+		while ($postsQuery->have_posts()):
+			$postsQuery->the_post();								
+			$pID = get_the_ID();
+			echo '<br /><span><</span>Destination title="'.get_the_title().'"<span>></span>'.get_field('guide_legacy_id', $pID).'<span><</span>/Destination<span>></span>';
+		endwhile;
+	endif;
+
+	
+}
+function list_out_airports()
+{
+global $wpdb;
+$airports_sql= "SELECT drf_airports.Airport_Title, drf_regions.Title, drf_airports.Airport_Link
+FROM drf_airports
+INNER JOIN drf_regions
+ON drf_airports.WP_Region_ID = drf_regions.WP_ID
+ORDER BY Title, Airport_Title ASC
+";
+
+
+$regions_sql = "SELECT drf_regions.Title
+FROM drf_regions
+ORDER BY Title ASC
+";
+
+$airports = $wpdb->get_results($airports_sql);
+$regions = $wpdb->get_results($regions_sql);
+
+
+foreach ($regions as $region)
+{
+
+	$hasAirports = false;
+	$convertedTitle = remove_accents( $region->Title);
+	$firstLetter = substr( $convertedTitle, 0, 1 );
+	foreach ($airports as $airport)
+	{
+				echo '<p>'.$region->Title.' - '.$airport->Title.'</p>';
+				if ($region->Title == $airport->Title) 
+				{
+					if ($hasAirports == false) 	
+					{
+						echo '<li class="country_title">'.$region->Title.'</li>'; 
+						$hasAirports = true;
+					}
+					echo '<li><a href = "'.$airport->Airport_Link.'">'.$airport->Airport_Title.'</a></li>';
+				}		
+	}
+}
+
+}
+
+function wtg_airport_maps()
+{
+								$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'airport',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = true;
+						if($postsQuery->have_posts()):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								$pID = get_the_ID();
+	
+	$mapPath = get_post_meta($pID, 'airport_map_filepath', true);
+	$mapImage = get_field('airport_map');
+	echo '<p>'.get_the_title().': '.$mapPath.' Image URL: '.$mapImage.'</p>';
+	endwhile;
+	endif;
+}
+
+
+function get_data()
+{
+global $wpdb;
+$regions = $wpdb->get_results( 
+	"
+	SELECT Title
+	FROM wtg_regions
+	WHERE 1
+	"
+);
+
+//foreach ( $regions as $region ) {echo $region->Title;}
+
+$cities = $wpdb->get_results( 
+
+	"
+	SELECT Title, Legacy_ID
+	FROM wtg_cities
+	WHERE 1
+	"
+);
+
+foreach ( $cities as $city ) { echo $city->Title.$city->Legacy_ID; }
+
+
+}
+
+function city_timezones()
+{
+		echo 'city timezones';
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'city',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						//$count = 0;
+						//$result = $wpdb->query("TRUNCATE wtg_cities");
+						//$result = true;
+						if($postsQuery->have_posts()):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								$pID = get_the_ID();
+								$pParentID = wp_get_post_parent_id( $pID ); 
+								$link = get_the_permalink();
+								$title = get_the_title();
+								echo '<br />'.$title;
+								                 $ctz1 = 'city_timezone_0_citylistvalue';
+                    $ctz2 = 'city_timezone_0_stdtznamevalue';
+                    $ctz3 = 'city_timezone_0_region_name_value';
+                    $ctz4 = 'city_timezone_0_language';
+                    $ctz5 = 'city_timezone_0_standardbiasvalue';
+                    $ctz6 = 'city_timezone_0_stdbiassecvalue';
+                    $ctz7 = 'city_timezone_0_stdtzabbrvalue';
+                    $ctz8 = 'city_timezone_0_countrynamevalue';
+					$ctz10 = 'city_timezone_0_thisyearutcstartvalue';
+                    $ctz11 = 'city_timezone_0_thisyearutcendvalue';
+                    $ctz12 = 'city_timezone_0_dstbiasvalue';
+					$ctz13 = 'dstbiassecsvalue';
+					
+                    //$ctz9 = 'city_timezone_0_description';
+					$true = true;
+//					echo '<br />'.get_post_meta($pID,$ctz1,$true);
+/*								echo '<br />'.get_post_meta($pID,$ctz2,$true);
+								echo '<br />'.get_post_meta($pID,$ctz3,$true);
+								echo '<br />'.get_post_meta($pID,$ctz4,$true);
+								echo '<br />'.get_post_meta($pID,$ctz5,$true);
+								echo '<br />'.get_post_meta($pID,$ctz6,$true);
+								echo '<br />'.get_post_meta($pID,$ctz7,$true);
+								echo '<br />'.get_post_meta($pID,$ctz8,$true); */
+								$start = get_post_meta($pID,$ctz10,$true);
+								$starts = substr($start, 0, 10);
+								$end = substr(get_post_meta($pID,$ctz11,$true),0,10);
+								echo '<br />DST standard Sec bias value '.get_post_meta($pID,$ctz13,$true);
+								echo '<br />This year UTC start value'.$starts;
+								echo '<br />This year UTC end value'.$end;
+								$date = date('Y-m-d');
+								echo 'current date is'.$date;
+								if ($date > $starts && $date < $end) {echo '<br />apply dst';}
+								
+								
+//								echo '<br />'.get_post_meta($pID,$ctz9,$true).'<br />';
+							endwhile;
+						endif;
+}
+
+
+
+function update_airports()
+{
+	global $wpdb;
+	$aargs = array
+			(
+				'post_type'			=> 'guides',
+				'post_status'		=> 'publish',
+				'posts_per_page' 	=> -1,
+				'order' 			=> 'ASC',
+				'orderby'       	=> 'title',
+				'tax_query'         => array
+										(
+											array
+											(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'airport',
+											 
+											),
+										),
+			);
+							
+	$postsQuery = new WP_Query($aargs);
+	$count = 0;
+	$result = $wpdb->query("TRUNCATE wtg_airports");
+	$result = true;
+	if($postsQuery->have_posts()):
+		while ($postsQuery->have_posts()):
+			$postsQuery->the_post();								
+			$pID = get_the_ID();
+			$title = get_the_title();
+			$pParentID = wp_get_post_parent_id($pID);
+			$gpParentID = wp_get_post_parent_id($pParentID);
+			$link = get_the_permalink();
+			$title = get_the_title();
+								echo '<br />'.$title;
+								$terms = get_the_terms($pdID, 'wtg_continent');								
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$termsParent = get_the_terms($pParentID, 'wtg_guide_type');
+								foreach ($termsParent as $termParent) {$termParentSlug = $termParent->slug;}
+								//echo '<br />the parent of this airport is a '.$termParentSlug;
+								if ($termParentSlug == 'city')
+								{
+									echo '<br /> Parent is a city';
+									$cityID = $pParentID;
+									echo '- Setting the city ID to '.$cityID.' '.get_the_title($cityID);
+
+									// This is for a Standard City Airport - set to the City Parent
+
+									$regionID = $gpParentID;
+
+									echo '- Region ID is '.$regionID;
+
+									// What happens if the region is a sub-region?
+
+									$parentTest = $regionID;
+									$WPParentRegionID = $parentTest;
+									
+									$parentTest = wp_get_post_parent_id($parentTest);
+									if ($parentTest) 
+									{ 
+										$WPParentRegionID = $parentTest; 
+										$parentTest = wp_get_post_parent_id($parentTest);
+										if ($parentTest) 
+										{ 
+											$WPParentRegionID = $parentTest;
+											$parentTest = wp_get_post_parent_id($parentTest); 
+											if ($parentTest) 
+											{
+												$WPParentRegionID = $parentTest;
+												$parentTest = wp_get_post_parent_id($parentTest); 
+											}
+										}
+
+									}
+									
+
+									// What happens if the region is a sub-sub-region (Spain - Canary - Lanzarote)
+
+/*
+									echo '- Region parent is'.$gpParentID;
+									if ($gpParentID == 0)  
+									{
+										echo ' setting '.$gpParentID.' to '.$regionID; $gpParentID = $regionID;
+									}
+									else
+									{
+										$gpParentID = p_get_post_parent_id($gpParentID);
+									}
+*/
+								}
+								else
+								{
+									echo  '<br /> Parent is a region';
+									$cityID = 0;
+									$regionID = $pParentID;
+	/*
+									$gpParentID = wp_get_post_parent_id( $regionID );
+									echo 'parent is '.get_the_title($regionID).' grand parent is'.get_the_title($gpParentID);
+									if ($gpParentID == 0) {echo ' setting '.$gpParentID.' to '.$regionID; $gpParentID = $regionID;} */
+
+									$parentTest = $regionID;
+									$WPParentRegionID = $parentTest;
+									
+									$parentTest = wp_get_post_parent_id($parentTest);
+									if ($parentTest) 
+									{ 
+										$WPParentRegionID = $parentTest; 
+										$parentTest = wp_get_post_parent_id($parentTest);
+										if ($parentTest) 
+										{ 
+											$WPParentRegionID = $parentTest;
+											$parentTest = wp_get_post_parent_id($parentTest); 
+											if ($parentTest) 
+											{
+												$WPParentRegionID = $parentTest;
+												$parentTest = wp_get_post_parent_id($parentTest); 
+											}
+										}
+
+									}
+
+
+									
+								}
+								echo '<br />'.$title.' Region is '.get_the_title($regionID).' Parent Region ID is '.get_the_title($WPParentRegionID);
+								$legacyID = get_field('guide_legacy_id');
+								$legactContinent = 0;
+							$wpdb->insert( 'wtg_airports', array('WP_ID' => $pID, 'Legacy_ID' => $legacyID, 'WP_Continent' => $termID , 'WP_Region_ID' => $regionID, 'WP_Parent_Region_ID' => $WPParentRegionID, 'WP_City_ID' => $cityID, 'Airport_Title' => $title, 'Airport_Link' => $link),
+											  array('%d','%d','%d','%d','%d','%d','%s','%s'));
+								echo 'The result is '.$result;
+							endwhile;
+						endif;
+
+}
+
+
+
+function update_attractions()
+{
+	global $wpdb;
+
+	$wpdb->show_errors();
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'attraction',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = $wpdb->query("TRUNCATE wtg_attractions");
+						$result = true;
+						if($postsQuery->have_posts() && $result):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								echo '<p>'.get_the_title().'</p>';								
+								$pID = get_the_ID();
+								$regionID = wp_get_post_parent_id( $pID ); 
+								$termsParent = get_the_terms($regionID, 'wtg_guide_type');
+								foreach ($termsParent as $termParent) {$termParentSlug = $termParent->slug;}
+								if ($termParentSlug == 'city')
+								{
+									echo '<br /> Parent is a city';
+									$regionID = wp_get_post_parent_id( $regionID ); 
+								}
+								$gpParentID = wp_get_post_parent_id( $regionID );
+								if ($gpParentID == 0) {echo ' setting '.$gpParentID.' to '.$regionID; $gpParentID = $regionID;}
+								$link = get_the_permalink();
+								$title = get_the_title();
+								echo $title.' - '.' ID '.$pID.' - '.$regionID.' - '.$gpParentID;
+								$terms = get_the_terms($pdID, 'wtg_continent');								
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$legacyID = get_field('guide_legacy_id');
+								if (!$legacyID) $legacyID =0;
+								$legactContinent = 0;
+								$result = 								
+								$wpdb->insert( 'wtg_attractions', array('WP_ID' => $pID, 'Legacy_ID' => $legacyID, 'WP_Continent' => $termID , 'WP_Region_ID' => $regionID, 'WP_Parent_Region_ID' => $gpParentID, 'Attraction_Title' => $title, 'Attraction_Link' => $link),
+											  array('%d','%d','%d','%d','%d','%s','%s'));
+								echo '<br />The insert result is '.$result;
+								
+								// $wpdb->print_error();
+								
+							endwhile;
+						endif;
+
+}
+
+function update_ski_resorts()
+{
+	global $wpdb;
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'ski-resort',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = $wpdb->query("TRUNCATE wtg_ski_resorts");
+						$result = true;
+						if($postsQuery->have_posts() && $result):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								echo '<p>'.get_the_title().'</p>';								
+								$pID = get_the_ID();
+								$regionID = wp_get_post_parent_id( $pID ); 
+								$gpParentID = wp_get_post_parent_id( $regionID );
+								if ($gpParentID == 0) {echo ' setting '.$gpParentID.' to '.$regionID; $gpParentID = $regionID;}
+								$link = get_the_permalink();
+								$title = get_the_title();
+								echo $title.' - '.' ID '.$pID.' - '.$regionID.' - '.$gpParentID;
+								$terms = get_the_terms($pdID, 'wtg_continent');								
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$legacyID = get_field('guide_legacy_id');
+								if (!$legacyID) $legacyID =0;
+								echo '<br />'.$termID.', '.$pParentID.', '.$title.', '.$link;
+								
+								$result = 
+								$wpdb->insert( 'wtg_ski_resorts', array('WP_ID' => $pID, 'Legacy_ID' => $legacyID, 'WP_Continent' => $termID , 'WP_Region_ID' => $regionID, 'WP_Parent_Region_ID' => $gpParentID,
+													'ski_resort_title' => $title, 'ski_resort_link' => $link),
+											  array('%d','%d','%d','%d','%d','%s','%s'));
+								echo $result;
+							endwhile;
+						endif;
+
+}
+
+function view_cruises()
+{
+
+echo 'View Cruises';
+/*							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'cruise',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$result = true;
+						if($postsQuery->have_posts()):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								echo '<p>'.get_the_title().' NID = '.get_field('legacy_guide_id').'</p>';
+							endwhile;
+						endif; */
+}
+
+function update_cruises()
+{
+	global $wpdb;
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'cruise',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = $wpdb->query("TRUNCATE wwtg_cruises");
+						$result = true;
+						if($postsQuery->have_posts() && $result):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								echo '<p>'.get_the_title().'</p>';								
+								$pID = get_the_ID();
+								$regionID = wp_get_post_parent_id( $pID ); 
+								$gpParentID = wp_get_post_parent_id( $regionID );
+								if ($gpParentID == 0) {echo ' setting '.$gpParentID.' to '.$regionID; $gpParentID = $regionID;}
+								$link = get_the_permalink();
+								$title = get_the_title();
+								echo $title.' - '.' ID '.$pID.' - '.$regionID.' - '.$gpParentID;
+								$terms = get_the_terms($pdID, 'wtg_continent');								
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$legacyID = get_field('guide_legacy_id');
+								if (!$legacyID) $legacyID =0;
+								echo '<br />'.$termID.', '.$pParentID.', '.$title.', '.$link;
+								
+								$result = 
+								$wpdb->insert( 'wwtg_cruises', array('WP_ID' => $pID, 'Legacy_ID' => $legacyID, 'WP_Continent' => $termID , 'WP_Region_ID' => $regionID, 'WP_Parent_Region_ID' => $gpParentID,
+													'cruise_title' => $title, 'cruise_link' => $link),
+											  array('%d','%d','%d','%d','%d','%s','%s'));
+								echo $result;
+							endwhile;
+						endif;
+
+}
+
+
+function get_airports_with_code()
+{
+	$aargs = array(
+		'post_type'             => 'guides',
+		'posts_per_page' 		=> -1,
+		'order' 		=> 'ASC',
+		'orderby'       => 'title',
+		'tax_query'             => array(
+			array(
+						  'taxonomy' => 'wtg_guide_type',
+						  'field'    => 'slug',
+						  'terms'    => 'airport',
+						 
+			),
+		),
+	);
+		
+	$postsQuery = new WP_Query($aargs);
+	if($postsQuery->have_posts()):
+		while ($postsQuery->have_posts()):
+			$postsQuery->the_post();								
+			$pID = get_the_ID();
+			$pParentID = wp_get_post_parent_id( $pID ); 
+			$link = get_the_permalink();
+			$title = get_the_title();
+			$code = get_field('overview_airport_code');
+			$legacyID = get_field('guide_legacy_id');
+			if ($pParentID)
+			{echo ' Airport Code is'.$code.','.$legacyID.','.$title.'<br />';}
+		endwhile;
+	endif;		
+}
+
+/*
+function update_cruises()
+{
+	global $wpdb;
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'cruise',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+//						$result = $wpdb->query("TRUNCATE wtg_airports");
+						$result = true;
+						if($postsQuery->have_posts() && $result):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								$pID = get_the_ID();
+								$pParentID = wp_get_post_parent_id( $pID ); 
+								$link = get_the_permalink();
+								$title = get_the_title();
+								echo '<br />'.$link;
+								$terms = get_the_terms($pdID, 'wtg_continent');								
+								foreach ($terms as $term) { $termID = $term->term_id;}
+								$termsParent = get_the_terms($pParentID, 'wtg_guide_type');
+								foreach ($termsParent as $termParent) {$termParentSlug = $termParent->slug;}
+								echo '<br />the parent of this cruise is a '.$termParentSlug;
+								if ($termParentSlug == 'city')
+								{
+									$pGrandParentID = wp_get_post_parent_id( $pParentID );
+									$cityID = $pParentID;
+									$regionID = $pGrandParentID;
+								}
+								else
+								{
+									$cityID = 0;
+									$regionID = $pParentID;
+								}
+								$legacyID = get_field('guide_legacy_id');
+								$legactContinent = 0;
+								$result = 
+								$wpdb->insert( 'wtg_airports', array('WP_ID' => $pID, 'Legacy_ID' => $legacyID, 'WP_Continent' => $termID , 'WP_Region_ID' => $regionID, 'WP_City_ID' => $cityID, 'Title' => $title, 'Link' => $link),
+											  array('%d','%d','%d','%d','%d','%s','%s'));
+								echo $result; 
+							endwhile;
+						endif;
+
+}
+*/
+function cruise_redirects()
+{
+	global $wpdb;
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'cruise',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = true;
+						if($postsQuery->have_posts()):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								$pID = get_the_ID();
+								$pParentID = wp_get_post_parent_id( $pID ); 
+								$link = get_the_permalink();
+								$title = get_the_title();
+								$slug = basename(get_permalink());
+//								echo '<br />'.$link;
+	
+
+								echo '<br />RewriteRule ^'.$slug.'([a-zA-Z0-9_-]+)?$ '.$link.'$1 [L,R=302]';
+							endwhile;
+						endif;
+
+}
+function wtg_region_redirects()
+{
+	global $wpdb;
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'region',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = true;
+						if($postsQuery->have_posts()):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								$pID = get_the_ID();
+								$pParentID = wp_get_post_parent_id( $pID ); 
+								$link = get_the_permalink();
+								$title = get_the_title();
+								$slug = basename(get_permalink());
+	    $my_fake_pages = array(
+        'history-language-culture' 		=> 'History',
+		'weather-climate-geography' 	=> 'History',
+		'business-communications' 		=> 'History',
+		'pictures' 						=> 'History',
+		'travel-by' 					=> 'History',
+		'region-hotels' 				=> 'History',
+		'things-to-do' 					=> 'History',
+		'shopping-nightlife' 			=> 'History',
+		'food-and-drink' 				=> 'History',
+		'getting-around' 				=> 'History',
+		'passport-visa' 				=> 'History',
+		'public-holidays' 				=> 'History',
+		'health' 						=> 'History',
+		'money-duty-free' 				=> 'History',
+		'geld-duty-free'				=> 'History',
+		'events' 						=> 'History',
+		
+		'history' 						=> 'History',
+		'weather' 						=> 'History',
+		//'pictures' 						=> 'History',
+		//'videos' 						=> 'History',
+		'gettingaround' 				=> 'History',
+		'things-to-see' 				=> 'History',
+		'tours-excursions' 				=> 'History',
+		'things-to-do-0' 				=> 'History',
+		'shopping' 						=> 'History',
+		'restaurants' 					=> 'History',
+		'nightlife' 					=> 'History',
+		'city-events' 					=> 'History',
+		'travel-to' 					=> 'History',
+		'hotels' 					=> 'History',
+		
+		'apres-ski' 					=> 'History',
+		
+		'airport-hotels' 				=> 'History',
+		
+    );
+
+							
+								echo '<br />RewriteRule ^'.$slug.'/unternehmungen '.$link.' [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/reisemoglichkeiten-vor-ort '.$link.'things-to-do/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/gesundheit '.$link.'health/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/nutzliche-informationen '.$link.'things-to-do/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/events '.$link.'events/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/essen-trinken '.$link.'food-and-drink/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/hotels '.$link.'region-hotels/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/reisepasse-visa '.$link.'passport-visa/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/feiertage '.$link.'public-holidays/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/wetter-klima-geographie '.$link.'weather-climate-geography [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/bildergalerie '.$link.'pictures/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/geld-duty-free '.$link.' money-duty-free/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/geschichte-sprache-kultur '.$link.'history-language-culture/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/geschaftsreisen-kommunikation '.$link.'business-communications/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/shopping-nachtleben '.$link.'shopping-nightlife/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/anreise '.$link.'travel-by/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.' '.$link.' [L,R=302]';
+//								echo '<br />RewriteRule ^'.$slug.'([a-zA-Z0-9_-]+)?$ '.$link.'$1 [L,R=302]';
+							endwhile;
+						endif;
+
+}
+
+
+function wtg_city_redirects()
+{
+	global $wpdb;
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'city',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = true;
+						if($postsQuery->have_posts()):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								$pID = get_the_ID();
+								$pParentID = wp_get_post_parent_id( $pID ); 
+								$link = get_the_permalink();
+								$title = get_the_title();
+								$slug = basename(get_permalink());
+								echo '<br />RewriteRule ^'.$slug.'/wetter '.$link.'weather/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/events '.$link.'city-events/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/restaurants '.$link.'restaurants/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/events '.$link.'events/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/nachtleben '.$link.'nightlife/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/stadtverkehr '.$link.'gettingaround/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/einkaufen '.$link.'shopping/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/hotels '.$link.'hotels/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/touren-ausfluge '.$link.'tours-excursions/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/geschichte '.$link.'history/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.'/reisen-nach '.$link.'travel-to/ [L,R=302]';
+								echo '<br />RewriteRule ^'.$slug.' '.$link.' [L,R=302]';
+								
+//								echo '<br />RewriteRule ^'.$slug.'([a-zA-Z0-9_-]+)?$ '.$link.'$1 [L,R=302]';
+							endwhile;
+						endif;
+
+}
+
+function wtg_airport_redirects()
+{
+	global $wpdb;
+
+							$aargs = array(
+							'post_type'             => 'guides',
+							'posts_per_page' 		=> -1,
+							'order' 		=> 'ASC',
+							'orderby'       => 'title',
+							'tax_query'             => array(
+								array(
+											  'taxonomy' => 'wtg_guide_type',
+											  'field'    => 'slug',
+											  'terms'    => 'airport',
+											 
+								),
+							),
+						);
+							
+						$postsQuery = new WP_Query($aargs);
+						$count = 0;
+						$result = true;
+						if($postsQuery->have_posts()):
+							while ($postsQuery->have_posts()):
+								$postsQuery->the_post();								
+								$pID = get_the_ID();
+								$pParentID = wp_get_post_parent_id( $pID );
+								if ($pParentID) { $pParentID1  = wp_get_post_parent_id( $pParentID ); }
+								if ($pParentID1) { $pParentID2  = wp_get_post_parent_id( $pParentID1 ); $pParentID = $pParentID1;}
+								if ($pParentID2) { $pParentID3  = wp_get_post_parent_id( $pParentID2 ); $pParentID = $pParentID2;}
+								if ($pParentID3) {$pParentID = $parentID3;}
+								$link = get_the_permalink();
+								$title = get_the_title();
+								$slug = basename(get_permalink());
+								$region = basename(get_permalink($pParentID));
+								echo '<br />RewriteRule '.$region.'/'.$slug.' '.$link.' [L,R=302]';
+							endwhile;
+						endif;
+
+}
+
+?>

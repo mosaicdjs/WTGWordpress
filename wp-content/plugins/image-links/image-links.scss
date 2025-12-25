@@ -1,0 +1,226 @@
+/**
+ * This is an SCSS file which needs to be compiled into CSS before use.
+ * See readme.txt for details on how to customise this.
+ */
+$mha-grid-gutter-width : 30px !default;
+$mha-screen-sm: 768px !default;
+$mha-screen-md: 992px !default;
+$mha-screen-lg: 1200px !default;
+$mha-image-links-caption-text-color: #FFFFFF !default;
+$mha-image-links-caption-shadow-color: #000000 !default;
+$mha-image-links-caption-background-base-color: #000000 !default;
+
+
+.mha-image-link-grid {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.mha-image-link-wrapper {
+  display: inline-block;
+  margin-bottom: ($mha-grid-gutter-width / 2);
+  width: 100%;
+
+  .mha-image-link-grid-columns-xs-1 & {
+    width: 100%;
+  }
+
+  .mha-image-link-grid-columns-xs-2 & {
+    width: 49%;
+  }
+
+  .mha-image-link-grid-columns-xs-3 & {
+    width: 32%;
+  }
+
+  .mha-image-link-grid-columns-xs-4 & {
+    width: 23%;
+  }
+
+  @media screen and (min-width: $mha-screen-sm) {
+    .mha-image-link-grid-columns-sm-1 & {
+      width: 100%;
+    }
+
+    .mha-image-link-grid-columns-sm-2 & {
+      width: 49%;
+    }
+
+    .mha-image-link-grid-columns-sm-3 & {
+      width: 32%;
+    }
+
+    .mha-image-link-grid-columns-sm-4 & {
+      width: 23%;
+    }
+  }
+
+  @media screen and (min-width: $mha-screen-md) {
+    .mha-image-link-grid-columns-md-1 & {
+      width: 100%;
+    }
+
+    .mha-image-link-grid-columns-md-2 & {
+      width: 49%;
+    }
+
+    .mha-image-link-grid-columns-md-3 & {
+      width: 32%;
+    }
+
+    .mha-image-link-grid-columns-md-4 & {
+      width: 23%;
+    }
+  }
+
+  @media screen and (min-width: $mha-screen-lg) {
+    .mha-image-link-grid-columns-lg-1 & {
+      width: 100%;
+    }
+
+    .mha-image-link-grid-columns-lg-2 & {
+      width: 49%;
+    }
+
+    .mha-image-link-grid-columns-lg-3 & {
+      width: 32%;
+    }
+
+    .mha-image-link-grid-columns-lg-4 & {
+      width: 23%;
+    }
+  }
+
+}
+
+.mha-image-link {
+  display: inline-block;
+  font-size: 14px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  // Reset Styles - set some styles so they are not intereferred with by inheritence
+  a:link,
+  a:hover,
+  a:active,
+  a:visited {
+    color: inherit; // let them take their colour from the paragraph we put them in
+    font-size: inherit;
+    text-decoration: inherit;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+  // Width/Height Ratio. http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+  &:before{
+    content: '';
+    display: block;
+    margin-top: 100%; // Equal width and height
+  }
+  // End Height Ratio.
+  .image-link-image {
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .caption {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    color: $mha-image-links-caption-text-color;
+    text-shadow: $mha-image-links-caption-shadow-color 0 0 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color .5s;
+
+    .text {
+      font-size: 20px;
+      margin: 0; // Remove the default <p> margin
+      padding: $mha-grid-gutter-width / 4;
+      background-color: rgba($mha-image-links-caption-background-base-color, .5);
+      transition: background-color .5s;
+
+      @media screen and (min-width: 375px) {
+        font-size: 22px;
+      }
+
+      @media screen and (min-width: $mha-screen-sm) {
+        padding: $mha-grid-gutter-width / 2;
+        font-size: 32px;
+      }
+
+      @media screen and (min-width: $mha-screen-lg) {
+        font-size: 40px;
+      }
+    }
+
+    .subtext {
+      margin: 0; // Remove the default <p> margin
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: $mha-grid-gutter-width / 4;
+      font-size: 10px;
+
+      @media screen and (min-width: 375px) {
+        font-size: 13px;
+      }
+
+      @media screen and (min-width: $mha-screen-sm) {
+        padding: $mha-grid-gutter-width / 2;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/**
+ * When the image link is hovered over, fade away the image.
+ *
+ * @type {[type]}
+ */
+.mha-image-link:hover {
+  // On hover, fade the whole image (and remove the fading from the text
+  // so it's not double-faded and super dark)
+  .text {
+    background-color: transparent;
+  }
+  .caption {
+    background-color: rgba($mha-image-links-caption-background-base-color, .5);
+  }
+}
+
+/**
+ * On Full Style image links remove the background fading from the text
+ * and add it only to the caption.
+ */
+.mha-image-link.full {
+  .text {
+    background-color: transparent;
+  }
+  .caption {
+    background-color: rgba($mha-image-links-caption-background-base-color, .5);
+    height: 100%;
+    margin: 0;
+    top: 0;
+    width: 100%;
+  }
+}

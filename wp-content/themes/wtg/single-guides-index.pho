@@ -1,0 +1,285 @@
+<?php
+//add_action('singleGuides', 'wtg_main_carousel', 10);
+
+
+/*$postid = get_the_ID();
+	//echo $postid;
+	$carousel_images = get_gallery_attachments($postid, 'home_carousel');
+
+
+display_carousel('myCarousel',$carousel_images,'full',true,false, $postid);*/
+$postid = get_the_ID();
+$guideTerms = get_the_terms($postid,'wtg_guide_type');
+
+$guideType = $guideTerms[0]->slug;
+	
+switch ($guideType) {
+	case 'city':
+		//wtg_city_landing($postid);
+		wtg_city_landing_xml($postid);
+		break;
+	
+	case 'region':
+		//wtg_region_landing($postid);
+		wtg_region_landing_xml($postid);
+		break;
+	
+	case 'airport':
+		wtg_airport_landing_xml($postid);
+		//wtg_airport_landing($postid);
+		break;
+	
+	case 'beach-resort':
+		wtg_beach_landing($postid);
+		break;
+	
+	case 'cruise':
+		wtg_cruise_landing($postid);
+		break;
+	
+	case 'ski-resort':
+		wtg_ski_landing_xml($postid);
+		// wtg_ski_landing($postid);
+		break;
+	
+	default :
+		break;
+}
+
+function wtg_ski_landing_xml($postid)
+{
+	$title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+	$language = get_field('language','options');
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/source-data/ski_resorts-full-'.$language.'.xml';
+	$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/ski/ski-overview.xsl';
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+	$xslt->importStylesheet($xsl);
+	
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//SkiResort');
+
+    if (!is_null($elements)) {
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+			if($legacy_id == $nid){
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+
+				print $xslt->transformToXML($region_Doc);
+			}
+		}
+	}
+}
+
+function wtg_airport_landing_xml($postid)
+{
+	$title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+	$language = get_field('language','options');
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/filtered/airports-full-'.$language.'.xml';
+	$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/airport/airport-overview.xsl';
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+	$xslt->importStylesheet($xsl);
+
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//Airport');
+
+    if (!is_null($elements)) {
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+			if($legacy_id == $nid){
+
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+
+				print $xslt->transformToXML($region_Doc);
+			}
+		}
+	}
+}
+
+function wtg_city_landing_xml($postid)
+{
+	$title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+	$language = get_field('language','options');
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/filtered/cities-full-'.$language.'.xml';
+	$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/city/city-overview.xsl';
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+	$xslt->importStylesheet($xsl);
+
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//City');
+
+    if (!is_null($elements)) {
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+			if($legacy_id == $nid){
+
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+
+				print $xslt->transformToXML($region_Doc);
+			}
+		}
+	}
+}
+
+
+function wtg_region_landing_xml($postid)
+{
+	$title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+	$language = get_field('language','options');
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/filtered/regions-full-'.$language.'.xml';
+	$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-overview.xsl';
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+	$xslt->importStylesheet($xsl);
+
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//Region');
+
+    if (!is_null($elements)) {
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+			if($legacy_id == $nid){
+
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+
+				print $xslt->transformToXML($region_Doc);
+			}
+		}
+	}
+
+}
+
+
+
+function wtg_ski_landing($postid)
+{
+	$title = get_the_title($postid);
+	$intro = apply_filters('the_content', get_post_meta($postid, 'ski_overview_introduction',true));
+	$location = apply_filters('the_content', get_post_meta($postid, 'ski_overview_location',true));
+	$website = get_post_meta($postid, 'ski_overview_website',true);
+	$hittheslope = apply_filters('the_content', get_post_meta($postid, 'ski_hit_the_slope',true));
+	
+	
+	echo "<h1 itemprop='headline'>$title ski resort</h1>
+			<div itemprop='text'>
+			<h2>About $title</h2>
+			
+			<h3>Introduction</h3>
+			$intro
+			<h3>Location</h3>
+			$location
+			<h3>Website</h3>
+			<a href='$website'>$website</a>
+			
+			<h2>On the slopes</h2>
+			$hittheslope
+			<h2>Average snow depth in $title</h2>
+			<h2>Historical snow depth in $title</h2>
+			</div>
+	";
+}
+
+function wtg_cruise_landing($postid)
+{
+	$intro = apply_filters('the_content', get_post_meta($postid, 'cruise_overview',true));
+	$sight = apply_filters('the_content', get_post_meta($postid, 'cruise_sightseeing',true));
+	$info = apply_filters('the_content', get_post_meta($postid, 'cruise_tourism_info_centers',true));
+	$shop = apply_filters('the_content', get_post_meta($postid, 'cruise_shopping',true));
+	$rest = apply_filters('the_content', get_post_meta($postid, 'cruise_restaurants',true));
+	$when = apply_filters('the_content', get_post_meta($postid, 'cruise_whentogo',true));
+	$near = apply_filters('the_content', get_post_meta($postid, 'cruise_nearestdestination',true));
+	$transfer = apply_filters('the_content', get_post_meta($postid, 'cruise_transferdistance',true));
+	$ttime = apply_filters('the_content', get_post_meta($postid, 'cruise_transfertime',true));
+	
+
+	?>
+	<h1 itemprop="headline">About <?php echo get_the_title($postid);?></h1>
+	<div itemprop="text">
+	<?php echo $intro;?>
+	<h3>Sightseeing:</h3>
+	<?php echo $sight;?>
+	<h3>Tourist information:</h3>
+	<?php echo $info;?>
+	<h3>Shopping introduction:</h3>
+	<?php echo $shop;?>
+	<h3>Restaurants:</h3>
+	<?php echo $rest;?>
+	<h3>When to go:</h3>
+	<?php echo $when;?>
+	<h3>Nearest destination:</h3>
+	<?php echo $near;?>
+	<h3>Transfer distance:</h3>
+	<?php echo $transfer;?>
+	<h3>Transfer time:</h3>
+	<?php echo $ttime;?>
+	</div>
+<?php
+}
+
+function wtg_beach_landing($postid)
+{
+	$intro = apply_filters('the_content', get_post_meta($postid, 'overview_introduction',true));
+	$beach = apply_filters('the_content', get_post_meta($postid, 'overview_beach',true));
+	$beyond = apply_filters('the_content', get_post_meta($postid, 'overview_beyond_the_beach',true));
+	$familiy = apply_filters('the_content', get_post_meta($postid, 'overview_family_fun',true));
+	$further = apply_filters('the_content', get_post_meta($postid, 'overview_exploring_further',true));
+	$splash = apply_filters('the_content', get_post_meta($postid, 'overview_splashing_out',true));
+
+	?>
+	<h1 itemprop="headline">About <?php echo get_the_title($postid);?></h1>
+	<div itemprop="text">
+	<?php echo $intro;?>
+	<h3>Beach:</h3>
+	<?php echo $beach;?>
+	<h3>Beyond the beach:</h3>
+	<?php echo $beyond;?>
+	<h3>Family fun:</h3>
+	<?php echo $familiy;?>
+	<h3>Exploring further:</h3>
+	<?php echo $further;?>
+<!--	<h3>Splashing out:</h3> -->
+	<?php //echo $splash;
+	?></div><?php
+	
+}
+
+
+

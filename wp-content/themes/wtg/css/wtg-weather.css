@@ -1,0 +1,234 @@
+.weather-widget { /*weather widget container*/
+	border:1px solid #d9d9d9;
+	padding:10px 0 10px 0;
+	/*margin:0 0 15px 0;*/
+	margin:0;
+	background:url(../images/widgetBg.gif) repeat-x bottom left;
+	float:left;
+	width:134px;
+	position:relative;
+}
+
+#search-results .weather-widget {margin:0 0 10px 0;}
+#fullWidthHeroAreaSidebar .weather-widget {width:153px}
+
+.weather-widget h2 {
+	display:block;
+	margin:0px 10px 0 0;
+	padding:0px;
+	text-align:center;
+	font-style:italic;
+	font-size:1.1em;
+}
+ 
+.weather-widget .views-field-country {display:none;}
+
+.weatherIcon {
+	/*float:left;*/
+	width:66px;
+	height:66px;
+	text-indent:-9999px;
+	margin:0 auto;
+}
+
+
+td.views-field-wind-dir{
+    padding-left:15px;  
+}
+
+.block-block-weather-7day-weather .views-field-overhead,
+.block-block-weather-7day-weather .views-field-overhead-icon,
+#search-results .weather-widget .views-field-overhead,
+#search-results .weather-widget .views-field-overhead-icon,
+.view-weather-ski .views-field-overhead,
+.view-weather-ski .views-field-overhead-icon 
+{float:left; width:66px;}
+
+.block-block-weather-7day-weather .views-field-day-max,
+#search-results .weather-widget .views-field-day-max,
+.view-weather-ski .views-field-base-temp
+{float:left; width:66px;}
+
+.weatherIconWrapper {
+	display:inline-block;
+	width:66px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.views-table td{
+    text-align:center;
+}
+
+.weatherIconWithDescription {
+	text-align:center;
+	width:66px;
+}
+ 
+.weatherIcon.Cloudy {background:url(../images/weather-sprite.png) no-repeat 0px 7px; width:60px; height:50px;}
+.weatherIcon.PartlyCloudyDay {background:url(../images/weather-sprite.png) no-repeat -60px 3px; height:55px;}
+.weatherIcon.PartlyCloudyNight {background:url(../images/weather-sprite.png) no-repeat -136px 13px; height:55px;}
+.weatherIcon.Sunny {background:url(../images/weather-sprite.png) no-repeat -200px 5px; height:52px; width:55px;}
+.weatherIcon.Clear {background:url(../images/weather-sprite.png) no-repeat -200px 5px; height:52px; width:55px;}
+.weatherIcon.Overcast {background:url(../images/weather-sprite.png) no-repeat -287px -0px; height:40px; width:60px;}
+.weatherIcon.HeavyRain {background:url(../images/weather-sprite.png) no-repeat -349px -1px; height:45px; width:55px;}
+.weatherIcon.ModRain {background:url(../images/weather-sprite.png) no-repeat -405px 10px; height:55px;}
+.weatherIcon.OccLightRain {background:url(../images/weather-sprite.png) no-repeat -60px -52px; height:56px;}
+.weatherIcon.IsoRainSwrsDay {background:url(../images/weather-sprite.png) no-repeat -61px -53px; height:56px;}
+.weatherIcon.IsoRainSwrsNight {background:url(../images/weather-sprite.png) no-repeat -413px -50px; height:56px;}
+.weatherIcon.ModRainSwrsDay {background:url(../images/weather-sprite.png) no-repeat -135px -48px;}
+.weatherIcon.ModRainSwrsNight {background:url(../images/weather-sprite.png) no-repeat -205px -48px;}
+.weatherIcon.HeavyRainSwrsDay {background:url(../images/weather-sprite.png) no-repeat -273px -48px;}
+.weatherIcon.HeavyRainSwrsNight {background:url(../images/weather-sprite.png) no-repeat -346px -52px;}
+.weatherIcon.HeavySnow {background:url(../images/weather-sprite.png) no-repeat -192px -225px; height:60px;}
+.weatherIcon.ModSnow {background:url(../images/weather-sprite.png) no-repeat -117px -116px; width:60px; height:50px;}
+.weatherIcon.OccLightSnow {background:url(../images/weather-sprite.png) no-repeat -240px -110px; height:55px;}
+.weatherIcon.IsoSnowSwrsDay {background:url(../images/weather-sprite.png) no-repeat -240px -111px; height:55px;}
+.weatherIcon.IsoSnowSwrsNight {background:url(../images/weather-sprite.png) no-repeat -125px -225px; height:55px;}
+.weatherIcon.CloudRainThunder {background:url(../images/weather-sprite.png) no-repeat -133px -282px; height:60px;}
+.weatherIcon.PartCloudSleetSnowThunderDay {background:url(../images/weather-sprite.png) no-repeat -3px -284px; height:55px;}
+.weatherIcon.PartCloudSleetSnowThunderNight {background:url(../images/weather-sprite.png) no-repeat -330px -224px; width:60px; height:55px;}
+.weatherIcon.PartCloudRainThunderDay {background:url(../images/weather-sprite.png) no-repeat -133px -282px; height:60px;}
+.weatherIcon.PartCloudRainThunderNight {background:url(../images/weather-sprite.png) no-repeat -205px -284px; height:55px;}
+.weatherIcon.IsoSleetSwrsDay {background:url(../images/weather-sprite.png) no-repeat -273px -167px; height:60px;}
+.weatherIcon.IsoSleetSwrsNight {background:url(../images/weather-sprite.png) no-repeat -148px -168px; height:60px;}
+.weatherIcon.OccLightSleet {background:url(../images/weather-sprite.png) no-repeat -415px -170px; width:65px; height:60px;}
+.weatherIcon.ModSleet {background:url(../images/weather-sprite.png) no-repeat 0px -230px; width:55px; height:50px;}
+.weatherIcon.ModSleetSwrsDay {background:url(../images/weather-sprite.png) no-repeat -2px -165px; width:68px; height:60px;}
+.weatherIcon.ModSleetSwrsNight {background:url(../images/weather-sprite.png) no-repeat -349px -165px; height:55px;}
+.weatherIcon.HeavySleet {background:url(../images/weather-sprite.png) no-repeat 2px -225px; width:65px; height:60px;}
+.weatherIcon.ModSnowSwrsDay {background:url(../images/weather-sprite.png) no-repeat -383px -110px; width:65px; height:60px;}
+.weatherIcon.ModSnowSwrsNight {background:url(../images/weather-sprite.png) no-repeat -126px -225px; width:65px; height:60px;}
+.weatherIcon.Fog {background:url(../images/weather-sprite.png) no-repeat -0px -390px; width:50px; height:20px;}
+.weatherIcon.FreezingFog {background:url(../images/weather-sprite.png) no-repeat -2px -338px; width:60px; height:40px;}
+.weatherIcon.Mist {background:url(../images/weather-sprite.png) no-repeat -5px -422px; width:46px; height:26px;}
+
+/*improve margins for small items in the weather widget box*/
+.weather-widget .weatherIcon.Fog {margin:20px 0 0 0;}
+.weather-widget .weatherIcon.FreezingFog {margin:10px 0 0 10px;}
+.weather-widget .weatherIcon.Mist {margin:15px 5px 0 15px;}
+.weather-widget .weatherIcon.PartCloudRainThunderDay {margin:6px 0 0 0;}
+.weather-widget .weatherIcon.ModSnow {margin:10px 0 0 0px;}
+.weather-widget .weatherIcon.Overcast {margin:10px 0 0 5px;}
+.weather-widget .weatherIcon.PartlyCloudyDay {margin:5px 0 0 0px;}
+.weather-widget .weatherIcon.HeavyRain {margin:10px 0 0 5px;}
+
+.textWeatherDescription { /*the the weather pages that have a description of the weather next to the icon*/
+	font-size:13px;
+	display:inline-block;
+	width:62px;
+	position:relative;
+	top:1px;
+	vertical-align:middle;
+}
+ 
+/*wind direction icons on weather pages*/
+.windDirectionIcon {width:46px; height:52px; position:relative; text-align:center;}
+.windSpeedIcon {height: 18px; left: 9px; position: absolute; top: 14px; width: 30px;}
+.windDirectionText {width:49px; text-align:center; text-transform:uppercase;}
+
+.wind-dir-n {background:url(../images/windIcons/1-n.png) no-repeat -6px top;}
+.wind-dir-nne {background:url(../images/windIcons/2-nne.png) no-repeat -6px top;}
+.wind-dir-ne {background:url(../images/windIcons/3-ne.png) no-repeat -6px top;}
+.wind-dir-ene {background:url(../images/windIcons/4-ene.png) no-repeat -6px top;}
+.wind-dir-e {background:url(../images/windIcons/5-e.png) no-repeat -6px top;}
+.wind-dir-ese {background:url(../images/windIcons/6-ese.png) no-repeat -6px top;}
+.wind-dir-se {background:url(../images/windIcons/7-se.png) no-repeat -6px top;}
+.wind-dir-sse {background:url(../images/windIcons/8-sse.png) no-repeat -7px top;}
+.wind-dir-s {background:url(../images/windIcons/9-s.png) no-repeat -6px top;}
+.wind-dir-ssw {background:url(../images/windIcons/10-ssw.png) no-repeat -6px top;}
+.wind-dir-sw {background:url(../images/windIcons/11-sw.png) no-repeat -6px top;}
+.wind-dir-wsw {background:url(../images/windIcons/12-wsw.png) no-repeat -6px top;}
+.wind-dir-w {background:url(../images/windIcons/13-w.png) no-repeat -6px top;}
+.wind-dir-wnw {background:url(../images/windIcons/14-wnw.png) no-repeat -6px top;}
+.wind-dir-nw {background:url(../images/windIcons/15-nw.png) no-repeat -6px top;}
+.wind-dir-nnw {background:url(../images/windIcons/16-nnw.png) no-repeat -6px top;}
+ 
+/********weather temps*********/
+	
+.views-field-day-max, /*for the normal temp*/
+.views-field-base-temp /*for the ski temp*/
+{
+	margin:15px 0 0 2px;
+	padding:0px;
+	height:41px;
+}
+.weather-widget .temperature {margin: 15px auto 0 auto; width: 55px;}
+
+.tempUnit { /*set a default image for temp*/
+
+	width:16px;
+	height:40px;
+    padding-left:25px;
+	margin:0 1px 0 0;
+	display:inline;
+}
+
+.tempDegrees {
+	display:inline;
+	width:18px;
+	height:35px;
+
+}
+
+.weather-widget .digit_minus {background:url(../images/numbers_temperature.jpg) no-repeat -7px -410px; width:9px}
+.weather-widget .digit_0 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -369px;}
+.weather-widget .digit_1 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -328px;}
+.weather-widget .digit_2 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -287px;}
+.weather-widget .digit_3 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -246px;}
+.weather-widget .digit_4 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -205px;}
+.weather-widget .digit_5 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -164px;}
+.weather-widget .digit_6 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -123px;}
+.weather-widget .digit_7 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -82px;}
+.weather-widget .digit_8 {background:url(../images/numbers_temperature.jpg) no-repeat -1px -41px;}
+.weather-widget .digit_9 {background:url(../images/numbers_temperature.jpg) no-repeat -1px 0px;}
+
+.cityWeatherHelpButton {
+	cursor:pointer;
+}
+
+.weatherGreyIcon {
+	display:inline-block;
+	width:66px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.weatherGreyIcon.Cloudy {background:url(../images/weather-sprite-grey.png) no-repeat 0px 7px; width:60px; height:50px;}
+.weatherGreyIcon.PartlyCloudyDay {background:url(../images/weather-sprite-grey.png) no-repeat -60px 3px; height:55px;}
+.weatherGreyIcon.PartlyCloudyNight {background:url(../images/weather-sprite-grey.png) no-repeat -136px 13px; height:55px;}
+.weatherGreyIcon.Sunny {background:url(../images/weather-sprite-grey.png) no-repeat -200px 5px; height:52px; width:55px;}
+.weatherGreyIcon.Clear {background:url(../images/weather-sprite-grey.png) no-repeat -200px 5px; height:52px; width:55px;}
+.weatherGreyIcon.Overcast {background:url(../images/weather-sprite-grey.png) no-repeat -287px -0px; height:40px; width:60px;}
+.weatherGreyIcon.HeavyRain {background:url(../images/weather-sprite-grey.png) no-repeat -349px -1px; height:45px; width:55px;}
+.weatherGreyIcon.ModRain {background:url(../images/weather-sprite-grey.png) no-repeat -405px 10px; height:55px;}
+.weatherGreyIcon.OccLightRain {background:url(../images/weather-sprite-grey.png) no-repeat -60px -52px; height:56px;}
+.weatherGreyIcon.IsoRainSwrsDay {background:url(../images/weather-sprite-grey.png) no-repeat -61px -53px; height:56px;}
+.weatherGreyIcon.IsoRainSwrsNight {background:url(../images/weather-sprite-grey.png) no-repeat -413px -50px; height:56px;}
+.weatherGreyIcon.ModRainSwrsDay {background:url(../images/weather-sprite-grey.png) no-repeat -135px -48px;}
+.weatherGreyIcon.ModRainSwrsNight {background:url(../images/weather-sprite-greypng) no-repeat -205px -48px;}
+.weatherGreyIcon.HeavyRainSwrsDay {background:url(../images/weather-sprite-grey.png) no-repeat -273px -48px;}
+.weatherGreyIcon.HeavyRainSwrsNight {background:url(../images/weather-sprite-grey.png) no-repeat -346px -52px;}
+.weatherGreyIcon.HeavySnow {background:url(../images/weather-sprite-grey.png) no-repeat -192px -225px; height:60px;}
+.weatherGreyIcon.ModSnow {background:url(../images/weather-sprite-grey.png) no-repeat -117px -116px; width:60px; height:50px;}
+.weatherGreyIcon.OccLightSnow {background:url(../images/weather-sprite-grey.png) no-repeat -240px -110px; height:55px;}
+.weatherGreyIcon.IsoSnowSwrsDay {background:url(../images/weather-sprite-grey.png) no-repeat -240px -111px; height:55px;}
+.weatherGreyIcon.IsoSnowSwrsNight {background:url(../images/weather-sprite-grey.png) no-repeat -125px -225px; height:55px;}
+.weatherGreyIcon.CloudRainThunder {background:url(../images/weather-sprite-grey.png) no-repeat -133px -282px; height:60px;}
+.weatherGreyIcon.PartCloudSleetSnowThunderDay {background:url(../images/weather-sprite-grey.png) no-repeat -3px -284px; height:55px;}
+.weatherGreyIcon.PartCloudSleetSnowThunderNight {background:url(../images/weather-sprite-grey.png) no-repeat -330px -224px; width:60px; height:55px;}
+.weatherGreyIcon.PartCloudRainThunderDay {background:url(../images/weather-sprite-grey.png) no-repeat -133px -282px; height:60px;}
+.weatherGreyIcon.PartCloudRainThunderNight {background:url(../images/weather-sprite-grey.png) no-repeat -205px -284px; height:55px;}
+.weatherGreyIcon.IsoSleetSwrsDay {background:url(../images/weather-sprite-grey.png) no-repeat -273px -167px; height:60px;}
+.weatherGreyIcon.IsoSleetSwrsNight {background:url(../images/weather-sprite-grey.png) no-repeat -148px -168px; height:60px;}
+.weatherGreyIcon.OccLightSleet {background:url(../images/weather-sprite-grey.png) no-repeat -415px -170px; width:65px; height:60px;}
+.weatherGreyIcon.ModSleet {background:url(../images/weather-sprite-grey.png) no-repeat 0px -230px; width:55px; height:50px;}
+.weatherGreyIcon.ModSleetSwrsDay {background:url(../images/weather-sprite-grey.png) no-repeat -2px -165px; width:68px; height:60px;}
+.weatherGreyIcon.ModSleetSwrsNight {background:url(../images/weather-sprite-grey.png) no-repeat -349px -165px; height:55px;}
+.weatherGreyIcon.HeavySleet {background:url(../images/weather-sprite-grey.png) no-repeat 2px -225px; width:65px; height:60px;}
+.weatherGreyIcon.ModSnowSwrsDay {background:url(../images/weather-sprite-grey.png) no-repeat -383px -110px; width:65px; height:60px;}
+.weatherGreyIcon.ModSnowSwrsNight {background:url(../images/weather-sprite-grey.png) no-repeat -126px -225px; width:65px; height:60px;}
+.weatherGreyIcon.Fog {background:url(../images/weather-sprite-grey.png) no-repeat -0px -390px; width:50px; height:20px;}
+.weatherGreyIcon.FreezingFog {background:url(../images/weather-sprite-grey.png) no-repeat -2px -338px; width:60px; height:40px;}
+.weatherGreyIcon.Mist {background:url(../images/weather-sprite-grey.png) no-repeat -5px -422px; width:46px; height:26px;}
+

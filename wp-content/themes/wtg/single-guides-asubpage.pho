@@ -1,0 +1,87 @@
+<?php
+
+$current_fp = get_query_var('fpage');
+//echo $current_fp.'<br/>';
+$postid = get_the_ID();
+//echo $postid;
+
+switch ($current_fp) {
+    case 'airport-hotels' :
+        //wtg_ahotels($postid);
+        wtg_ahotels_xml($postid);
+        break;
+    
+}
+
+function wtg_ahotels_xml($postid)
+{
+    $title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+	$language = get_field('language','options');
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/filtered/airports-full-'.$language.'.xml';
+	$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/airport/airport-hotels.xsl';
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+	$xslt->importStylesheet($xsl);
+	//$xslt->setParameter(NULL, 'id', $lagacy_id);
+	//print $xslt->transformToXML($dom);
+	
+	
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//Airport');
+
+    if (!is_null($elements)) {
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+			if($legacy_id == $nid){
+				//print $xslt->transformToXML($element);
+				//print $element;
+				//echo $element->saveHTML();
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+				
+				//overview
+                //$content_tag = $regionpath->query("//Content/Overview/Overview");
+                //$content = trim($content_tag->item(0)->nodeValue);
+				print $xslt->transformToXML($region_Doc);
+				//echo $content;
+			}
+		}
+	}
+}
+
+
+function wtg_ahotels($postID)
+{
+    $title = get_the_title($postID);
+    $hotels = apply_filters('the_content', get_post_meta($postID, 'city_hotels', true));
+    ?><h1><?php echo $title;?> Hotels</h1><?php
+    echo $hotels;
+    if ( have_rows('airport_hotels', $postID)):
+        while (have_rows('airport_hotels', $postID)) :the_row();
+            $name = get_sub_field('title',$postID);
+            $body = get_sub_field('body',$postID);
+            $cat = get_sub_field('hotel_type',$postID);
+            $thorough = get_sub_field('address_1',$postID);
+            $hood = get_sub_field('address_2',$postID);
+            $locality = get_sub_field('city',$postID);
+            $subAdmin = get_sub_field('sub_admin_area',$postID);
+            $admin = get_sub_field('admin_area',$postID);
+            $postcode = get_sub_field('postcode',$postID);
+            $country = get_sub_field('country',$postID);
+            $tel = get_sub_field('telephone',$postID);
+            $website = get_sub_field('website',$postID);
+            
+            echo '<h4>'.$name.'</h4>';
+            echo '<span><b>Tel:</b> '.$tel.' | <b>Website:</b> '.$website.'</span>';
+            echo $body.'<br/>';
+        endwhile;
+    endif;
+}

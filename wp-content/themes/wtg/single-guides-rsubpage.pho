@@ -1,0 +1,1053 @@
+<?php
+$current_fp = get_query_var('fpage');
+//echo $current_fp.'<br/>';
+$postid = get_the_ID();
+//echo $postid;
+$title = get_the_title($postid);
+$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+$language = get_field('language','options');
+$dom  = new DOMDocument;
+$xmlpath = '/var/www/columbus-xml/filtered/regions-full-'.$language.'.xml';
+$xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-overview.xsl';
+echo '<h1 style="display:none"> the fp is '.$current_fp;
+switch ($current_fp) {
+    case 'history-language-culture' :
+        //wtg_rhistory($postid)
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-histlang.xsl';
+		// if ($language == 'de') {$xslpath = '/wtg-data-sync/templates-'.$language.'/region/region-histlang.xsl';}
+
+        break;
+    case 'weather-climate-geography' :
+        //wtg_rweather($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-weather.xsl';
+        break;
+    case 'business-communications' :
+        //wtg_rbusiness($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-business.xsl';
+        break;
+    case 'pictures' :
+    case 'videos' :
+    case 'image-gallery' :
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-gallery.xsl';
+        break;
+    case 'travel-by' :
+        //wtg_rtravelto($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-travelto.xsl';
+        break;
+    case 'region-hotels' :
+        //wtg_rwheretostay($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-wherestay.xsl';
+        break;
+    case 'passport-visa' :
+        //wtg_rpassportvisa($postid);
+        //visa_central_promo_bottom();
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-passvisa.xsl';
+        break;
+    case 'health' :
+        //wtg_rhealth($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-health.xsl';
+        break;
+    case 'public-holidays' :
+        //wtg_rpublicholidays($postid);
+	echo '<style>i display:none</style>';
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-pubhols.xsl';
+        break;
+    case 'money-duty-free' :
+        //wtg_rmoney($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-money.xsl';
+        break;
+ 	case 'geld-duty-free':
+        //wtg_rmoney($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-money.xsl';
+ 
+    case 'things-to-do' :
+        //wtg_region_important_addresses($postid);
+        //wtg_must_see($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-thingsdo.xsl';
+        break;
+    case 'shopping-nightlife' :
+        //wtg_rshopping($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-shopnight.xsl';
+        break;
+    case 'food-and-drink' :
+        //wtg_rfooddrink($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-fooddrink.xsl';
+        break;
+    case 'getting-around' :
+        //wtg_rgettingaround($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-gettingaround.xsl';
+        break;
+    case 'events' :
+        //wtg_revents($postid);
+        $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-'.$language.'/region/region-events.xsl';
+        break;
+}
+
+$dom->load($xmlpath);
+
+$xp    = new DOMXPath($dom);
+$elements = $xp->query('//Region');
+
+$xsl  = new DOMDocument;
+$xsl->load($xslpath);
+$xslt = new XSLTProcessor();
+$xslt->importStylesheet($xsl);
+//$xslt->setParameter(NULL, 'id', $lagacy_id);
+//print $xslt->transformToXML($dom);
+
+if($current_fp=='passport-visa'){
+   // visa_central_promo_top();
+}
+
+if (!is_null($elements)) {
+    foreach ($elements as $element) {
+        $title = $element->getAttribute('title');
+        $nid = $element->getAttribute('nid');
+        if($legacy_id == $nid){
+            //print $xslt->transformToXML($element);
+            //print $element;
+            //echo $element->saveHTML();
+            $region_Doc = new DOMDocument();
+            $cloned = $element->cloneNode(TRUE);
+            $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+            $regionpath = new DOMXPath($region_Doc);
+            
+            //overview
+            //$content_tag = $regionpath->query("//Content/Overview/Overview");
+            //$content = trim($content_tag->item(0)->nodeValue);
+            print $xslt->transformToXML($region_Doc);
+            //echo $content;
+        }
+    }
+}
+
+if($current_fp=='passport-visa'){
+   // visa_central_promo_bottom();
+}
+
+wtg_guide_MPU();
+
+
+function wtg_must_see($postID)
+{
+    $title = get_the_title($postID);
+    ?><h2>Attractions in <?php echo $title;?></h2><?php
+    
+    if ( have_rows('must_see', $postID)):
+        while (have_rows('must_see', $postID)) :the_row();
+            $name = get_sub_field('must_see_title',$postID);
+            $body = get_sub_field('must_see_body',$postID);
+            if(!empty($name)){
+                echo '<h4>'.$name.'</h4>';
+                echo $body.'<br/>';
+            }
+
+            //echo'<b>Address:</b>  '.$address.'<br/>';
+            // echo'<b>Tel:</b>  '.$tel.'<br/>';
+           //echo'<b>Opening Hours:</b>  '.$open.'<br/>';
+           // echo'<b>Website:</b>  '.$website.'<br/><br/>';
+            
+            
+        endwhile;
+    endif;
+}
+
+
+function wtg_region_important_addresses($postID)
+{
+    
+    $html = '';
+    $index = 0;
+    $title = get_the_title($postID);
+    if ( have_rows('city_tourist_information_centres', $postID)):
+        while (have_rows('city_tourist_information_centres', $postID)) :the_row();
+            //$name       = get_sub_field('tourist_centre_name');
+            //$toa1       = get_sub_field('tourist_centre_thoroughfare');
+            //$toa2       = get_sub_field('tourist_centre_neighborhood');
+            //$toa3       = get_sub_field('tourist_centre_locality');
+            //$body       = get_sub_field('tourist_centre_body');
+            //$website    = get_sub_field('tourist_centre_website');
+            //$totele     = get_sub_field('tourist_centre_telephone');
+            //$toopen     = get_sub_field('tourist_centre_opening_times');// it turns out i cannot spell tourist :P
+            $name_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_name';
+            $name       = get_post_meta($postID, $name_string, true);
+            
+            $body_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_body';
+            $body       = get_post_meta($postID, $body_string, true);
+            $opening_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_opening_times';
+            $opening       = get_post_meta($postID, $opening_string, true);
+            
+            $thoroughfare_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_thoroughfare';
+            $toa1      = get_post_meta($postID, $thoroughfare_string, true).', ';
+            if(!empty($toa1)){
+                $toa1t = $toa1; 
+            }
+            
+            $neighborhood_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_neighborhood';
+            $toa2      = get_post_meta($postID, $neighborhood_string, true);
+            
+            $locality_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_locality';
+            $toa3      = get_post_meta($postID, $locality_string, true);
+            
+            $country_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_country';
+            $toa4     = get_post_meta($postID, $country_string, true);
+            
+            $website_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_website';
+            $website       = get_post_meta($postID, $website_string, true);
+            $website_tidy = str_replace('http://','',$website);
+            
+            $tele_string = 'city_tourist_information_centres_'.$index.'_tourist_centre_telephone';
+            $tele       = get_post_meta($postID, $tele_string, true);
+            
+            //$body       = get_sub_field('tourist_centre_body');
+            //$website    = get_sub_field('tourist_centre_website');
+            //$totele     = get_sub_field('tourist_centre_telephone');
+            //$open     = get_sub_field('tourist_centre_opening_times');// it turns out i cannot spell tourist :P
+            
+            
+            $toaddress = $toa1t.$toa2.', '.$toa3.', '.$toa4;
+               // get_sub_field('country',$postID).', '.
+                //get_sub_field('postcode',$postID);http://schema.org/TouristInformationCenter
+                
+            if (!empty($name)&&!empty($website)){
+                $html .= '<section itemscope itemtype="http://schema.org/TouristInformationCenter">';
+                    $html .= '<h4 itemprop="name">'.$name.'</h4>';
+                    $html .= '<div itemprop="description">'.$body.'</div>';
+                    $html .= '<div><b>Address: </b><span>'.$toaddress.'</span></div>';
+                    $html .= '<div><b>Tel: </b><span itemprop="telephone">'.$tele.'</span></div>';
+                    //$html .= '<b>Opening Hours:</b>  '.$open.'<br/>';
+                    $html .= '<div><b>Website: </b><a itemprop="url" href="'.$website.'">'.$website_tidy.'</a></div>';
+                    $html .= '<div><b>Opening times: </b><span itemprop="openingHours">'.$opening.'</span></div>';
+                $html .= '</section>';
+            }
+            
+            
+            $index++;
+        endwhile;
+    endif;
+    echo "<h1>Things to see & do in $title</h1>";
+    if(!empty($html)){
+        ?><h2>Tourist offices</h2><?php
+        echo $html;
+    
+    }
+
+}
+
+
+function wtg_rhistory($postID)
+{
+    $title = get_the_title($postID);
+    $history = apply_filters('the_content', get_post_meta($postID, 'region_history', true));
+    $religion = apply_filters('the_content', get_post_meta($postID, 'religion', true));
+    $social = apply_filters('the_content', get_post_meta($postID, 'social_conventions', true));
+    $language = apply_filters('the_content', get_post_meta($postID, 'language_info', true));
+    $phrases = apply_filters('the_content', get_post_meta($postID, 'phrases', true));
+    ?>
+    <h1><?php echo $title;?> History, Language and Culture</h1>
+    <h2>History of <?php echo $title;?></h2>
+    <?php echo $history;?>
+    <h2><?php echo $title;?> Culture</h2>
+    <h3>Religion</h3>
+    <?php echo $religion;?>
+    <h3>Social Conventions</h3>
+    <?php echo $social;?>
+    <h2>Language in <?php echo $title;?></h2>
+    <?php echo $language;
+    if(!empty($phrases)){
+        echo "<h2>Phrases</h2>$phrases";
+    }
+}
+
+function  wtg_rweather($postID)
+{
+    $title = get_the_title($postID);
+    $best = apply_filters('the_content', get_post_meta($postID, 'region_best_time_to_visit', true));
+    $clothing = apply_filters('the_content', get_post_meta($postID, 'required_clothing', true));
+    $geog = apply_filters('the_content', get_post_meta($postID, 'geography', true));
+    ?>
+    <h1><?php echo $title;?> Weather, climate and geography</h1>
+    <h2>Weather & climate</h2>
+    <h3>Best time to visit</h3>
+    <?php echo $best;?>
+    <?php if (!empty($clothing)){ echo "<h3>Required clothing</h3>$clothing";} ?>
+    <h2>Geography</h2>
+    <?php echo $geog;
+}
+
+function wtg_rbusiness($postID)
+{
+    $title = get_the_title($postID);
+    $etiquette = apply_filters('the_content', get_post_meta($postID, 'etiquette', true));
+    $officeHours = get_post_meta($postID, 'office_hours', true);
+    $economy = apply_filters('the_content', get_post_meta($postID, 'economy', true));
+    $gdp = get_post_meta($postID, 'business_gdp', true);
+    $mainExports = get_post_meta($postID, 'main_exports', true);
+    $mainImports = get_post_meta($postID, 'main_imports', true);
+    $mainTradePartners = get_post_meta($postID, 'main_trade_partners', true);
+    
+    $telephone = apply_filters('the_content', get_post_meta($postID, 'com_telephone', true));
+    $mobile = apply_filters('the_content', get_post_meta($postID, 'com_mobile_telephone', true));
+    $internet = apply_filters('the_content', get_post_meta($postID, 'com_internet', true));
+    $media = apply_filters('the_content', get_post_meta($postID, 'com_media', true));
+    $post = apply_filters('the_content', get_post_meta($postID, 'com_post', true));
+    $postOfice = apply_filters('the_content', get_post_meta($postID, 'com_postoffice_hours', true));
+    
+    ?>
+    <h1><?php echo $title;?>: Doing business & staying in touch</h1>
+    <h2>Doing Business in <?php echo $title;?></h2>
+    <?php echo $etiquette;?>
+    <h3>Office Hours</h3>
+    <?php echo $officeHours;?>
+    <h3>Economy</h3>
+    <?php echo $economy;?>
+    <h3>GDP</h3>
+    <?php echo $gdp;?>
+    <h3>Main exports</h3>
+    <?php echo $mainExports;?>
+    <h3>Main imports</h3>
+    <?php echo $mainImports;?>
+    <h3>Main trading partners</h3>
+    <?php echo $mainTradePartners;?>
+    <h2>Keeping in Touch in <?php echo $title;?></h2>
+    <h3>Telephone</h3>
+    <?php echo $telephone;?>
+    <h3>Mobile Phone</h3>
+    <?php echo $mobile;?>
+    <h3>Internet</h3>
+    <?php echo $internet;?>
+    <h3>Media</h3>
+    <?php echo $media;
+    if(!empty($flightTimes)){?>
+        <h3>Post</h3>
+        <?php echo $post;
+    }
+    if(!empty($flightTimes)){?>
+        <b>Post Office hours</b></br>
+        <?php echo $postOfice;
+    }
+}
+
+function wtg_rtravelto($postID)
+{
+    $title = get_the_title($postID);
+    $air = apply_filters('the_content', get_post_meta($postID, 'getting_there_air', true));
+    $flightTimes = get_post_meta($postID, 'getting_there_flight_times', true);
+    $airPasses = apply_filters('the_content', get_post_meta($postID, 'getting_there_air_passes', true));
+    $departureTax = get_post_meta($postID, 'getting_there_departure_tax', true);
+    $road  = apply_filters('the_content',get_post_meta($postID, 'getting_there_road', true));
+    $roadNote  = apply_filters('the_content',get_post_meta($postID, 'getting_there_road_notes', true));
+    $cruiseShips = apply_filters('the_content',get_post_meta($postID, 'getting_there_cruise_ships', true));
+    $ferryOperators = apply_filters('the_content',get_post_meta($postID, 'getting_there_ferry_operators', true));
+    $water  = apply_filters('the_content',get_post_meta($postID, 'getting_there_water', true));
+    $waterNote  = apply_filters('the_content',get_post_meta($postID, 'getting_there_water_note', true));
+    $rail = apply_filters('the_content',get_post_meta($postID, 'getting_there_rail', true));
+    $railPass  = apply_filters('the_content',get_post_meta($postID, 'getting_there_rail_passes', true));
+    $railNote  = apply_filters('the_content',get_post_meta($postID, 'getting_there_rail_note', true));
+    $cruises  = apply_filters('the_content',get_post_meta($postID, 'getting_there_cruises', true));
+    $river  = apply_filters('the_content',get_post_meta($postID, 'getting_there_river', true));
+    ?>
+    <h1>Travel to <?php echo $title;?></h1>
+    <?php
+    
+    if(!empty($air)){?>
+        <h2>Flying to <?php echo $title;?></h2>
+        <?php echo $air;
+        if(!empty($flightTimes)){?>
+            <h3>Flight times</h3>
+            <?php echo $flightTimes;
+        }
+        if(!empty($airPasses)){?>
+            <h3>Air passes</h3>
+            <?php echo $airPasses;
+        }
+        if(!empty($departureTax)){?>
+            <h3>Departure tax</h3>
+            <?php echo $departureTax;
+        }
+    }
+    if(!empty($rail)){?>
+        <h2>Travel by Rail</h2>
+        <?php echo $rail;
+        if(!empty($railPass)){?>
+            <h3>Rail passes</h3>
+            <?php echo $railPass;
+        }
+        if(!empty($railNote)){?>
+            <h3>Rail note</h3>
+            <?php echo $railNote;
+        }
+    }
+    if(!empty($road)){?>
+        <h2>Driving to <?php echo $title;?></h2>
+        <?php echo $road;
+        if(!empty($roadNote)){?>
+            <h3>Driving note</h3>
+            <?php echo $roadNote;
+        }
+    }
+    if(!empty($water)){?>
+        <h2>Getting to <?php echo $title;?> by boat</h2>
+        <?php echo $water;
+        if(!empty($ferryOperators)){?>
+        
+            <h3>Ferry Operators</h3>
+            <?php echo $ferryOperators;
+        }
+        
+        if(!empty($waterNote)){?>
+            <h3>Boat note</h3>
+            <?php echo $waterNote;
+        }
+        if(!empty($cruises)){?>
+            <h3>Cruises</h3>
+            <?php echo $cruises;
+        }
+        if(!empty($cruises)){?>
+            <h3>Cruise ships</h3>
+            <?php echo $cruiseShips;
+        }
+        
+        if(!empty($river)){?>
+            <h3>River routes</h3>
+            <?php echo $river;
+        }
+    }
+}
+
+function wtg_rwheretostay($postID)
+{
+    $title = get_the_title($postID);
+    $hotels = apply_filters('the_content', get_post_meta($postID, 'accommodation_hotels', true));
+    $bandb = apply_filters('the_content', get_post_meta($postID, 'accomodation_bed_and_breakfast', true));
+    $caravan = apply_filters('the_content',get_post_meta($postID, 'accommodation_camping_caravaning', true));
+    $other = apply_filters('the_content',get_post_meta($postID, 'accommodation_other', true));
+    
+    ?>
+    <h1>Where to stay in <?php echo $title;?></h1>
+    <h3>Hotels</h3>
+    <?php echo $hotels;
+    if(!empty($bandb)){?>
+        <h3>Bed and breakfast</h3>
+        <?php echo $bandb;
+    }
+    if(!empty($caravan)){?>
+        <h3>Camping</h3>
+        <?php echo $caravan;
+    }
+    if(!empty($other)){?>
+        <h3>Other accommodation</h3>
+        <?php echo $other;
+    }
+}
+
+function wtg_rpassportvisa($postID)
+{
+    $title = get_the_title($postID);
+    $passports = apply_filters('the_content', get_post_meta($postID, 'passports', true));
+    $visas = apply_filters('the_content', get_post_meta($postID, 'visas', true));
+    $visaNote = apply_filters('the_content',get_post_meta($postID, 'visa_note', true));
+    $visaTypes = apply_filters('the_content',get_post_meta($postID, 'visa_types_cost', true));
+    $validity = get_post_meta($postID, 'validity', true);
+    $transit = apply_filters('the_content', get_post_meta($postID, 'transit', true));
+    $appTo = get_post_meta($postID, 'application_to', true);
+    $tempRes = apply_filters('the_content', get_post_meta($postID, 'temporary_residence', true));
+    $workDays = get_post_meta($postID, 'working_days', true);
+    $extStay = apply_filters('the_content', get_post_meta($postID, 'extension_of_stay', true));
+    $entChild = apply_filters('the_content',get_post_meta($postID, 'entry_with_children', true));
+    $entPets = apply_filters('the_content',get_post_meta($postID, 'entry_with_pets', true));
+    ?>
+    
+    <h1 itemprop="headline" ><?php echo $title;?> Visa and Passport Requirements</h1>
+    <div itemprop="text">
+    <div>
+    <table class="guide-table">
+        <tr>
+            <th></th>
+            <th>Passport required</th>
+            <th>Return ticket required</th>
+            <th>Visa Required</th>
+        </tr>
+        <?php
+            $count = 0;
+            if ( have_rows('passport_table', $postID)):
+                while (have_rows('passport_table', $postID)) :the_row();
+                    $title = get_sub_field('passporttable_title',$postID);
+                    //$title = get_sub_field('passporttable_title');
+                    //$passRequired = get_sub_field('passporttable_pass_required');
+                    //$visaRequired = get_sub_field('passporttable_visa_required');
+                    //$tickRequired = get_sub_field('passporttable_ticket_required');
+                    
+                    //echo "<tr><td>$title</td><td>$passRequired</td><td>$visaRequired</td><td>$tickRequired</td></tr>";
+                    if (!empty($title)){
+                    ?><tr>
+                        <td><?php the_sub_field('passporttable_title');?></td>
+                        <td><?php the_sub_field('passporttable_pass_required');?></td>
+                        <td><?php the_sub_field('passporttable_ticket_required');?></td>
+                        <td><?php the_sub_field('passporttable_visa_required');?></td>
+                        
+                    </tr><?php
+                    }
+                    $count++;
+                endwhile;
+            else :
+                echo"no rows";
+            endif;
+            //echo "count is: $count | post id is: $postID</br>";
+            //print_r(the_field('passport_table'));
+        ?>
+    </table>
+    </div>
+    <?php
+    visa_central_promo_top();
+    
+    
+    ?>
+    <h3>Passports</h3>
+    <?php echo $passports;?>
+    <h3>Visas</h3>
+    <?php echo $visas;
+    if(!empty($visaNote)){?>
+        <h3>Visa Note<h3>
+        <?php echo $visaNote;
+    }
+    if(!empty($visaTypes)){?>
+        <h3>Types and Cost</h3>
+        <?php echo $visaTypes;
+    }
+    if(!empty($validity)){?>
+        <h3>Validity</h3>
+        <?php echo $validity;
+    }
+    if(!empty($transit)){?>
+        <h3>Transit</h3>
+        <?php echo $transit;
+    }
+    if(!empty($appTo)){?>
+        <h3>Application to</h3>
+        <?php echo $appTo;
+    }
+    if(!empty($tempRes)){?>
+        <h3>Temporary residence</h3>
+        <?php echo $tempRes;
+    }
+    if(!empty($workDays)){?>
+        <h3>Working days</h3>
+        <?php echo $workDays;
+    }
+    if(!empty($extStay)){?>
+        <h3>Extension of stay</h3>
+        <?php echo $extStay;
+    }
+    if(!empty($entChild)){?>
+        <h3>Entry with children</h3>
+        <?php echo $entChild;
+    }
+    if(!empty($entPets)){?>
+        <h3>Entry with pets</h3>
+        <?php echo $entPets;
+    }?>
+    <br/>
+    <b><i>Our visa and passport information is updated regularly and is correct at the time of publishing,<br/>
+    but critical information should be verified with the relevant embassy before travel.</i></b>
+    
+    <h2>Embassies and tourist offices</h2>
+    <?php
+    if ( have_rows('contact_address', $postID)):
+        while (have_rows('contact_address', $postID)) :the_row();
+            $name = get_sub_field('ca_name',$postID);
+            $tel = get_sub_field('ca_telephone',$postID);
+            $website = get_sub_field('ca_website',$postID);
+            $website_tidy = str_replace('http://', '', $website);
+            $opening = get_sub_field('ca_opening_times',$postID);
+            
+            //$address = '';
+            //if ( have_rows('ca_address', $postID)):
+                //while (have_rows('ca_address', $postID)) :the_row();
+                    $address = get_sub_field('ca_thoroughfare',$postID).', '.get_sub_field('ca_neighborhood',$postID).', '.get_sub_field('ca_a_city',$postID).', '.get_sub_field('ca_postcode',$postID);
+                //endwhile;
+            //endif;
+            if(!empty($name)){
+                echo "<h3>$name</h3>";
+                echo "<b>Telephone: </b>$tel<br/>";
+                echo "<b>Website: </b><a href='$website'>$website_tidy</a><br/>";
+                echo "<b>Address: </b>$address<br/>";
+                echo "<b>Opening times: </b>$opening<br/>";
+            
+            }
+        endwhile;
+    endif;
+    ?>
+    </div>
+    <?php
+}
+
+function wtg_rhealth($postID)
+{
+    $title = get_the_title($postID);
+    $healthcare = apply_filters('the_content', get_post_meta($postID, 'healthcare', true));
+    $foodDrink = apply_filters('the_content', get_post_meta($postID, 'food_drink', true));
+    $otherRisks = apply_filters('the_content',get_post_meta($postID, 'other_risks', true));
+    $note = apply_filters('the_content',get_post_meta($postID, 'vaccinations_note', true));
+    $precautions = apply_filters('the_content',get_post_meta($postID, 'precautions', true));
+    ?>
+    <h1><?php echo $title;?> Health Care and Vaccinations</h1>
+    
+    <table class="guide-table">
+        <tr>
+            <th>Title</th>
+            <th>Special precautions</th>
+        </tr>
+        <?php
+        if ( have_rows('vaccination_table', $postID)):
+            while (have_rows('vaccination_table', $postID)) :the_row();
+                $title = get_sub_field('vaccination',$postID);
+                $special = get_sub_field('special_precautions',$postID);
+                if (!empty($title)){
+                    echo "<tr><td>$title</td><td>$special</td></tr>";
+                }
+            
+            endwhile;
+        endif;
+        if (!empty($note)){
+            echo "<tr><td>$note</td></tr>";
+        }
+        
+        ?>
+    </table>
+    
+    
+    <?php echo $healthcare;?>
+    <h3>Food and drink</h3>
+    <?php echo $foodDrink;
+    if(!empty($precautions)){echo "<h3>Precautions</h3>$precautions";}?>
+    <h3>Other Risks</h3>
+    <?php echo $otherRisks;
+    
+}
+
+function wtg_rmoney($postID)
+{
+    $title = get_the_title($postID);
+    $currencyInfo = apply_filters('the_content', get_post_meta($postID, 'currency_information', true));
+    $creditCards = apply_filters('the_content', get_post_meta($postID, 'credit_cards', true));
+    $atm = apply_filters('the_content',get_post_meta($postID, 'atm', true));
+    $travelCheques = apply_filters('the_content',get_post_meta($postID, 'travellers_cheques', true));
+    $bankingHours = get_post_meta($postID, 'banking_hours', true);
+    $currencyRest = apply_filters('the_content', get_post_meta($postID, 'currency_restriction', true));
+    $currencyEx = apply_filters('the_content',get_post_meta($postID, 'currency_exchange', true));
+    $currencySym = apply_filters('the_content',get_post_meta($postID, 'currency_codesymbol', true));
+    $dutyFree = apply_filters('the_content', get_post_meta($postID, 'dutyfree_overview', true));
+    $bannedIn = apply_filters('the_content',get_post_meta($postID, 'banned_imports', true));
+    $bannedEx = apply_filters('the_content',get_post_meta($postID, 'banned_exports', true));
+    ?>
+    <h1>Money and duty free for <?php echo $title;?></h1>
+    <h2>Currency & Money</h2>
+    <h3>Currency information</h3>
+    <?php echo $currencyInfo;?>
+    <h3>Credit cards</h3>
+    <?php echo $creditCards;?>
+    <h3>ATM</h3>
+    <?php echo $atm;?>
+    <h3>Travellers cheques</h3>
+    <?php echo $travelCheques;?>
+    <h3>Banking hours</h3>
+    <?php echo $bankingHours;?>
+    <h3>Currency restriction</h3>
+    <?php echo $currencyRest;?>
+    <h3>Currency exchange</h3>
+    <?php echo $currencyEx;?>
+    <h2><?php echo $title;?> duty free</h2>
+    <?php echo $dutyFree;
+    if(!empty($bannedIn)){?>
+        <h3>Banned Imports</h3>
+        <?php echo $bannedIn;
+    }
+    if(!empty($bannedEx)){?>
+        <h3>Banned Exports</h3>
+        <?php echo $bannedEx;
+    }
+}
+
+function wtg_rpublicholidays($postID)
+{
+    $title = get_the_title($postID);
+    ?><h1><?php echo $title;?> Public Holidays</h1><?php
+    $intro = apply_filters('the_content', get_post_meta($postID, 'public_holidays_intro', true));
+    //echo $intro.'<br/>';
+    echo 'Below are listed Public Holidays for the January-December period '.date('Y');
+    
+    if ( have_rows('public_holiday_table', $postID)):
+        while (have_rows('public_holiday_table', $postID)) :the_row();
+            $name = get_sub_field('ph_name',$postID);
+            $sDate = date_create(get_sub_field('ph_start_date',$postID));
+            $eDate = get_sub_field('ph_end_date',$postID);
+            $tbc = get_sub_field('ph_tbc',$postID);
+            
+            
+            if(!empty($eDate)){ $end = date_create($eDate);}
+            $start_clean = date_format( $sDate, 'l d F Y');
+            $end_clean = date_format( $end, 'l d F Y');
+
+            //if(!empty($name)){
+                if ($sDate != '' && $name != '' && $tbc != ''){
+                    echo '<h4>'.$name.'</h4>';
+                    echo'<b>Start date:</b>  '.$start_clean.'<br/>';
+                    if(!empty($eDate)){echo'<b>End date:</b>  '.$end_clean.'<br/>';}
+                    echo'<b>TBC:</b>  '.$tbc.'<br/><br/><br/>';
+                    //echo'<b>TBC:</b>  '.$tbc.'<br/>Test: '.$sDate.'<br/><br/>';
+                }
+            //}
+        endwhile;
+    endif;
+}
+
+function wtg_rshopping($postID)
+{
+    $title = get_the_title($postID);
+    $intro = apply_filters('the_content', get_post_meta($postID, 'shopping_intro', true));
+    $hours = apply_filters('the_content', get_post_meta($postID, 'shopping_opening_hours', true));
+    $note = apply_filters('the_content',get_post_meta($postID, 'shopping_note', true));
+    $nightlife = apply_filters('the_content',get_post_meta($postID, 'nightlife', true));
+    ?>
+    <h1><?php echo $title;?> Shopping and nightlife</h1>
+    <h2>Shopping in <?php echo $title;?></h2>
+    <?php echo $intro;?>
+    <h3>Shopping Note</h3>
+    <?php echo $note;?>
+    <h3>Shopping hours</h3>
+    <?php echo $hours;?>
+    <h2>Nightlife in <?php echo $title;?></h2>
+    <?php echo $nightlife;
+    
+}
+
+function wtg_rfooddrink($postID)
+{
+    $title = get_the_title($postID);
+    $intro = apply_filters('the_content', get_post_meta($postID, 'fd_intro', true));
+    $food = apply_filters('the_content', get_post_meta($postID, 'fd_regional_specialities', true));
+    $things = apply_filters('the_content',get_post_meta($postID, 'things_to_know', true));
+    $tipping = apply_filters('the_content',get_post_meta($postID, 'tipping', true));
+    $age = apply_filters('the_content',get_post_meta($postID, 'drinking_age', true));
+    $drinks = apply_filters('the_content',get_post_meta($postID, 'fd_regional_drinks', true));
+    ?>
+    <h1><?php echo $title;?> Food and Drink</h1>
+    <?php echo $intro;?>
+    <h3>Specialities:</h3>
+    <?php echo $food;
+    if(!empty($things)){?>
+        <h3>Things to know:</h3>
+        <?php echo $things;
+    }?>
+    <h3>Tipping:</h3>
+    <?php echo $tipping;?>
+    <h3>Drinking age:</h3>
+    <?php echo $age;
+    if(!empty($drinks)){?>
+        <h3>Regional Drinks:</h3>
+        <?php echo $drinks;
+    }
+}
+
+function wtg_rgettingaround($postID){
+    $title = get_the_title($postID);
+    $air = apply_filters('the_content', get_post_meta($postID, 'air', true));
+    $airNote = get_post_meta($postID, 'air_notes', true);
+    $airPasses = apply_filters('the_content', get_post_meta($postID, 'air_passes', true));
+    $departureTax = get_post_meta($postID, 'departure_tax', true);
+    $road  = apply_filters('the_content',get_post_meta($postID, 'road', true));
+    $sideRoad = get_post_meta($postID, 'side_of_road', true);
+    $roadqual  = apply_filters('the_content',get_post_meta($postID, 'road_quality', true));
+    $roadClass = apply_filters('the_content',get_post_meta($postID, 'road_classification', true));
+    $carHire = apply_filters('the_content',get_post_meta($postID, 'car_hire', true));
+    $taxi  = apply_filters('the_content',get_post_meta($postID, 'taxi', true));
+    $bike  = apply_filters('the_content',get_post_meta($postID, 'bike', true));
+    $coach = apply_filters('the_content',get_post_meta($postID, 'coach', true));
+    $regs  = apply_filters('the_content',get_post_meta($postID, 'regulations', true));
+    $breakdown  = apply_filters('the_content',get_post_meta($postID, 'breakdown_service', true));
+    $docs  = apply_filters('the_content',get_post_meta($postID, 'documentation', true));
+    $roadNote  = apply_filters('the_content',get_post_meta($postID, 'road_note', true));
+    $towns  = apply_filters('the_content',get_post_meta($postID, 'towns_and_cities', true));
+    $rail  = apply_filters('the_content',get_post_meta($postID, 'rail', true));
+    $railPass  = apply_filters('the_content',get_post_meta($postID, 'rail_passes', true));
+    $railNote = get_post_meta($postID, 'rail_note', true);
+    $water  = apply_filters('the_content',get_post_meta($postID, 'water', true));
+    $waterNote = get_post_meta($postID, 'water_note', true);
+    
+    ?>
+    <h1>Getting Around <?php echo $title;?></h1>
+    <?php
+    if(!empty($air)){?>
+        <h3>Air:</h3>
+        <?php echo $air;
+    }
+    if(!empty($flightTimes)){?>
+        <h3>Flight times:</h3>
+        <?php echo $flightTimes;
+    }
+    if(!empty($airPasses)){?>
+        <h3>Air passes</h3>
+        <?php echo $airPasses;
+    }
+    if(!empty($departureTax)){?>
+        <h3>Departure tax</h3>
+        <?php echo $departureTax;
+    }
+    if(!empty($road)){?>
+        <h3>Road</h3>
+        <?php echo $road;
+    }
+    if(!empty($sideRoad)){?>
+        <h3>Side of the road</h3>
+        <?php
+        switch($sideRoad){
+            case 'r':
+                echo 'right';
+                break;
+            case 'l':
+                echo 'left';
+                break;
+        }
+    }
+    if(!empty($roadqual)){?>
+        <h3>Road Quality</h3>
+        <?php echo $roadqual;
+    }
+    if(!empty($roadClass)){?>
+        <h3>Road Classification</h3>
+        <?php echo $roadClass;
+    }
+    if(!empty($carHire)){?>
+        <h3>Car Hire</h3>
+        <?php echo $carHire;
+    }
+    if(!empty($taxi)){?>
+        <h3>Taxis</h3>
+        <?php echo $taxi;
+    }
+    if(!empty($bike)){?>
+        <h3>Bikes</h3>
+        <?php echo $bike;
+    }
+    if(!empty($coach)){?>
+        <h3>Coaches</h3>
+        <?php echo $coach;
+    }
+    if(!empty($regs)){?>
+        <h3>Regulations</h3>
+        <?php echo $regs;
+    }
+    if(!empty($breakdown)){?>
+        <h3>Breakdown Service</h3>
+        <?php echo $breakdown;
+    }
+    if(!empty($docs)){?>
+        <h3>Documentation</h3>
+        <?php echo $docs;
+    }
+    if(!empty($roadNote)){?>
+        <h3>Road note</h3>
+        <?php echo $roadNote;
+    }
+    if(!empty($towns)){?>
+        <h3>Towns and cities</h3>
+        <?php echo $towns;
+    }
+    if(!empty($rail)){?>
+        <h3>Rail</h3>
+        <?php echo $rail;
+    }
+    if(!empty($railPass)){?>
+        <h3>Rail passes</h3>
+        <?php echo $railPass;
+    }
+    if(!empty($railNote)){?>
+        <h3>Rail Note</h3>
+        <?php echo $railNote;
+    }
+    if(!empty($water)){?>
+        <h3>Water</h3>
+        <?php echo $water;
+    }
+    if(!empty($waterNote)){?>
+        <h3>Water Note</h3>
+        <?php echo $waterNote;
+    }
+}
+
+function wtg_revents($postID)
+{
+    $title = get_the_title($postID);
+    ?><h2><?php echo $title;?> Events</h2><?php
+    
+    if ( have_rows('region_events', $postID)):
+        while (have_rows('region_events', $postID)) :the_row();
+            $name = get_sub_field('event_title',$postID);
+            $from = date_create(get_sub_field('from_date',$postID));
+            $from_clean = date_format( $from, 'l d F');
+            $from_iso8601 = date_format( $from, "Y-m-d");
+            $to = get_sub_field('to_date',$postID);
+            $dateTBC = get_sub_field('date_tbc',$postID);
+            $body = get_sub_field('event_body',$postID);
+            $venue = get_sub_field('venue_name',$postID);
+            $importance = get_sub_field('importance',$postID);
+            $cost = get_sub_field('event_cost',$postID);
+            $website = get_sub_field('website',$postID);
+            $website_tidy = str_replace('http://', '', $website);
+            $address = '';
+            
+            $address = get_sub_field('neighborhood',$postID).', '.
+                    get_sub_field('locality',$postID).', '.
+                    get_sub_field('country',$postID).', '.
+                    get_sub_field('postcode',$postID);
+            
+            if (!empty($name)){
+                $html .= '<section itemscope itemtype="http://schema.org/Event">';
+                    $html .= "<h3 itemprop='name'>$name</h3>";
+                    if ($dateTBC == 1){
+                        $html .= '<div><b>Date (to be confirmed): </b><span itemprop="startDate" content="'.$from_iso8601.'">'.$from_clean.'</span></div>';
+                    }else{
+                        $html .= '<div><b>Date: </b><span itemprop="startDate" content="'.$from_iso8601.'">'.$from_clean.'</span></div>';
+                    }
+                    $html .= "<div itemprop='description'>$body</div>";
+                    $html .= "<div itemprop='location' itemscope itemtype='http://schema.org/Place'>";
+                        $html .= "<div><b>Venue: </b><span itemprop='name'>$venue</span></div>";
+                        if($address != ', , , '){
+                            $html .= "<div><b>Address: </b><span itemprop='address'>$address</span></div>";
+                        }else{
+                            $html .= "<div><b></b><span itemprop='address'></span></div>";
+                        }
+                    $html .= '</div>';
+                    if(!empty($website)){
+                        $html .= '<div><b>Website: </b><a itemprop="url" href="'.$website.'">'.$website_tidy.'</a></div>';
+                    }
+                    if(!empty($cost)){
+                        $html .= '<div><b>Cost: </b><span itemprop="price">'.$cost.'</span></div>';
+                    } else {
+                        $html .= '<div><b>Cost: </b><span>Free</span></div>';
+                    }
+                    
+                $html .= '</section>';
+                
+            }
+            
+        endwhile;
+        echo $html;
+    endif;
+}
+
+function visa_central_promo_top()
+{
+    ?>
+    <style type="text/css">
+
+
+.block-block-passport-and-visa-additional-info{width:465px; float:left; }
+.small-boxout{margin-bottom:20px;width:175px; padding:5px; background:#FF9; float:right; margin:10px 5px 0 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0px 0px 5px #666666; -webkit-box-shadow: 0px 0px 5px #666666; box-shadow: 0px 0px 5px #666666;}
+
+.small-boxout .heading{ font-size:11px; font-weight:bold; margin:2px 0 5px 0; }
+.small-boxout  .body{ font-size:10px; line-height:13px; margin-top:0px; }
+
+.small-boxout .visa-button { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #090; color:#FFF; text-align:center; padding:5px 0; margin-bottom:5px; }
+
+
+</style>
+
+
+<div class="small-boxout clearfix">
+<p class="heading">Do you need a Visa?</p>
+<p class="body">Our preferred partner VisaCentral can make applying for one fast and easy.</p>
+
+<!-- a href="http://www.visacentral.co.uk/wtg" rel="nofollow" class="visa-button geo-gb clearfix" target="_blank">Apply for one now!</a -->
+<a href="http://www.visacentral.com/worldtravelguide" rel="nofollow" class="visa-button geo-usxx clearfix" target="_blank">Apply for one now!</a>
+
+<!-- a href="http://www.visacentral.co.uk/wtg" rel="nofollow" target="_blank" class="geo-gb"><img src="http://www.worldtravelguide.net/client-assets/sponsors/MyTinyLogo.gif" align="right" alt="Preferred suppliers of Visas and Passports by World Travel Guide" title="Preferred suppliers of Visas and Passports by World Travel Guide" border="0"/></a -->
+
+<a href="http://www.visacentral.com/worldtravelguide" rel="nofollow" target="_blank" class="geo-usxx"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/2017/05/MyTinyLogo.gif" align="right" alt="Preferred suppliers of Visas and Passports by World Travel Guide" title="Preferred suppliers of Visas and Passports by World Travel Guide" border="0"/></a>
+
+
+</div>
+
+<?php
+}
+
+
+
+function visa_central_promo_bottom()
+{
+    ?>
+    <style type="text/css">
+
+
+.largeboxout{width:100%; padding:10px; background: url('<?php echo get_site_url();?>/client-assets/design/EN-small.png') 418px -10px no-repeat #FF9; margin:20px auto 40px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0px 0px 5px #666666; -webkit-box-shadow: 0px 0px 5px #666666; box-shadow: 0px 0px 5px #666666;}
+
+.largeheading{ font-size:13px; font-weight:bold; margin:2px 0 5px 0; }
+.largebody{ font-size:11px; line-height:13px; margin-top:10px; }
+
+li.largebody{ font-size:11px; line-height:13px; margin-top:5px; }
+
+.largevisa-button { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #090; color:#FFF; text-align:center; padding:7px 0 5px 0; margin-bottom:5px; width:300px; }
+
+.visalists ul{ width:45%; float:left; }
+.visalists ul li{ list-style: disc; margin-left: 20px; }
+
+.largebody.strong{ font-weight:bold; }
+
+.buttonholder{ margin-top:15px; }
+
+
+.block-block-visacentral-en-bottom-promo {clear:both;}
+
+</style>
+
+<div class="largeboxout clearfix">
+<p class="largeheading">Do you need a Visa?</p>
+<p class="largebody">Our preferred partner VisaCentral can make applying for one fast and easy.</p>
+
+<p class="largebody">With more than 50 years experience CIBT and its subsidiary VisaCentral have become the largest and most well-established travel visa and passport company in the world.</p>
+<p class="largebody">CIBT and its subsidiary VisaCentral has the tools, experience, and global network necessary to effectively reduce the time associated with obtaining travel documents and legalisations. </p>
+
+<div class="visalists clearfix">
+<p class="largebody strong">VisaCentral offer:</p>
+<ul>
+    <li class="largebody">Unmatched Speed.</li>
+    <li class="largebody">Full Line of Services.</li>
+    <li class="largebody">Proprietary Database.</li>
+</ul>
+<ul>
+    <li class="largebody">Travel Visa and Passport Specialists.</li>
+    <li class="largebody">Secure Process.</li>
+    <li class="largebody">Real-time Order Tracking.</li>
+</ul>
+</div>
+
+<!--div class="buttonholder" class="geo-gb">
+<a target="_blank" href="http://www.visacentral.co.uk/wtg"><img border="0" align="right" title="Preferred suppliers of Visas and Passports by World Travel Guide" alt="Preferred suppliers of Visas and Passports by World Travel Guide" src="http://www.worldtravelguide.net/client-assets/sponsors/MyTinyLogo.gif" style="margin-bottom:-5px;"/></a>
+<a target="_blank" class="largevisa-button clearfix" href="http://www.visacentral.co.uk/wtg">Apply for a Visa now!</a>
+</div -->
+<div class="buttonholder" class="geo-usxx">
+<a target="_blank" rel="nofollow" class="largevisa-button-text" href="http://www.visacentral.com/worldtravelguide"><img border="0" align="right" title="Preferred suppliers of Visas and Passports by World Travel Guide" alt="Preferred suppliers of Visas and Passports by World Travel Guide" src="<?php echo get_site_url();?>/wp-content/uploads/2017/05/MyTinyLogo.gif" style="margin-bottom:-5px;"/></a>
+<a target="_blank" rel="nofollow" class="largevisa-button clearfix" href="http://www.visacentral.com/worldtravelguide">Apply for a Visa now!</a>
+</div>
+
+</div>
+    
+    
+    <?php    
+}
+
+function wtg_guide_MPU()
+{
+?>
+        <div id='div-gpt-ad-1492512001379-6' style="margin-top:10px;">
+		<script>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1492512001379-6'); });
+		</script>
+		</div>
+<?php
+}
+
+
+
+?>

@@ -1,0 +1,56 @@
+services:
+  wordpress:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+      - ./config/php.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./columbus-xml:/var/www/columbus-xml
+    environment:
+      WORDPRESS_MEMORY_LIMIT: 4096M
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress123
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_DEBUG', true);
+        define('WP_DEBUG_LOG', true);
+        define('WP_DEBUG_DISPLAY', false);
+        @ini_set('display_errors', 0);
+        @ini_set('memory_limit', '4096');
+      PHP_UPLOAD_MAX_FILESIZE: 1024M
+      PHP_POST_MAX_SIZE: 1024M
+      PHP_MEMORY_LIMIT: 4096M
+      PHP_MAX_EXECUTION_TIME: 300O0
+      PHP_OPCACHE_ENABLE: 1
+    mem_limit: 4g
+    mem_reservation: 2g
+    cpus: '1.0'
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress123
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - "8081:80"  # Access via http://localhost:8081
+    environment:
+      - PMA_HOST=mysql  # Use the service name of your database container
+      - MYSQL_ROOT_PASSWORD=root123  # Must match your DB root password
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:

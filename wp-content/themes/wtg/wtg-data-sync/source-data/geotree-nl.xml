@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ColumbusTravelData language="nl">
+	<Continent nid="8331685" title="Europe">
+		<Places>
+			<Region nid="8331686" title="France">
+			</Region>
+		</Places>
+	</Continent>
+</ColumbusTravelData>

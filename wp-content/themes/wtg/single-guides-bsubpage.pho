@@ -1,0 +1,50 @@
+<?php
+$postid = get_the_id();
+$title = get_the_title($postid);
+	$legacy_id = get_post_meta($postid,'guide_legacy_id',true);
+
+	$dom  = new DOMDocument;
+	$xmlpath = '/var/www/columbus-xml/source-data/beach_resorts-full-en.xml';
+    $xslpath = get_template_directory_uri().'/wtg-data-sync/templates-en/beach/beach-gallery.xsl';
+   // echo $xslpath;
+	$dom->load($xmlpath);
+	$xsl  = new DOMDocument;
+	$xsl->load($xslpath);
+	
+	$xslt = new XSLTProcessor();
+    //$xslt->importStylesheet($xsl);
+    $openedStylesheet = $xslt->importStylesheet($xsl);
+    //echo 'Stylesheet opened is '.$openedStylesheet;
+	//$xslt->setParameter(NULL, 'id', $lagacy_id);
+	//print $xslt->transformToXML($dom);
+	
+	
+	$xp    = new DOMXPath($dom);
+    $elements = $xp->query('//BeachResort');
+   //var_dump($elements);
+
+    if (!is_null($elements)) {
+        //echo 'Elements not null';
+        foreach ($elements as $element) {
+            $title = $element->getAttribute('title');
+            $nid = $element->getAttribute('nid');
+           // echo '<br />'.$title.' '.$nid;
+            // echo '<br />the legacy guide ='.$legacy_id;
+			if($legacy_id == $nid){
+                // echo 'Match!';
+				//print $xslt->transformToXML($element);
+				//print $element;
+				//echo $element->saveHTML();
+				$region_Doc = new DOMDocument();
+                $cloned = $element->cloneNode(TRUE);
+                $region_Doc->appendChild($region_Doc->importNode($cloned, True));
+                $regionpath = new DOMXPath($region_Doc);
+				
+				//overview
+                //$content_tag = $regionpath->query("//Content/Overview/Overview");
+                //$content = trim($content_tag->item(0)->nodeValue);
+				print $xslt->transformToXML($region_Doc);
+				//echo $content;
+			}
+		}
+	}

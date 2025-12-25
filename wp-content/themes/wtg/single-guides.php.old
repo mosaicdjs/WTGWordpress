@@ -1,0 +1,35 @@
+<?php
+get_header();
+$current_fp = get_query_var('fpage');
+?>
+
+	  <div id="primary">
+			<div id="content" role="main">
+
+<ul id="menu-book-nav">
+<li class="menu-item"><a href="<?php echo get_permalink(); ?>">Overview</a></li>
+<li class="menu-item"><a href="<?php echo get_permalink() ?>?fpage=about">About</a></li>
+<li class="menu-item"><a href="<?php echo get_permalink() ?>?fpage=history">History</a></li>
+<li class="menu-item"><a href="<?php echo get_permalink() ?>?fpage=weather">Weather</a></li>
+</ul>
+
+				<?php while ( have_posts() ) : the_post(); ?>
+
+		<?php if (!$current_fp) {
+				get_template_part( 'single', 'guides-index' );
+			} else if ($current_fp == 'about') {
+				get_template_part( 'single', 'guides-about' );
+			} else if ($current_fp == 'history') {
+				get_template_part( 'single', 'guides-author' );
+			} else if ($current_fp == 'weather') {
+				get_template_part( 'single', 'guides-weather' );
+			}; ?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+<?php
+get_footer()
+?>
