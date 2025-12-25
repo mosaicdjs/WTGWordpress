@@ -1,0 +1,2789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<productname><![CDATA[Stonecutter Spirits Single Barrel Gin]]></productname>
+		<categoryreference><![CDATA[22e]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[East Coast]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[45]]></alcohol>
+		<company><![CDATA[Stonecutter Spirits]]></company>
+		<producername><![CDATA[Stonecutter Spirits]]></producername>
+		<samplenumber><![CDATA[5482]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Cask Finished - 41-48%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[KINOBI Kyoto Dry Gin]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[Japan]]></country>
+		<region><![CDATA[Kyoto]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[45.7]]></alcohol>
+		<company><![CDATA[K.K. Number One Drinks (The Kyoto Distillery)]]></company>
+		<producername><![CDATA[K.K. Number One Drinks (The Kyoto Distillery)]]></producername>
+		<samplenumber><![CDATA[922]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Contemporary Styles - Japan - 45.7%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Teeling Whiskey Single Malt Irish Whiskey]]></productname>
+		<categoryreference><![CDATA[30e]]></categoryreference>
+		<country><![CDATA[Republic of Ireland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[Teeling Whiskey Company]]></company>
+		<producername><![CDATA[Teeling Whiskey Company]]></producername>
+		<samplenumber><![CDATA[5608]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Irish Whiskey - Single Malt - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Irish Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Harrington Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[Midlands]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[44]]></alcohol>
+		<company><![CDATA[Warner Edwards Distillery Ltd]]></company>
+		<producername><![CDATA[Warner Edwards Distillery Ltd]]></producername>
+		<samplenumber><![CDATA[7012]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 44-45%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenglassaugh Highland Scotch Whisky 40 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[40]]></age>
+		<alcohol><![CDATA[42.5]]></alcohol>
+		<company><![CDATA[The BenRiach Distillery Company Ltd]]></company>
+		<producername><![CDATA[The BenRiach Distillery Company Ltd]]></producername>
+		<samplenumber><![CDATA[6707]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 35-40 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bauer's ZirbenZauber]]></productname>
+		<categoryreference><![CDATA[34d]]></categoryreference>
+		<country><![CDATA[Austria]]></country>
+		<region><![CDATA[Styria]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[35]]></alcohol>
+		<company><![CDATA[Franz Bauer GmbH]]></company>
+		<producername><![CDATA[Franz Bauer GmbH]]></producername>
+		<samplenumber><![CDATA[5315]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Flavoured Spirit - Pine Cone]]></tastingcategory>
+		<spirittype><![CDATA[Flavoured Spirit]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Grasovka Vodka]]></productname>
+		<categoryreference><![CDATA[28 (c)]]></categoryreference>
+		<country><![CDATA[Poland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Semper Idem Underberg GmbH]]></company>
+		<producername><![CDATA[Semper Idem Underberg GmbH]]></producername>
+		<samplenumber><![CDATA[5424]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Flavoured - Bison Grass]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The BenRiach Single Malt Scotch Whisky 35 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[35]]></age>
+		<alcohol><![CDATA[42.5]]></alcohol>
+		<company><![CDATA[The BenRiach Distillery Company Ltd]]></company>
+		<producername><![CDATA[The BenRiach Distillery Company Ltd]]></producername>
+		<samplenumber><![CDATA[6710]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 35-40 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenglassaugh Highland Single Malt Scotch Whisky 30 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42]]></alcohol>
+		<company><![CDATA[The BenRiach Distillery Company Ltd]]></company>
+		<producername><![CDATA[The BenRiach Distillery Company Ltd]]></producername>
+		<samplenumber><![CDATA[6714]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 24-30 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The GlenDronach Original Single Malt Scotch Whisky 12YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[12]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[The BenRiach Distillery Company Ltd]]></company>
+		<producername><![CDATA[The BenRiach Distillery Company Ltd]]></producername>
+		<samplenumber><![CDATA[6722]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 12-13YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Balblair Vintage 1999 1st Release, Travel Retail Exclusive Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[15]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[International Beverage]]></company>
+		<producername><![CDATA[International Beverage]]></producername>
+		<samplenumber><![CDATA[5868]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 17-18 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Balblair Vintage 1990 Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[21]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[International Beverage]]></company>
+		<producername><![CDATA[International Beverage]]></producername>
+		<samplenumber><![CDATA[5885]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - Cask Strength]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[anCnoc 12 Year Old Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[12]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[International Beverage]]></company>
+		<producername><![CDATA[International Beverage]]></producername>
+		<samplenumber><![CDATA[5881]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 12-13YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Speyburn Arranta Casks Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[International Beverage]]></company>
+		<producername><![CDATA[International Beverage]]></producername>
+		<samplenumber><![CDATA[5879]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky Scotch - Single Malt - Speyside - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky Scotch]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Voga Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[Piedmonte/Piemonte ]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Enoitalia Spa]]></company>
+		<producername><![CDATA[Enoitalia Spa]]></producername>
+		<samplenumber><![CDATA[6618]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Aka Kirishima]]></productname>
+		<categoryreference><![CDATA[26d]]></categoryreference>
+		<country><![CDATA[Japan]]></country>
+		<region><![CDATA[Miyazaki]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[25]]></alcohol>
+		<company><![CDATA[Nord Trade Counsel]]></company>
+		<producername><![CDATA[Nord Trade Counsel]]></producername>
+		<samplenumber><![CDATA[944]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Shochu - Sweet Potato - Japan - 25%]]></tastingcategory>
+		<spirittype><![CDATA[Shochu]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Dolce by Cello Mango]]></productname>
+		<categoryreference><![CDATA[23j]]></categoryreference>
+		<country><![CDATA[Australia]]></country>
+		<region><![CDATA[New South Wales]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[16]]></alcohol>
+		<company><![CDATA[Cece Liqueur Pty Ltd]]></company>
+		<producername><![CDATA[Cece Liqueur Pty Ltd]]></producername>
+		<samplenumber><![CDATA[5123]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Mango]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[KWV Heritage XO Cognac]]></productname>
+		<categoryreference><![CDATA[19d(iv)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Cognac]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></company>
+		<producername><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></producername>
+		<samplenumber><![CDATA[286]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Cognac - XO]]></tastingcategory>
+		<spirittype><![CDATA[Cognac]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Louis Royer Cognac XO]]></productname>
+		<categoryreference><![CDATA[19c(i)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Cognac]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Louis Royer SAS]]></company>
+		<producername><![CDATA[Louis Royer SAS]]></producername>
+		<samplenumber><![CDATA[2952]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Cognac - XO]]></tastingcategory>
+		<spirittype><![CDATA[Cognac]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[KWV 12]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></company>
+		<producername><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></producername>
+		<samplenumber><![CDATA[290]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - South Africa - Pot Still - 8-12 YO]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Mozart Chocolate Cream]]></productname>
+		<categoryreference><![CDATA[23c]]></categoryreference>
+		<country><![CDATA[Austria]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[17]]></alcohol>
+		<company><![CDATA[Schlumberger Wein- und Sektkellerei GMBH]]></company>
+		<producername><![CDATA[Schlumberger Wein- und Sektkellerei GMBH]]></producername>
+		<samplenumber><![CDATA[5457]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Chocolate]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[KWV 15 Potstill Brandy]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[Western Cape]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></company>
+		<producername><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></producername>
+		<samplenumber><![CDATA[291]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - South Africa - Pot Still - 15-20 YO]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[0.75L-58% Kinmen Kaoliang Liquor]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[58]]></alcohol>
+		<company><![CDATA[Kinmen Kaoliang Liquor Inc.]]></company>
+		<producername><![CDATA[Kinmen Kaoliang Liquor Inc.]]></producername>
+		<samplenumber><![CDATA[6577]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 58 - 66%]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[KWV 20 Potstill Brandy]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[Western Cape]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></company>
+		<producername><![CDATA[Warshay Investment (Pty) Ltd ta KWV]]></producername>
+		<samplenumber><![CDATA[292]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - South Africa - Pot Still - 15-20 YO]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Original Distilled No. 21 Kinmen Kaoliang Liquor]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[58]]></alcohol>
+		<company><![CDATA[Kinmen Kaoliang Liquor Inc.]]></company>
+		<producername><![CDATA[Kinmen Kaoliang Liquor Inc.]]></producername>
+		<samplenumber><![CDATA[6581]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 58 - 66%]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[XOP Garnheath 42 YO]]></productname>
+		<categoryreference><![CDATA[31c ]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[44.5]]></alcohol>
+		<company><![CDATA[Douglas Laing & Co Ltd]]></company>
+		<producername><![CDATA[Douglas Laing & Co Ltd]]></producername>
+		<samplenumber><![CDATA[74]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Grain - 42-43YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Calvados Domfrontais Louis de Lauriston Hors d'Age]]></productname>
+		<categoryreference><![CDATA[18d(ii)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Calvados]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42]]></alcohol>
+		<company><![CDATA[Calvados Christian Drouin SAS]]></company>
+		<producername><![CDATA[Les Chais Du Verger Normand]]></producername>
+		<samplenumber><![CDATA[5112]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Calvados - Domfrontais - Hors d'Age - 1991]]></tastingcategory>
+		<spirittype><![CDATA[Calvados]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Cotswolds Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[The Cotswold Distilling Company Ltd.]]></company>
+		<producername><![CDATA[The Cotswold Distilling Company Ltd.]]></producername>
+		<samplenumber><![CDATA[6866]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 46-48%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Jaime I]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[Spain]]></country>
+		<region><![CDATA[Catalunya]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Miguel Torres SA]]></company>
+		<producername><![CDATA[Miguel Torres SA]]></producername>
+		<samplenumber><![CDATA[1886]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - Brandy del Penedes]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Torres 20]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[Spain]]></country>
+		<region><![CDATA[Catalunya]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Miguel Torres SA]]></company>
+		<producername><![CDATA[Miguel Torres SA]]></producername>
+		<samplenumber><![CDATA[1885]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - Brandy del Penedes]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Manchester Gin]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[Midlands & North]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42]]></alcohol>
+		<company><![CDATA[Drinks Of Manchester Ltd T/a Manchester Gin]]></company>
+		<producername><![CDATA[Drinks Of Manchester Ltd T/a Manchester Gin]]></producername>
+		<samplenumber><![CDATA[5473]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Contemporary Styles - England - 39-46%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Monsieur Lapin Karottenschnaps]]></productname>
+		<categoryreference><![CDATA[20b(v)]]></categoryreference>
+		<country><![CDATA[Germany]]></country>
+		<region><![CDATA[Württemberg]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Die Kleine Destillerie]]></company>
+		<producername><![CDATA[Die Kleine Destillerie]]></producername>
+		<samplenumber><![CDATA[2692]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Fruit Spirits - Macerated & Distilled - Carrot]]></tastingcategory>
+		<spirittype><![CDATA[Fruit Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[OPM Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[India]]></country>
+		<region><![CDATA[Punjab]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42.8]]></alcohol>
+		<company><![CDATA[Omsons Marketing Pvt. Ltd.]]></company>
+		<producername><![CDATA[Omsons Marketing Pvt. Ltd.]]></producername>
+		<samplenumber><![CDATA[1753]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - 41-43%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Wild Island Botanic Gin]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43.7]]></alcohol>
+		<company><![CDATA[Colonsay Beverages Ltd]]></company>
+		<producername><![CDATA[Colonsay Beverages Ltd]]></producername>
+		<samplenumber><![CDATA[5258]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Contemporary Styles - Scotland - 41-47.3%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bodegas Fundador Supremo Aged in 15 YRS Old Amontillado Sherry Casks]]></productname>
+		<categoryreference><![CDATA[21a]]></categoryreference>
+		<country><![CDATA[Spain]]></country>
+		<region><![CDATA[Jerez]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Bodegas Fundador]]></company>
+		<producername><![CDATA[Bodegas Fundador]]></producername>
+		<samplenumber><![CDATA[2431]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - Brandy de Jerez - Gran Reserva - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Stalinskaya Blue Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Romania]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[45]]></alcohol>
+		<company><![CDATA[Prodal 94]]></company>
+		<producername><![CDATA[Prodal 94]]></producername>
+		<samplenumber><![CDATA[584]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - 45%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Stalinskaya Silver Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Romania]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Prodal 94]]></company>
+		<producername><![CDATA[Prodal 94]]></producername>
+		<samplenumber><![CDATA[583]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Eastern Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Château du Tariquet Folle Blanche 8 YO]]></productname>
+		<categoryreference><![CDATA[15b(i)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Armagnac]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[50.5]]></alcohol>
+		<company><![CDATA[Château du Tariquet SCV]]></company>
+		<producername><![CDATA[Château du Tariquet SCV]]></producername>
+		<samplenumber><![CDATA[3660]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Armagnac - 8 Year Old - Cask Strength 50%]]></tastingcategory>
+		<spirittype><![CDATA[Armagnac]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Domritter Boonekamp]]></productname>
+		<categoryreference><![CDATA[17a]]></categoryreference>
+		<country><![CDATA[Germany]]></country>
+		<region><![CDATA[Württemberg]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[44]]></alcohol>
+		<company><![CDATA[Uwe Müller GmbH & Co KG]]></company>
+		<producername><![CDATA[Uwe Müller GmbH & Co KG]]></producername>
+		<samplenumber><![CDATA[1306]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Bitters - Digestive (Potable) - 11-44%]]></tastingcategory>
+		<spirittype><![CDATA[Bitters]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Vodka Putinoff Platinum 5 quintuple distilled 40%]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Germany]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lidl Stiftung & Co Kg]]></company>
+		<producername><![CDATA[Eckerts Wacholder Brennerei GmbH]]></producername>
+		<samplenumber><![CDATA[2685]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bond & Lillard]]></productname>
+		<categoryreference><![CDATA[29]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[Kentucky]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[50]]></alcohol>
+		<company><![CDATA[Campari America]]></company>
+		<producername><![CDATA[Campari America]]></producername>
+		<samplenumber><![CDATA[1034]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whiskey - Straight Bourbon - Kentucky - No Age Stated - 50-55%]]></tastingcategory>
+		<spirittype><![CDATA[Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Esker Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42]]></alcohol>
+		<company><![CDATA[Esker Spirits]]></company>
+		<producername><![CDATA[Esker Spirits]]></producername>
+		<samplenumber><![CDATA[5759]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 42%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Korlat Aronija]]></productname>
+		<categoryreference><![CDATA[23j]]></categoryreference>
+		<country><![CDATA[Croatia]]></country>
+		<region><![CDATA[Istria]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[20]]></alcohol>
+		<company><![CDATA[BADEL1862 d.d.]]></company>
+		<producername><![CDATA[BADEL1862 d.d.]]></producername>
+		<samplenumber><![CDATA[5477]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Chokeberry]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Gylden Akvavit]]></productname>
+		<categoryreference><![CDATA[16b]]></categoryreference>
+		<country><![CDATA[Germany]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Pabst & Richarz Vertriebs GmbH]]></company>
+		<producername><![CDATA[Pabst & Richarz Vertriebs GmbH]]></producername>
+		<samplenumber><![CDATA[5487]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Aquavit - Golden]]></tastingcategory>
+		<spirittype><![CDATA[Aquavit]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Frederiksberg Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[Denmark]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[44]]></alcohol>
+		<company><![CDATA[Hammer & Son Ltd]]></company>
+		<producername><![CDATA[Hammer & Son Ltd]]></producername>
+		<samplenumber><![CDATA[6667]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 44-45%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Rhum Agricole Vieux Neisson 12 ans d'âge]]></productname>
+		<categoryreference><![CDATA[25c]]></categoryreference>
+		<country><![CDATA[Martinique]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[52.7]]></alcohol>
+		<company><![CDATA[Distillerie Neisson]]></company>
+		<producername><![CDATA[Distillerie Neisson]]></producername>
+		<samplenumber><![CDATA[6679]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Rum - Dark - Agricole - Martinique - 12YO - 52%]]></tastingcategory>
+		<spirittype><![CDATA[Rum]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Shasharakuraku Aka]]></productname>
+		<categoryreference><![CDATA[26d]]></categoryreference>
+		<country><![CDATA[Japan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[37]]></alcohol>
+		<company><![CDATA[Nishi Sake Brewing Co. Ltd]]></company>
+		<producername><![CDATA[Nishi Sake Brewing Co. Ltd]]></producername>
+		<samplenumber><![CDATA[6853]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Shochu - Sweet Potato - Japan - 37-44%+]]></tastingcategory>
+		<spirittype><![CDATA[Shochu]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Kavalan Distillery Reserve Single Malt Whisky (Peaty Cask)]]></productname>
+		<categoryreference><![CDATA[32e(ii)]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[58.6]]></alcohol>
+		<company><![CDATA[Kavalan Distillery]]></company>
+		<producername><![CDATA[Kavalan Distillery]]></producername>
+		<samplenumber><![CDATA[5158]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Taiwan - Single Malt - Peated - Cask Strength - 58.6%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Kavalan Solist ex-Bourbon Single Cask Strength Single Malt Whisky]]></productname>
+		<categoryreference><![CDATA[32e(ii)]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[57.1]]></alcohol>
+		<company><![CDATA[Kavalan Distillery]]></company>
+		<producername><![CDATA[Kavalan Distillery]]></producername>
+		<samplenumber><![CDATA[5160]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Taiwan - Single Malt - Cask Strength - 57%+]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Kavalan Solist Vinho Barrique Single Cask Strength Single Malt Whisky]]></productname>
+		<categoryreference><![CDATA[32e(ii)]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[57.1]]></alcohol>
+		<company><![CDATA[Kavalan Distillery]]></company>
+		<producername><![CDATA[Kavalan Distillery]]></producername>
+		<samplenumber><![CDATA[5163]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Taiwan - Single Malt - Cask Finish & Cask Strength - 54-59%+]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Tanqueray No. Ten ]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[47.3]]></alcohol>
+		<company><![CDATA[Smarts Communications]]></company>
+		<producername><![CDATA[Diageo Plc]]></producername>
+		<samplenumber><![CDATA[5259]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Contemporary Styles - Scotland - 41-47.3%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Kavalan Classic Single Malt Whisky]]></productname>
+		<categoryreference><![CDATA[32e]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Kavalan Distillery]]></company>
+		<producername><![CDATA[Kavalan Distillery]]></producername>
+		<samplenumber><![CDATA[5166]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Taiwan - Single Malt - 40-46%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Russian Bear Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Edward Snell & Co Ltd]]></company>
+		<producername><![CDATA[Edward Snell & Co Ltd]]></producername>
+		<samplenumber><![CDATA[6189]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - 41-43%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Cantina Privata Moscato Sauternes Cask Finish]]></productname>
+		<categoryreference><![CDATA[21b]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Distilleria Canellese C Bocchino & C srl]]></company>
+		<producername><![CDATA[Distilleria Canellese C Bocchino & C srl]]></producername>
+		<samplenumber><![CDATA[6865]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - Grappa - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Kavalan Solist Moscatel Sherry Single Cask Strength Single Malt Whisky]]></productname>
+		<categoryreference><![CDATA[32e(ii)]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[54.8]]></alcohol>
+		<company><![CDATA[Kavalan Distillery]]></company>
+		<producername><![CDATA[Kavalan Distillery]]></producername>
+		<samplenumber><![CDATA[5154]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Taiwan - Single Malt - Cask Finish & Cask Strength - 54-59%+]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Grappa Riserva Carlo Bocchino]]></productname>
+		<categoryreference><![CDATA[21b]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[Abruzzo]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42]]></alcohol>
+		<company><![CDATA[Distilleria Canellese C Bocchino & C srl]]></company>
+		<producername><![CDATA[Distilleria Canellese C Bocchino & C srl]]></producername>
+		<samplenumber><![CDATA[4970]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - Grappa - Wood Aged]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Calvados Pays d'Auge 20 ans - XO - Réserve des Seigneurs]]></productname>
+		<categoryreference><![CDATA[18d(i)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Calvados]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41]]></alcohol>
+		<company><![CDATA[Château du Breuil SAS]]></company>
+		<producername><![CDATA[Château du Breuil SAS]]></producername>
+		<samplenumber><![CDATA[5367]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Calvados - XO - Pays d'Auge - 15 - 20 Year Old]]></tastingcategory>
+		<spirittype><![CDATA[Calvados]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Karasek Vogelbeere]]></productname>
+		<categoryreference><![CDATA[20b(iv)]]></categoryreference>
+		<country><![CDATA[Austria]]></country>
+		<region><![CDATA[Lower Austria (Niederösterreich)]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Norbert Karasek]]></company>
+		<producername><![CDATA[Norbert Karasek]]></producername>
+		<samplenumber><![CDATA[5337]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Fruit Spirits - Macerated & Distilled - Rowanberry]]></tastingcategory>
+		<spirittype><![CDATA[Fruit Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Liqueur d'excellence Yuzu Marie Brizard]]></productname>
+		<categoryreference><![CDATA[23d]]></categoryreference>
+		<country><![CDATA[Spain]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[20]]></alcohol>
+		<company><![CDATA[Marie Brizard Wine & Spirits]]></company>
+		<producername><![CDATA[Marie Brizard Wine & Spirits]]></producername>
+		<samplenumber><![CDATA[5131]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Citrus - Yuzu]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[City of London Christopher Wren Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[45.3]]></alcohol>
+		<company><![CDATA[City of London Distillery]]></company>
+		<producername><![CDATA[City of London Distillery]]></producername>
+		<samplenumber><![CDATA[5287]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 44-45%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Gordon’s London Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[37.5]]></alcohol>
+		<company><![CDATA[Smarts Communications]]></company>
+		<producername><![CDATA[Diageo Plc]]></producername>
+		<samplenumber><![CDATA[5263]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 37-38%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[MacQueens Blended Scotch Whisky 15YO]]></productname>
+		<categoryreference><![CDATA[31a]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[15]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Quality Spirits International]]></company>
+		<producername><![CDATA[Quality Spirits International]]></producername>
+		<samplenumber><![CDATA[5198]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended - 12-15 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[35. 163 - A Playful Wrestling Match Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[56.4]]></alcohol>
+		<company><![CDATA[The Scotch Malt Whisky Society Ltd]]></company>
+		<producername><![CDATA[The Scotch Malt Whisky Society Ltd]]></producername>
+		<samplenumber><![CDATA[6547]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - No Age Stated - Cask Strength 56%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Amaro Montenegro]]></productname>
+		<categoryreference><![CDATA[17a]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[Emilia Romagna ]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[23]]></alcohol>
+		<company><![CDATA[Gruppo Montenegro]]></company>
+		<producername><![CDATA[Gruppo Montenegro]]></producername>
+		<samplenumber><![CDATA[4202]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Bitters - Digestive (Potable) - 11-44%]]></tastingcategory>
+		<spirittype><![CDATA[Bitters]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[MacQueens Blended Scotch Whisky 12YO]]></productname>
+		<categoryreference><![CDATA[31a]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[12]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Quality Spirits International]]></company>
+		<producername><![CDATA[Quality Spirits International]]></producername>
+		<samplenumber><![CDATA[5199]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended - 12-15 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Chinese Spirits Baijiu Yushan Daqu]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[Taichung County]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[59.5]]></alcohol>
+		<company><![CDATA[AOW]]></company>
+		<producername><![CDATA[TTL]]></producername>
+		<samplenumber><![CDATA[5073]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 58 - 66%]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Chinese Spirits Baijiu Yushan Taiwan Kaoliang Liquor Aged 5 years]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[Taichung County]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[52]]></alcohol>
+		<company><![CDATA[AOW]]></company>
+		<producername><![CDATA[TTL]]></producername>
+		<samplenumber><![CDATA[5216]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 3 - 8 YO]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[?Chinese Spirits Baijiu?Yushan Taiwan Yuan Jiao Kaoliang Liquor Aged 8 Years ]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[Taichung County]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[52]]></alcohol>
+		<company><![CDATA[AOW]]></company>
+		<producername><![CDATA[TTL]]></producername>
+		<samplenumber><![CDATA[5167]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 3 - 8 YO]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Chinese Spirits Baijiu Yushan Taiwan Kaoliang Liquor Aged 3 Years]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[Taiwan]]></country>
+		<region><![CDATA[Taichung County]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[58]]></alcohol>
+		<company><![CDATA[AOW]]></company>
+		<producername><![CDATA[TTL]]></producername>
+		<samplenumber><![CDATA[5168]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 3 - 8 YO]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bundaberg Royal Liqueur : Banana Toffee]]></productname>
+		<categoryreference><![CDATA[23j]]></categoryreference>
+		<country><![CDATA[Australia]]></country>
+		<region><![CDATA[Queensland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[20]]></alcohol>
+		<company><![CDATA[Bundaberg Distilling Company]]></company>
+		<producername><![CDATA[Bundaberg Distilling Company]]></producername>
+		<samplenumber><![CDATA[5291]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Banana & Toffee]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Distillerie Lemercier Pastis 1811]]></productname>
+		<categoryreference><![CDATA[34d]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[45]]></alcohol>
+		<company><![CDATA[Grandes Distilleries Peureux]]></company>
+		<producername><![CDATA[Grandes Distilleries Peureux]]></producername>
+		<samplenumber><![CDATA[6600]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Flavoured Spirits - Aniseed]]></tastingcategory>
+		<spirittype><![CDATA[Flavoured Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Amaro Negroni]]></productname>
+		<categoryreference><![CDATA[17a]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[Veneto]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[25]]></alcohol>
+		<company><![CDATA[Venegazzu spa]]></company>
+		<producername><![CDATA[Venegazzu spa]]></producername>
+		<samplenumber><![CDATA[5017]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Bitters - Digestive (Potable) - 11-44%]]></tastingcategory>
+		<spirittype><![CDATA[Bitters]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Lörch Hocharomatischer Waldhimbeergeist]]></productname>
+		<categoryreference><![CDATA[20b(iv)]]></categoryreference>
+		<country><![CDATA[Germany]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Bimmerle KG]]></company>
+		<producername><![CDATA[Bimmerle KG]]></producername>
+		<samplenumber><![CDATA[2699]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Fruit Spirits - Macerated & Distilled - Raspberry]]></tastingcategory>
+		<spirittype><![CDATA[Fruit Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Canadian Club Classic Small Batch 12YO]]></productname>
+		<categoryreference><![CDATA[32a]]></categoryreference>
+		<country><![CDATA[Canada]]></country>
+		<region><![CDATA[Ontario]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Beam Canada Inc]]></company>
+		<producername><![CDATA[Beam Canada Inc]]></producername>
+		<samplenumber><![CDATA[4998]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Canada - Blended - 12-21 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Lörch Edles hocharomatisches Haselnuss Destillat Spirituose]]></productname>
+		<categoryreference><![CDATA[20b(vi)]]></categoryreference>
+		<country><![CDATA[Germany]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Bimmerle KG]]></company>
+		<producername><![CDATA[Bimmerle KG]]></producername>
+		<samplenumber><![CDATA[5545]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Fruit Spirits - Macerated & Distilled - Hazelnut]]></tastingcategory>
+		<spirittype><![CDATA[Fruit Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Corte Vetusto Mezcal Espadin]]></productname>
+		<categoryreference><![CDATA[27a(i)]]></categoryreference>
+		<country><![CDATA[Mexico]]></country>
+		<region><![CDATA[South Western Mexico]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[45]]></alcohol>
+		<company><![CDATA[Black Sheep Spirits Limited]]></company>
+		<producername><![CDATA[Black Sheep Spirits Limited]]></producername>
+		<samplenumber><![CDATA[6395]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Mezcal - 100% Agave - Joven]]></tastingcategory>
+		<spirittype><![CDATA[Mezcal]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Knob Creek Rye]]></productname>
+		<categoryreference><![CDATA[29a]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[Kentucky]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[50]]></alcohol>
+		<company><![CDATA[Multiply]]></company>
+		<producername><![CDATA[Multiply]]></producername>
+		<samplenumber><![CDATA[5251]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whiskey - Straight Rye - Kentucky - No Age Stated - 45-50%]]></tastingcategory>
+		<spirittype><![CDATA[Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Angostura 1824]]></productname>
+		<categoryreference><![CDATA[25c]]></categoryreference>
+		<country><![CDATA[Trinidad & Tobago]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Angostura Limited]]></company>
+		<producername><![CDATA[Angostura Limited]]></producername>
+		<samplenumber><![CDATA[5361]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Rum - Dark - Caribbean - 10-21YO]]></tastingcategory>
+		<spirittype><![CDATA[Rum]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Knob Creek Single Barrel Reserve]]></productname>
+		<categoryreference><![CDATA[29a]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[Kentucky]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[60]]></alcohol>
+		<company><![CDATA[Multiply]]></company>
+		<producername><![CDATA[Multiply]]></producername>
+		<samplenumber><![CDATA[5252]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whiskey - Straight Bourbon - Kentucky - 9 YO - 60%]]></tastingcategory>
+		<spirittype><![CDATA[Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA["LUX" Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Austria]]></country>
+		<region><![CDATA[Lower Austria (Niederösterreich)]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Kamill Rauf KG]]></company>
+		<producername><![CDATA[Kamill Rauf KG]]></producername>
+		<samplenumber><![CDATA[6610]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Lysholm LINIE Aquavit]]></productname>
+		<categoryreference><![CDATA[16b]]></categoryreference>
+		<country><![CDATA[Norway]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41.5]]></alcohol>
+		<company><![CDATA[Arcus AS]]></company>
+		<producername><![CDATA[Arcus AS]]></producername>
+		<samplenumber><![CDATA[6530]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Aquavit - Golden]]></tastingcategory>
+		<spirittype><![CDATA[Aquavit]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenfiddich Aged 15 YO Single Malt ScotchWhisky]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5521]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 14-17 YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Malteserkreuz Malteser Aquavit]]></productname>
+		<categoryreference><![CDATA[16a]]></categoryreference>
+		<country><![CDATA[Denmark]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Arcus AS]]></company>
+		<producername><![CDATA[Arcus AS]]></producername>
+		<samplenumber><![CDATA[6533]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Aquavit - Clear]]></tastingcategory>
+		<spirittype><![CDATA[Aquavit]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenfiddich 30 YO Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5524]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 25-30 YO ]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Dalwhinnie Winter's Gold Highland Single Malt]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Smarts Communications]]></company>
+		<producername><![CDATA[Smarts Communications]]></producername>
+		<samplenumber><![CDATA[5626]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Grant's 12 YO]]></productname>
+		<categoryreference><![CDATA[31b]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5525]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Deluxe Blend - 6-13 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Oban 14 Year Old]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Smarts Communications]]></company>
+		<producername><![CDATA[Smarts Communications]]></producername>
+		<samplenumber><![CDATA[5627]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 14-16YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenfiddich 40 YO Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5531]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 35-40 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Singleton of Glendullan Double Matured Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Smarts Communications]]></company>
+		<producername><![CDATA[Smarts Communications]]></producername>
+		<samplenumber><![CDATA[5638]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky Scotch - Single Malt - Speyside - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky Scotch]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Monkey Shoulder]]></productname>
+		<categoryreference><![CDATA[31d]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5538]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended Malt - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Singleton of Glen Ord 18]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Smarts Communications]]></company>
+		<producername><![CDATA[Smarts Communications]]></producername>
+		<samplenumber><![CDATA[5642]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 18-25YO - 40-48%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Grant's Elementary Copper ]]></productname>
+		<categoryreference><![CDATA[31b]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5536]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended - 29-30 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Balvenie 14 YO Caribbean Cask Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5494]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 14-17 YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Balvenie Thirty Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e(ii)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[47.3]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5497]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 25-30 YO ]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Old Parr 18 Year Old]]></productname>
+		<categoryreference><![CDATA[31a]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Smarts Communications]]></company>
+		<producername><![CDATA[Smarts Communications]]></producername>
+		<samplenumber><![CDATA[5660]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended - 17-21 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Goldhauch Haselnuss Edeldestillat Spirituose]]></productname>
+		<categoryreference><![CDATA[20b(vi)]]></categoryreference>
+		<country><![CDATA[Germany]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Bimmerle KG]]></company>
+		<producername><![CDATA[Bimmerle KG]]></producername>
+		<samplenumber><![CDATA[2710]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Fruit Spirits - Macerated & Distilled - Hazelnut]]></tastingcategory>
+		<spirittype><![CDATA[Fruit Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Solerno Blood Orange]]></productname>
+		<categoryreference><![CDATA[23d]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[Sicily]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5498]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Citrus - Orange]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Xquisito Limoncello Puro D'Oro]]></productname>
+		<categoryreference><![CDATA[23d]]></categoryreference>
+		<country><![CDATA[Netherlands]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[30]]></alcohol>
+		<company><![CDATA[Xquisito]]></company>
+		<producername><![CDATA[Xquisito]]></producername>
+		<samplenumber><![CDATA[6868]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Citrus - Lemon]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Malts of Scotland "MoS Classic" 18YO Blended Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31d]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[UNIQUE LIQUIDS GmbH]]></company>
+		<producername><![CDATA[UNIQUE LIQUIDS GmbH]]></producername>
+		<samplenumber><![CDATA[5306]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended Malts - 15-18YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Tullamore Dew 12 YO Special Reserve]]></productname>
+		<categoryreference><![CDATA[30b]]></categoryreference>
+		<country><![CDATA[Republic of Ireland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[6006]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Irish Whiskey - Deluxe Blend - 12YO]]></tastingcategory>
+		<spirittype><![CDATA[Irish Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Malts of Scotland "Dark Side of Islay- Scarabus" Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31d]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[51.2]]></alcohol>
+		<company><![CDATA[UNIQUE LIQUIDS GmbH]]></company>
+		<producername><![CDATA[UNIQUE LIQUIDS GmbH]]></producername>
+		<samplenumber><![CDATA[5307]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended Malt - Islay - No Age Stated - Cask Strength 51%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Balvenie Forty Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e(ii)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[48.5]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5443]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 35-40 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Liqueur de Sureau]]></productname>
+		<categoryreference><![CDATA[23n]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[20]]></alcohol>
+		<company><![CDATA[Joseph Cartron]]></company>
+		<producername><![CDATA[Joseph Cartron]]></producername>
+		<samplenumber><![CDATA[5297]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Elderflower]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenfiddich Cask Collection Reserve Cask Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5512]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - No Age Stated - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenfiddich Aged 21 YO Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5519]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 21-25 YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Gradus Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Russia]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Permalko JSC]]></company>
+		<producername><![CDATA[Permalko JSC]]></producername>
+		<samplenumber><![CDATA[5339]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Eastern Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenfiddich Aged 18 YO]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[William Grant & Sons Distillers Ltd]]></company>
+		<producername><![CDATA[William Grant & Sons Distillers Ltd]]></producername>
+		<samplenumber><![CDATA[5520]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 18-19 YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Sierra Tequila Antiguo]]></productname>
+		<categoryreference><![CDATA[27d(i)]]></categoryreference>
+		<country><![CDATA[Mexico]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[The Drinks Company Ltd.]]></company>
+		<producername><![CDATA[Borco International GmbH]]></producername>
+		<samplenumber><![CDATA[5093]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Tequila - 100% Agave - Anejo]]></tastingcategory>
+		<spirittype><![CDATA[Tequila]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Benromach 35 YO Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[The Benromach Distillery Co Ltd.]]></company>
+		<producername><![CDATA[The Benromach Distillery Co Ltd.]]></producername>
+		<samplenumber><![CDATA[6272]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 35-40 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Sierra Milenario Tequila Reposado]]></productname>
+		<categoryreference><![CDATA[27c(i)]]></categoryreference>
+		<country><![CDATA[Mexico]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41.5]]></alcohol>
+		<company><![CDATA[The Drinks Company Ltd.]]></company>
+		<producername><![CDATA[Borco International GmbH]]></producername>
+		<samplenumber><![CDATA[5099]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Tequila - 100% Agave - Reposado - 38-55%]]></tastingcategory>
+		<spirittype><![CDATA[Tequila]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Cognac Roullet VSOP Grande Champagne]]></productname>
+		<categoryreference><![CDATA[19b(i)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Cognac]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[SAS Maison de Negoce Charentaise]]></company>
+		<producername><![CDATA[SAS Maison de Negoce Charentaise]]></producername>
+		<samplenumber><![CDATA[6396]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Cognac - VSOP - Grande Champagne]]></tastingcategory>
+		<spirittype><![CDATA[Cognac]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bowmore Darkest Islay Single Malt Scotch Whisky 15YO]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[15]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6067]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Islay - 15 - 18 YO - Cask Strength]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Blackwater No5 Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[Republic of Ireland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41.5]]></alcohol>
+		<company><![CDATA[Blackwater Distillery]]></company>
+		<producername><![CDATA[Blackwater Distillery]]></producername>
+		<samplenumber><![CDATA[6371]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 41%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bowmore Islay Single Malt Scotch Whisky 18 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[18]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6068]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Islay - 15 - 18 YO - Cask Strength]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glen Garioch Founder's Reserve Highland Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[48]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6071]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - No Age Stated - 46-48%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[English Spirit Distillery Cucumber Spirit]]></productname>
+		<categoryreference><![CDATA[34d]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[East Anglia]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42]]></alcohol>
+		<company><![CDATA[English Spirit Distillery]]></company>
+		<producername><![CDATA[English Spirit Distillery]]></producername>
+		<samplenumber><![CDATA[5582]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Fruit Spirits - Macerated & Distilled - Cucumber]]></tastingcategory>
+		<spirittype><![CDATA[Fruit Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glen Garioch Highland Single Malt Whisky 12 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[12]]></age>
+		<alcohol><![CDATA[48]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6072]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 8-12 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Laproaig The 1815 Legacy Edition Islay Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[48]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6048]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Islay - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bowmore Islay Single Malt Scotch Whisky 18YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[18]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6054]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Islay - 15 - 18 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bowmore Islay Single Malt Scotch Whisky 10 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6057]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Islay - 8-12 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Tea Liqueur Jossie Earl Grey]]></productname>
+		<categoryreference><![CDATA[23q]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[20]]></alcohol>
+		<company><![CDATA[Lead-off Japan Co.,Ltd.]]></company>
+		<producername><![CDATA[Gabriel Boudier]]></producername>
+		<samplenumber><![CDATA[6234]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Tea]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bowmore Islay Single Malt Scotch Whisky 15 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6058]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Islay - 15 - 18 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Vana Tallinn Elegance]]></productname>
+		<categoryreference><![CDATA[23l]]></categoryreference>
+		<country><![CDATA[Estonia]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Liviko AS]]></company>
+		<producername><![CDATA[Liviko AS]]></producername>
+		<samplenumber><![CDATA[6542]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Liqueur - Spice]]></tastingcategory>
+		<spirittype><![CDATA[Liqueur]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Laphroaig Quarter Cask Islay Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[48]]></alcohol>
+		<company><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></company>
+		<producername><![CDATA[Beam Suntory (ex Morrison Bowmore/Laphroig)]]></producername>
+		<samplenumber><![CDATA[6059]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Islay - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Gustav Dill Vodka]]></productname>
+		<categoryreference><![CDATA[28 (c)]]></categoryreference>
+		<country><![CDATA[Finland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lignell & Piispanen]]></company>
+		<producername><![CDATA[Lignell & Piispanen]]></producername>
+		<samplenumber><![CDATA[6503]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Flavoured - Herbal]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Gustav Arctic Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Finland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lignell & Piispanen]]></company>
+		<producername><![CDATA[Lignell & Piispanen]]></producername>
+		<samplenumber><![CDATA[6505]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[1792 Full Proof Kentucky Straight Bourbon Whiskey]]></productname>
+		<categoryreference><![CDATA[29a]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[Kentucky]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[62.5]]></alcohol>
+		<company><![CDATA[Sazerac Company Inc]]></company>
+		<producername><![CDATA[Sazerac Company Inc]]></producername>
+		<samplenumber><![CDATA[6454]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whiskey - Straight Bourbon - Kentucky - No Age Stated - 62-64.75%]]></tastingcategory>
+		<spirittype><![CDATA[Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Flor de Caña Centenario 12]]></productname>
+		<categoryreference><![CDATA[25c]]></categoryreference>
+		<country><![CDATA[Nicaragua]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Rum Trading International - Flor de Caña]]></company>
+		<producername><![CDATA[Rum Trading International - Flor de Caña]]></producername>
+		<samplenumber><![CDATA[5763]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Rum - Dark - Central & South America - 5-25YO]]></tastingcategory>
+		<spirittype><![CDATA[Rum]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[1792 Single Barrel Kentucky Straight Bourbon Whiskey]]></productname>
+		<categoryreference><![CDATA[29]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[Kentucky]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[49.3]]></alcohol>
+		<company><![CDATA[Sazerac Company Inc]]></company>
+		<producername><![CDATA[Sazerac Company Inc]]></producername>
+		<samplenumber><![CDATA[5999]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whiskey - Straight Bourbon - Kentucky - No Age Stated - 46-49%]]></tastingcategory>
+		<spirittype><![CDATA[Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Gin Méridor]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Pays de la Loire]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41.9]]></alcohol>
+		<company><![CDATA[Distillerie Combier]]></company>
+		<producername><![CDATA[Distillerie Combier]]></producername>
+		<samplenumber><![CDATA[5264]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 42%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Big House Kentucky Straight Bourbon Whiskey]]></productname>
+		<categoryreference><![CDATA[29a]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[Kentucky]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[45]]></alcohol>
+		<company><![CDATA[Sazerac Company Inc]]></company>
+		<producername><![CDATA[Sazerac Company Inc]]></producername>
+		<samplenumber><![CDATA[5784]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whiskey - Straight Bourbon - Kentucky - No Age stated - 37-45%]]></tastingcategory>
+		<spirittype><![CDATA[Whiskey]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Flor de Caña Centenario 25 ]]></productname>
+		<categoryreference><![CDATA[25c]]></categoryreference>
+		<country><![CDATA[Nicaragua]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Rum Trading International - Flor de Caña]]></company>
+		<producername><![CDATA[Rum Trading International - Flor de Caña]]></producername>
+		<samplenumber><![CDATA[5765]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Rum - Dark - Central & South America - 5-25YO]]></tastingcategory>
+		<spirittype><![CDATA[Rum]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Dalmore Valour Single Highland Malt]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Whyte and Mackay Ltd]]></company>
+		<producername><![CDATA[Whyte and Mackay Ltd]]></producername>
+		<samplenumber><![CDATA[6028]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Pastis Henri Bardouin]]></productname>
+		<categoryreference><![CDATA[34c]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Emporia Brands Ltd]]></company>
+		<producername><![CDATA[Distilleries et Domaines de Provence]]></producername>
+		<samplenumber><![CDATA[6552]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Flavoured Spirits - Aniseed]]></tastingcategory>
+		<spirittype><![CDATA[Flavoured Spirits]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Diurachs Own Jura Single Highland Malt 16YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[16]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Whyte and Mackay Ltd]]></company>
+		<producername><![CDATA[Whyte and Mackay Ltd]]></producername>
+		<samplenumber><![CDATA[6036]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Island - 16 - 21 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Jura Single Highland Malt 10YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[10]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Whyte and Mackay Ltd]]></company>
+		<producername><![CDATA[Whyte and Mackay Ltd]]></producername>
+		<samplenumber><![CDATA[6038]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Island - 10 -12 - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Sainsbury's Taste the Difference Calvados XO]]></productname>
+		<categoryreference><![CDATA[18d(i)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Calvados]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Emporia Brands Ltd]]></company>
+		<producername><![CDATA[Emporia Brands Ltd]]></producername>
+		<samplenumber><![CDATA[6563]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Calvados - Pays d'Auge - 12 Year Old]]></tastingcategory>
+		<spirittype><![CDATA[Calvados]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Las Garrafas de Oaxaca, Serpiente Rosada]]></productname>
+		<categoryreference><![CDATA[27b(i)]]></categoryreference>
+		<country><![CDATA[Mexico]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Destilados de Alambique SA de CV]]></company>
+		<producername><![CDATA[Destilados de Alambique SA de CV]]></producername>
+		<samplenumber><![CDATA[6247]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Mezcal - 100% Agave - Joven]]></tastingcategory>
+		<spirittype><![CDATA[Mezcal]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Dalmore Single Highland Malt 50YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[50]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Whyte and Mackay Ltd]]></company>
+		<producername><![CDATA[Whyte and Mackay Ltd]]></producername>
+		<samplenumber><![CDATA[6039]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 50 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[dRAMM Licorice Cream]]></productname>
+		<categoryreference><![CDATA[23h]]></categoryreference>
+		<country><![CDATA[Netherlands]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[14.5]]></alcohol>
+		<company><![CDATA[Engelstad Spirits AS]]></company>
+		<producername><![CDATA[Engelstad]]></producername>
+		<samplenumber><![CDATA[5892]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Cream - Licorice + Chilli]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Syndicate 58/6 12 YO Blended Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31b]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Syndicate 58/6 Limited]]></company>
+		<producername><![CDATA[Syndicate 58/6 Limited]]></producername>
+		<samplenumber><![CDATA[6270]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Deluxe Blend - 6-13 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[1606 Premium London Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[South East]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[1606 Gin]]></company>
+		<producername><![CDATA[1606 Gin]]></producername>
+		<samplenumber><![CDATA[6350]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 43%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Dewar's 30 YO " Ne Plus Ultra" Blended Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31b]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[John Dewar & Sons Ltd]]></company>
+		<producername><![CDATA[John Dewar & Sons Ltd]]></producername>
+		<samplenumber><![CDATA[5762]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Blended - 29-30 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Rare Vintage Glen Grant 1961]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Gordon & Macphail]]></company>
+		<producername><![CDATA[Gordon & Macphail]]></producername>
+		<samplenumber><![CDATA[5825]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 53 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Craigellachie 23 YO Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[John Dewar & Sons Ltd]]></company>
+		<producername><![CDATA[John Dewar & Sons Ltd]]></producername>
+		<samplenumber><![CDATA[5861]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 23 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Moore's Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[Australia]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Distillery Botanica Pty Ltd]]></company>
+		<producername><![CDATA[Distillery Botanica Pty Ltd]]></producername>
+		<samplenumber><![CDATA[6529]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[El Dorado Demerara Rum - 21 YO]]></productname>
+		<categoryreference><![CDATA[25b]]></categoryreference>
+		<country><![CDATA[Guyana]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Love Drinks]]></company>
+		<producername><![CDATA[Demerara Distillers]]></producername>
+		<samplenumber><![CDATA[5736]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Rum - Golden - Guyana - 8 -21 YO]]></tastingcategory>
+		<spirittype><![CDATA[Rum]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Longmorn 23 Year Old]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[48]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6113]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 23 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Glenlivet Founder's Reserve Single Malt Scotch Whisky]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6079]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky Scotch - Single Malt - Speyside - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky Scotch]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Ovin Pion Vodka ]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Cognac]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Ovin Pion GmbH & Co.KG]]></company>
+		<producername><![CDATA[Ovin Pion GmbH & Co.KG]]></producername>
+		<samplenumber><![CDATA[6233]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Grappa Le Giare Gewürztraminer]]></productname>
+		<categoryreference><![CDATA[21b]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41]]></alcohol>
+		<company><![CDATA[Distilleria Marzadro Spa]]></company>
+		<producername><![CDATA[Distilleria Marzadro Spa]]></producername>
+		<samplenumber><![CDATA[5991]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - Grappa - Traminer - Wood Aged]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Glenlivet 15 Year Old]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6086]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 12-17 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Yanghe Spirit Classic Series (Dream_M6)]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[China]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[52]]></alcohol>
+		<company><![CDATA[Jiangsu Yanghe Distillery Co Ltd]]></company>
+		<producername><![CDATA[Jiangsu Yanghe Distillery Co Ltd]]></producername>
+		<samplenumber><![CDATA[5663]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 50 - 56%]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Grappa Giare Amarone]]></productname>
+		<categoryreference><![CDATA[21b]]></categoryreference>
+		<country><![CDATA[Italy]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41]]></alcohol>
+		<company><![CDATA[Distilleria Marzadro Spa]]></company>
+		<producername><![CDATA[Distilleria Marzadro Spa]]></producername>
+		<samplenumber><![CDATA[5992]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - Grappa - Amarone - Wood Aged]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Glenlivet 18 Year Old]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6080]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 19-21 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Scapa Skiren]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Island]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6090]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Islands -  No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Aberlour 12 Year Old Double Cask Matured Highland Single Malt]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6110]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 10-12 YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Aberlour 16 Year Old Double Cask Matured]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Speyside]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6106]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Speyside - 14-17 YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Rutte Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[Netherlands]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[De Kuyper Royal Distillers]]></company>
+		<producername><![CDATA[De Kuyper Royal Distillers]]></producername>
+		<samplenumber><![CDATA[5834]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 43%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[De Kuyper Crème de Cassis]]></productname>
+		<categoryreference><![CDATA[23b]]></categoryreference>
+		<country><![CDATA[Netherlands]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[15]]></alcohol>
+		<company><![CDATA[De Kuyper Royal Distillers]]></company>
+		<producername><![CDATA[De Kuyper Royal Distillers]]></producername>
+		<samplenumber><![CDATA[5843]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Blackcurrant]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Scapa Glansa]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Island]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6089]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch -Single Malt - Island - No Age Stated - Peated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Mainstay 54 Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[54]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[5906]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - 54%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Ballantine's Hard Fired]]></productname>
+		<categoryreference><![CDATA[31b]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6095]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Deluxe Blend - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Yanghe Spirit Classic Series (Sky)]]></productname>
+		<categoryreference><![CDATA[35a]]></categoryreference>
+		<country><![CDATA[China]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[42]]></alcohol>
+		<company><![CDATA[Jiangsu Yanghe Distillery Co Ltd]]></company>
+		<producername><![CDATA[Jiangsu Yanghe Distillery Co Ltd]]></producername>
+		<samplenumber><![CDATA[5667]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Kaoliang Liquor (Baiju) - China - 33-46%]]></tastingcategory>
+		<spirittype><![CDATA[Kaoliang Liquor (Baiju)]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Klipdrift Gold Potstilled Brandy]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[5915]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - South Africa - Pot Stilled - No Age Stated]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Ballantine's 17 Year Old]]></productname>
+		<categoryreference><![CDATA[31b]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Lexis Agency]]></company>
+		<producername><![CDATA[Chivas Brothers]]></producername>
+		<samplenumber><![CDATA[6083]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Deluxe Blend - 17-18 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Van Ryn's 20 YO Collector's Reserve]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[5898]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - South Africa - Pot Still - 15-20 YO]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[One Gin]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[South]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[Global Ethics Ltd]]></company>
+		<producername><![CDATA[Global Ethics Ltd]]></producername>
+		<samplenumber><![CDATA[6276]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Contemporary Styles - England - 39-46%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Oude Meester Souverein 18 YO Potstill Brandy]]></productname>
+		<categoryreference><![CDATA[21d]]></categoryreference>
+		<country><![CDATA[South Africa]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[5899]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Grape Brandy - South Africa - Pot Still - 15-20 YO]]></tastingcategory>
+		<spirittype><![CDATA[Grape Brandy]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Creme de Cassis Des Hautes Cotes de Nuits ]]></productname>
+		<categoryreference><![CDATA[23b]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[18]]></alcohol>
+		<company><![CDATA[MAISON TRENEL]]></company>
+		<producername><![CDATA[MAISON TRENEL]]></producername>
+		<samplenumber><![CDATA[5987]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Blackcurrant]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Purity Vodka 51 ]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Sweden]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Purity Vodka AB]]></company>
+		<producername><![CDATA[Purity Vodka AB]]></producername>
+		<samplenumber><![CDATA[6819]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - Europe - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Richelieu XO]]></productname>
+		<categoryreference><![CDATA[19c(i)]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[Cognac]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[5908]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Cognac - XO - Fine Champagne]]></tastingcategory>
+		<spirittype><![CDATA[Cognac]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Deanston 18 YO Highland Single Malt]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46.3]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[6251]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 17-18 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Purity Vodka Organic]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[Sweden]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Purity Vodka AB]]></company>
+		<producername><![CDATA[Purity Vodka AB]]></producername>
+		<samplenumber><![CDATA[6822]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Vodka - Organic - Neutral - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Wheatley Vodka]]></productname>
+		<categoryreference><![CDATA[28a]]></categoryreference>
+		<country><![CDATA[USA]]></country>
+		<region><![CDATA[Kentucky]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[41]]></alcohol>
+		<company><![CDATA[Sazerac Company Inc]]></company>
+		<producername><![CDATA[Buffalo Trace Distillery]]></producername>
+		<samplenumber><![CDATA[5774]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Vodka - Neutral - 41-43%]]></tastingcategory>
+		<spirittype><![CDATA[Vodka]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenmorangie Original 10 YO Highland Single Malt]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[The Glenmorangie Company]]></company>
+		<producername><![CDATA[The Glenmorangie Company]]></producername>
+		<samplenumber><![CDATA[6127]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 8-12 YO ]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[El Señorio Mezcal Reposado Extra]]></productname>
+		<categoryreference><![CDATA[27c(i)]]></categoryreference>
+		<country><![CDATA[Mexico]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Para Todo Mal Mezcal]]></company>
+		<producername><![CDATA[Para Todo Mal Mezcal]]></producername>
+		<samplenumber><![CDATA[6999]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Mezcal - 100% Agave - Reposado Extra]]></tastingcategory>
+		<spirittype><![CDATA[Mezcal]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenmorangie Nectar D'Or]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[The Glenmorangie Company]]></company>
+		<producername><![CDATA[The Glenmorangie Company]]></producername>
+		<samplenumber><![CDATA[6125]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 12YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenmorangie 18 YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[The Glenmorangie Company]]></company>
+		<producername><![CDATA[The Glenmorangie Company]]></producername>
+		<samplenumber><![CDATA[6137]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 18-25YO - 40-48%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenmorangie Duthac Highland Single Malt]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[The Glenmorangie Company]]></company>
+		<producername><![CDATA[The Glenmorangie Company]]></producername>
+		<samplenumber><![CDATA[6134]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - No Age Stated - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenmorangie Grand Vintage Malt 1990]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43]]></alcohol>
+		<company><![CDATA[The Glenmorangie Company]]></company>
+		<producername><![CDATA[The Glenmorangie Company]]></producername>
+		<samplenumber><![CDATA[6130]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 24-30 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenmorangie Bacalta]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[The Glenmorangie Company]]></company>
+		<producername><![CDATA[The Glenmorangie Company]]></producername>
+		<samplenumber><![CDATA[6135]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - No Age Stated - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenmorangie Quinta Ruban]]></productname>
+		<categoryreference><![CDATA[31e(i)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46]]></alcohol>
+		<company><![CDATA[The Glenmorangie Company]]></company>
+		<producername><![CDATA[The Glenmorangie Company]]></producername>
+		<samplenumber><![CDATA[6132]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 12YO - Cask Finish]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Azor Gin Reserva]]></productname>
+		<categoryreference><![CDATA[22e]]></categoryreference>
+		<country><![CDATA[Portugal]]></country>
+		<region><![CDATA[Açores VR (Azores)]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Drinks & Flavours, Lda]]></company>
+		<producername><![CDATA[Drinks & Flavours, Lda]]></producername>
+		<samplenumber><![CDATA[6805]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Wood Finished - 40-47%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bunnahabhain 18 YO Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e(ii)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46.3]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[6260]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Islay - 18-25YO - Unpeated - Cask Strength 45%+]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bunnahabhain 25 YO Single Malt Scotch Whisky ]]></productname>
+		<categoryreference><![CDATA[31e(ii)]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46.3]]></alcohol>
+		<company><![CDATA[Distell]]></company>
+		<producername><![CDATA[Distell]]></producername>
+		<samplenumber><![CDATA[6261]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Islay - 18-25YO - Unpeated - Cask Strength 45%+]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Blended Whisky #3 23YO]]></productname>
+		<categoryreference><![CDATA[31a]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[23]]></age>
+		<alcohol><![CDATA[48.2]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6625]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Deluxe Blend - 23-25 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Oliver Cromwell London Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[37.5]]></alcohol>
+		<company><![CDATA[Aldi Stores Ltd]]></company>
+		<producername><![CDATA[Aldi Stores Ltd]]></producername>
+		<samplenumber><![CDATA[6150]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 37-38%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Glenturret 35YO Highland Single Malt]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Highland]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[47.7]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6633]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Highland - 35-40 YO]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Port Ellen Islay Single Malt Scotch Whisky 33YO]]></productname>
+		<categoryreference><![CDATA[31e]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[Islay]]></region>
+		<age><![CDATA[33]]></age>
+		<alcohol><![CDATA[47.5]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6626]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Single Malt - Islay - 33 YO Peated - Cask Strength 47%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[The Half-Century Blend 50YO]]></productname>
+		<categoryreference><![CDATA[31b]]></categoryreference>
+		<country><![CDATA[Scotland]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[50]]></age>
+		<alcohol><![CDATA[45.5]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6635]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Whisky - Scotch - Deluxe Blend - 50 YO - Cask Strength 45%]]></tastingcategory>
+		<spirittype><![CDATA[Whisky]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bathtub Gin - Cask-Aged ]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[South East]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[43.3]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6643]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - Contemporary Styles - Wood Rested - 43-57%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bathtub Gin - Cask-Aged, Navy-Strength]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[South East]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[57]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6644]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Gin - Wood Finished - Navy Strength - 57%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bathtub Gin - Navy-Strength]]></productname>
+		<categoryreference><![CDATA[22c]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[South East]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[57]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6645]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Gin - Contemporary Styles - England - 57%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Hernö - Batch 1 (That Boutique-y Gin Company)]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[Sweden]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[46.2]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6650]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 46-48%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Bathtub Gin - Cask-Aged, Navy-Strength]]></productname>
+		<categoryreference><![CDATA[22e]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[South East]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[57]]></alcohol>
+		<company><![CDATA[ATOM Supplies Ltd]]></company>
+		<producername><![CDATA[ATOM Supplies Ltd]]></producername>
+		<samplenumber><![CDATA[6644]]></samplenumber>
+		<award><![CDATA[Gold Outstanding]]></award>
+		<tastingcategory><![CDATA[Gin - Wood Finished - Navy Strength - 57%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Tyler-Street London Dry Gin]]></productname>
+		<categoryreference><![CDATA[22a]]></categoryreference>
+		<country><![CDATA[England]]></country>
+		<region><![CDATA[South West]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[40]]></alcohol>
+		<company><![CDATA[Soul Spirits Ltd]]></company>
+		<producername><![CDATA[Soul Spirits Ltd]]></producername>
+		<samplenumber><![CDATA[6451]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Gin - London Dry - 40%]]></tastingcategory>
+		<spirittype><![CDATA[Gin]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[Specially Selected Creme de Cassis]]></productname>
+		<categoryreference><![CDATA[23b]]></categoryreference>
+		<country><![CDATA[France]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[15]]></alcohol>
+		<company><![CDATA[Aldi Stores Ltd]]></company>
+		<producername><![CDATA[Aldi Stores Ltd]]></producername>
+		<samplenumber><![CDATA[6153]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Liqueurs - Blackcurrant]]></tastingcategory>
+		<spirittype><![CDATA[Liqueurs]]></spirittype>
+	</node>
+	<node>
+		<productname><![CDATA[El Señorio Mezcal Reposado]]></productname>
+		<categoryreference><![CDATA[27c(ii)]]></categoryreference>
+		<country><![CDATA[Mexico]]></country>
+		<region><![CDATA[]]></region>
+		<age><![CDATA[]]></age>
+		<alcohol><![CDATA[38]]></alcohol>
+		<company><![CDATA[Para Todo Mal Mezcal]]></company>
+		<producername><![CDATA[Para Todo Mal Mezcal]]></producername>
+		<samplenumber><![CDATA[7000]]></samplenumber>
+		<award><![CDATA[Gold]]></award>
+		<tastingcategory><![CDATA[Mezcal - 100% Agave - Reposado]]></tastingcategory>
+		<spirittype><![CDATA[Mezcal]]></spirittype>
+	</node>
+</data>
