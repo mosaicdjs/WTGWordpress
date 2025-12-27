@@ -992,7 +992,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "A"){
 									array_push($aresults, $pID);
@@ -1011,7 +1011,7 @@ switch ($language)
 						$aParts = partition($aresults, 4);
 						echo '<ul>';
 						foreach($aParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							
@@ -1021,7 +1021,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1029,7 +1029,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1037,7 +1037,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -1079,7 +1079,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "D"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -1099,7 +1099,7 @@ switch ($language)
 						$dParts = partition($dresults, 4);
 						echo '<ul>';
 						foreach($dParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart1);
@@ -1107,7 +1107,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1115,7 +1115,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1123,7 +1123,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -1165,7 +1165,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "G"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -1185,7 +1185,7 @@ switch ($language)
 						$gParts = partition($gresults, 4);
 						echo '<ul>';
 						foreach($gParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart1);
@@ -1193,7 +1193,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1201,7 +1201,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1209,7 +1209,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -1252,7 +1252,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "J"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -1271,7 +1271,7 @@ switch ($language)
 						
 						$jParts = partition($jresults, 4);
 						foreach($jParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart1);
@@ -1279,7 +1279,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1287,7 +1287,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1295,7 +1295,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -1338,7 +1338,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "M"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -1358,7 +1358,7 @@ switch ($language)
 						$mParts = partition($mresults, 4);
 						echo '<ul>';
 						foreach($mParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart1);
@@ -1366,7 +1366,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1374,7 +1374,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1382,7 +1382,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -1426,7 +1426,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "P"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -1449,7 +1449,7 @@ switch ($language)
 						$pParts = partition($presults, 4);
 						echo '<ul>';
 						foreach($pParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart1);
@@ -1457,7 +1457,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1465,7 +1465,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1473,7 +1473,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -1517,7 +1517,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "T"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -1537,7 +1537,7 @@ switch ($language)
 						$tParts = partition($tresults, 4);
 						echo '<ul>';
 						foreach($tParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart1);
@@ -1545,7 +1545,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1553,7 +1553,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1561,7 +1561,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -1605,7 +1605,7 @@ switch ($language)
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "W"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -1628,7 +1628,7 @@ switch ($language)
 						$wParts = partition($wresults, 4);
 						echo '<ul>';
 						foreach($wParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart1);
@@ -1636,7 +1636,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart2);
@@ -1644,7 +1644,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart3);
@@ -1652,7 +1652,7 @@ switch ($language)
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_beaches($aPart4);
@@ -2121,7 +2121,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "A"){
 									array_push($aresults, $pID);
@@ -2140,7 +2140,7 @@ function wtg_cruiseby_AZ_static()
 						$aParts = partition($aresults, 4);
 						echo '<ul>';
 						foreach($aParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							
@@ -2150,7 +2150,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2158,7 +2158,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2166,7 +2166,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -2208,7 +2208,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "D"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -2228,7 +2228,7 @@ function wtg_cruiseby_AZ_static()
 						$dParts = partition($dresults, 4);
 						echo '<ul>';
 						foreach($dParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart1);
@@ -2236,7 +2236,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2244,7 +2244,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2252,7 +2252,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -2294,7 +2294,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "G"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -2314,7 +2314,7 @@ function wtg_cruiseby_AZ_static()
 						$gParts = partition($gresults, 4);
 						echo '<ul>';
 						foreach($gParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart1);
@@ -2322,7 +2322,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2330,7 +2330,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2338,7 +2338,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -2381,7 +2381,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "J"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -2400,7 +2400,7 @@ function wtg_cruiseby_AZ_static()
 						
 						$jParts = partition($jresults, 4);
 						foreach($jParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart1);
@@ -2408,7 +2408,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2416,7 +2416,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2424,7 +2424,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -2467,7 +2467,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "M"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -2487,7 +2487,7 @@ function wtg_cruiseby_AZ_static()
 						$mParts = partition($mresults, 4);
 						echo '<ul>';
 						foreach($mParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart1);
@@ -2495,7 +2495,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2503,7 +2503,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2511,7 +2511,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -2555,7 +2555,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "P"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -2578,7 +2578,7 @@ function wtg_cruiseby_AZ_static()
 						$pParts = partition($presults, 4);
 						echo '<ul>';
 						foreach($pParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart1);
@@ -2586,7 +2586,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2594,7 +2594,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2602,7 +2602,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -2646,7 +2646,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "T"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -2666,7 +2666,7 @@ function wtg_cruiseby_AZ_static()
 						$tParts = partition($tresults, 4);
 						echo '<ul>';
 						foreach($tParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart1);
@@ -2674,7 +2674,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2682,7 +2682,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2690,7 +2690,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -2734,7 +2734,7 @@ function wtg_cruiseby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "W"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -2757,7 +2757,7 @@ function wtg_cruiseby_AZ_static()
 						$wParts = partition($wresults, 4);
 						echo '<ul>';
 						foreach($wParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart1);
@@ -2765,7 +2765,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart2);
@@ -2773,7 +2773,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart3);
@@ -2781,7 +2781,7 @@ function wtg_cruiseby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_cruise($aPart4);
@@ -3047,7 +3047,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "A"){
 									array_push($aresults, $pID);
@@ -3066,7 +3066,7 @@ function wtg_skiby_AZ_static()
 						$aParts = partition($aresults, 4);
 						echo '<ul>';
 						foreach($aParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							
@@ -3076,7 +3076,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3084,7 +3084,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3092,7 +3092,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3134,7 +3134,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "D"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -3154,7 +3154,7 @@ function wtg_skiby_AZ_static()
 						$dParts = partition($dresults, 4);
 						echo '<ul>';
 						foreach($dParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart1);
@@ -3162,7 +3162,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3170,7 +3170,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3178,7 +3178,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($dParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3220,7 +3220,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "G"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -3240,7 +3240,7 @@ function wtg_skiby_AZ_static()
 						$gParts = partition($gresults, 4);
 						echo '<ul>';
 						foreach($gParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart1);
@@ -3248,7 +3248,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3256,7 +3256,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3264,7 +3264,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($gParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3307,7 +3307,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "J"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -3326,7 +3326,7 @@ function wtg_skiby_AZ_static()
 						
 						$jParts = partition($jresults, 4);
 						foreach($jParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart1);
@@ -3334,7 +3334,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3342,7 +3342,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3350,7 +3350,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($jParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3393,7 +3393,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "M"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -3413,7 +3413,7 @@ function wtg_skiby_AZ_static()
 						$mParts = partition($mresults, 4);
 						echo '<ul>';
 						foreach($mParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart1);
@@ -3421,7 +3421,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3429,7 +3429,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3437,7 +3437,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($mParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3481,7 +3481,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "P"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -3504,7 +3504,7 @@ function wtg_skiby_AZ_static()
 						$pParts = partition($presults, 4);
 						echo '<ul>';
 						foreach($pParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart1);
@@ -3512,7 +3512,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3520,7 +3520,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3528,7 +3528,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($pParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3572,7 +3572,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "T"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -3592,7 +3592,7 @@ function wtg_skiby_AZ_static()
 						$tParts = partition($tresults, 4);
 						echo '<ul>';
 						foreach($tParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart1);
@@ -3600,7 +3600,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3608,7 +3608,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3616,7 +3616,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($tParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3660,7 +3660,7 @@ function wtg_skiby_AZ_static()
 						if($postsQuery->have_posts()):
 							while ($postsQuery->have_posts()):$postsQuery->the_post();
 								$pID = get_the_ID();
-								$link = get_permalink($pID);
+								$link = wtg_esc_url(get_permalink($pID));
 								$title = get_the_title($pID);
 								if (substr( $title, 0, 1 ) === "W"){
 									//echo '<li class="country_title">'.$title.'</li>';
@@ -3683,7 +3683,7 @@ function wtg_skiby_AZ_static()
 						$wParts = partition($wresults, 4);
 						echo '<ul>';
 						foreach($wParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							//$title = get_the_title($aPart1);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart1);
@@ -3691,7 +3691,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							//$title = get_the_title($aPart2);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart2);
@@ -3699,7 +3699,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							//$title = get_the_title($aPart3);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart3);
@@ -3707,7 +3707,7 @@ function wtg_skiby_AZ_static()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($wParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							//$title = get_the_title($aPart4);
 							//echo '<li class="country_title">'.$title.'</li>';
 							wtg_return_ski($aPart4);
@@ -3845,7 +3845,7 @@ function wtg_countryby_continent()
 						$aParts = partition($aresults, 4);
 						echo '<ul>';
 						foreach($aParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							$title = get_the_title($aPart1);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 							
@@ -3853,21 +3853,21 @@ function wtg_countryby_continent()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							$title = get_the_title($aPart2);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							$title = get_the_title($aPart3);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							$title = get_the_title($aPart4);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
@@ -4171,7 +4171,7 @@ function wtg_passvisaby_continent()
 						$aParts = partition($aresults, 4);
 						echo '<ul>';
 						foreach($aParts[0] as $aPart1){
-							$link = get_permalink($aPart1).'passport-visa';
+							$link = wtg_esc_url(get_permalink($aPart1) . 'passport-visa');
 							$title = get_the_title($aPart1);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 							
@@ -4179,21 +4179,21 @@ function wtg_passvisaby_continent()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[1] as $aPart2){
-							$link = get_permalink($aPart2).'passport-visa';
+							$link = wtg_esc_url(get_permalink($aPart2) . 'passport-visa');
 							$title = get_the_title($aPart2);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[2] as $aPart3){
-							$link = get_permalink($aPart3).'passport-visa';
+							$link = wtg_esc_url(get_permalink($aPart3) . 'passport-visa');
 							$title = get_the_title($aPart3);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[3] as $aPart4){
-							$link = get_permalink($aPart4).'passport-visa';
+							$link = wtg_esc_url(get_permalink($aPart4) . 'passport-visa');
 							$title = get_the_title($aPart4);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
@@ -4314,7 +4314,7 @@ function wtg_publicholsby_continent()
 						$aParts = partition($aresults, 4);
 						echo '<ul>';
 						foreach($aParts[0] as $aPart1){
-							$link = get_permalink($aPart1).'public-holidays';
+							$link = wtg_esc_url(get_permalink($aPart1) . 'public-holidays');
 							$title = get_the_title($aPart1);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 							
@@ -4322,21 +4322,21 @@ function wtg_publicholsby_continent()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[1] as $aPart2){
-							$link = get_permalink($aPart2).'public-holidays';
+							$link = wtg_esc_url(get_permalink($aPart2) . 'public-holidays');
 							$title = get_the_title($aPart2);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[2] as $aPart3){
-							$link = get_permalink($aPart3).'public-holidays';
+							$link = wtg_esc_url(get_permalink($aPart3) . 'public-holidays');
 							$title = get_the_title($aPart3);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[3] as $aPart4){
-							$link = get_permalink($aPart4).'public-holidays';
+							$link = wtg_esc_url(get_permalink($aPart4) . 'public-holidays');
 							$title = get_the_title($aPart4);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
@@ -4453,7 +4453,7 @@ function wtg_city_db()
 						$aParts = partition($aresults, 4);
 						echo '<ul>';
 						foreach($aParts[0] as $aPart1){
-							$link = get_permalink($aPart1);
+							$link = wtg_esc_url(get_permalink($aPart1));
 							$title = get_the_title($aPart1);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 							
@@ -4461,21 +4461,21 @@ function wtg_city_db()
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[1] as $aPart2){
-							$link = get_permalink($aPart2);
+							$link = wtg_esc_url(get_permalink($aPart2));
 							$title = get_the_title($aPart2);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[2] as $aPart3){
-							$link = get_permalink($aPart3);
+							$link = wtg_esc_url(get_permalink($aPart3));
 							$title = get_the_title($aPart3);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}
 						echo '</ul>';
 						echo '<ul>';
 						foreach($aParts[3] as $aPart4){
-							$link = get_permalink($aPart4);
+							$link = wtg_esc_url(get_permalink($aPart4));
 							$title = get_the_title($aPart4);
 							echo '<li><a href="'.$link.'">'.$title.'</a></li>';
 						}

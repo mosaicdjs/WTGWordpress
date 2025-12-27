@@ -1,5 +1,40 @@
 <?php
 
+// --- WTG hardening helpers (Patch set A) ---
+if (!function_exists('wtg_remote_json_get')) {
+	/**
+	 * Fetch JSON from a remote endpoint with caching and error handling.
+	 *
+	 * @param string $url
+	 * @param string $cache_key
+	 * @param int $ttl_seconds
+	 * @return object|null Decoded JSON object, or null on failure.
+	 */
+	function wtg_remote_json_get($url, $cache_key, $ttl_seconds = 86400) {
+		$cache_key = 'wtg_json_' . sanitize_key($cache_key);
+		$cached = get_transient($cache_key);
+		if ($cached !== false) {
+			return $cached;
+		}
+		$response = wp_remote_get($url, array('timeout' => 8, 'redirection' => 3));
+		if (is_wp_error($response)) {
+			return null;
+		}
+		$code = (int) wp_remote_retrieve_response_code($response);
+		$body = wp_remote_retrieve_body($response);
+		if ($code < 200 || $code >= 300 || !$body) {
+			return null;
+		}
+		$obj = json_decode($body);
+		if (json_last_error() !== JSON_ERROR_NONE) {
+			return null;
+		}
+		set_transient($cache_key, $obj, (int) $ttl_seconds);
+		return $obj;
+	}
+}
+// --- end helpers ---
+
 function wtg_guide_content($postid)
 {
 
@@ -93,8 +128,7 @@ if (get_the_title($postid) == 'Slovenia') { /*echo 'Slovenia: '.$legacy_id;*/ }
     $language = get_field('language','options');
     $guideTerms = get_the_terms($postid,'wtg_guide_type');
     $guideType = $guideTerms[0]->slug;
-    $fp = get_query_var('fpage');
-    if (!$fp) $fp='default';
+    $fp = wtg_sanitize_fpage(null, 'default');
     
     switch ($fp)
     {
@@ -474,9 +508,9 @@ default:
 break;
 }
         //echo 'Travel Advice for :'.$region;
-        $json = file_get_contents('https://www.gov.uk/api/content/foreign-travel-advice/'.$region);
-        $obj = json_decode($json);
-        $details = $obj->details;
+        $obj = wtg_remote_json_get('https://www.gov.uk/api/content/foreign-travel-advice/' . $region, 'govuk_fa_' . $region, 12 * HOUR_IN_SECONDS);
+        if (!$obj) { return ''; }
+$details = $obj->details;
         $parts = $details->parts;
         foreach ($parts as $part){ 
         $content = $part->body;

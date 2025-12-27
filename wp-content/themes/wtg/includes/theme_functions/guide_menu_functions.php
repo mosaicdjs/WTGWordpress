@@ -40,7 +40,7 @@ function wtg_guide_menu_region($postID)
 	 * Can't think of a better way, given the data.. so, meh.. the simplest answer is more likely to be the best... even if it's more code
 	 * 
 	 */
-	$current_fp = get_query_var('fpage');
+	$current_fp = wtg_sanitize_fpage();
 	$active = '';
 	$expanded = 'false';
 	$colapsed = 'collapsed';
@@ -61,15 +61,15 @@ function wtg_guide_menu_region($postID)
 				<div class="panel-heading" role="tab" id="headingOne">
 					<h4 class="panel-title">
 					  <a role="button" data-toggle="collapse" data-parent="#accordion" class="'.$colapsed.'" href="#collapseOne" aria-expanded="'.$expanded.'" aria-controls="collapseOne">
-						Introducing '.get_the_title($postID).'</a>
+						Introducing '.wtg_esc_html(get_the_title($postID)).'</a>
 					</h4>
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse '.$in.'" role="tabpanel" aria-labelledby="headingOne">
 					<div class="panel-body">
 						<ul>
-							<li><a href="'.get_permalink($postID).'" class="'.$active.'">About '.get_the_title($postID).'</a>
+							<li><a href="'.wtg_esc_url(get_permalink($postID)).'" class="'.$active.'">About '.wtg_esc_html(get_the_title($postID)).'</a>
 							</li>						
-							<!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.get_the_title($postID).'</a> 
+							<!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.wtg_esc_html(get_the_title($postID)).'</a> 
 							</li> -->
 							<li><a href="'.get_permalink($postID).'history-language-culture" class="history-language-culture">History, language & culture</a>
 							</li>
@@ -109,7 +109,7 @@ function wtg_guide_menu_region($postID)
 				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 					<div class="panel-body">
 						<ul>
-							<li><a href="'.get_permalink($postID).'travel-by" class="travel-by">Travel to  '.get_the_title($postID).'</a>
+							<li><a href="'.get_permalink($postID).'travel-by" class="travel-by">Travel to  '.wtg_esc_html(get_the_title($postID)).'</a>
 							</li>';
 							echo'<li><a href="'.get_permalink($postID).'region-hotels" class="region-hotels">Where to stay</a>
 									</li>';
@@ -214,7 +214,7 @@ function wtg_guide_menu_region($postID)
 					<div class="panel-heading" role="tab" id="headingThree">
 						<h4 class="panel-title">
 						  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							'.get_the_title($parentID).': Key Info
+							'.wtg_esc_html(get_the_title($parentID)).': Key Info
 						  </a>
 						</h4>
 					</div>
@@ -240,7 +240,7 @@ function wtg_guide_menu_region($postID)
 					<div class="panel-heading" role="tab" id="headingThree">
 						<h4 class="panel-title">
 						  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							'.get_the_title($parentParentID).': Key Info
+							'.wtg_esc_html(get_the_title($parentParentID)).': Key Info
 						  </a>
 						</h4>
 					</div>
@@ -323,7 +323,7 @@ function guide_has_parent($id)
 
 function wtg_guide_menu_city($postID)
 {
-	$current_fp = get_query_var('fpage');
+	$current_fp = wtg_sanitize_fpage();
 	$active = '';
 	$expanded = 'false';
 	$colapsed = 'collapsed';
@@ -342,20 +342,20 @@ function wtg_guide_menu_city($postID)
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" class="'.$colapsed.'" href="#collapseOne" aria-expanded="'.$expanded.'" aria-controls="collapseOne">
-                    Introducing '.get_the_title($postID).'
+                    Introducing '.wtg_esc_html(get_the_title($postID)).'
                   </a>
                 </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse '.$in.'" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="'.get_permalink($postID).'" class="'.$active.'">About '.get_the_title($postID).'</a>
+                                    <li><a href="'.wtg_esc_url(get_permalink($postID)).'" class="'.$active.'">About '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li>
                                     <li><a href="'.get_permalink($postID).'history" class="history">History</a>
                                     </li>
                                     <li><a href="'.get_permalink($postID).'weather" class="weather">Weather / Best time to visit</a>
 									</li>						
-									<!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.get_the_title($postID).'</a>
+									<!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.wtg_esc_html(get_the_title($postID)).'</a>
 									</li> -->
                                 </ul>
                             </div>
@@ -408,7 +408,7 @@ function wtg_guide_menu_city($postID)
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="'.get_permalink($postID).'travel-to" class="travel-to">Travel to '.get_the_title($postID).'</a>
+                                    <li><a href="'.get_permalink($postID).'travel-to" class="travel-to">Travel to '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li>
                                     <li><a href="'.get_permalink($postID).'hotels" class="hotels">Hotels</a>
                                     </li>
@@ -462,7 +462,7 @@ function wtg_guide_menu_city($postID)
 								
 									
 									echo '
-									<li><a href="'.get_permalink($parentID).'" class="about-country">About '.get_the_title($parentID).'</a>
+									<li><a href="'.wtg_esc_url(get_permalink($parentID)).'" class="about-country">About '.wtg_esc_html(get_the_title($parentID)).'</a>
 									</li>
 									<li><a href="'.get_permalink($parentID).'passport-visa" class="passport-visa">Passport & visa</a>
 									</li>
@@ -524,7 +524,7 @@ function wtg_guide_menu_city($postID)
 
 function wtg_guide_menu_airport($postID)
 {
-	$current_fp = get_query_var('fpage');
+	$current_fp = wtg_sanitize_fpage();
 	$active = '';
 
 	if(empty($current_fp)){
@@ -535,14 +535,14 @@ function wtg_guide_menu_airport($postID)
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Introducing '.get_the_title($postID).'
+                    Introducing '.wtg_esc_html(get_the_title($postID)).'
                   </a>
 							</h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="'.get_permalink($postID).'" class="'.$active.'">About '.get_the_title($postID).'</a>
+                                    <li><a href="'.wtg_esc_url(get_permalink($postID)).'" class="'.$active.'">About '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li>
                                     <li><a href="'.get_permalink($postID).'airport-hotels" class="airport-hotels">Hotels</a>
                                     </li>
@@ -576,7 +576,7 @@ function wtg_guide_menu_airport($postID)
 
 function wtg_guide_menu_ski($postID)
 {
-	$current_fp = get_query_var('fpage');
+	$current_fp = wtg_sanitize_fpage();
 	$active = '';
 	
 	if(empty($current_fp)){
@@ -588,18 +588,18 @@ function wtg_guide_menu_ski($postID)
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Introducing '.get_the_title($postID).'
+                    Introducing '.wtg_esc_html(get_the_title($postID)).'
                   </a>
 							</h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="'.get_permalink($postID).'" class="'.$active.'">About '.get_the_title($postID).'</a>
+                                    <li><a href="'.wtg_esc_url(get_permalink($postID)).'" class="'.$active.'">About '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li>
                                     <li><a href="'.get_permalink($postID).'apres-ski" class="apres-ski">Resort information</a>
                                     </li>
-                                    <!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.get_the_title($postID).'</a>
+                                    <!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li> -->
 
 								</ul>
@@ -629,14 +629,14 @@ function wtg_guide_menu_cruise($postID)
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Introducing '.get_the_title($postID).'
+                    Introducing '.wtg_esc_html(get_the_title($postID)).'
                   </a>
 							</h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="'.get_permalink($postID).'" class="'.$active.'">About '.get_the_title($postID).'</a>
+                                    <li><a href="'.wtg_esc_url(get_permalink($postID)).'" class="'.$active.'">About '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li>
                                 </ul>
                             </div>
@@ -654,16 +654,16 @@ function wtg_guide_menu_beach($postID)
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Introducing '.get_the_title($postID).'
+                    Introducing '.wtg_esc_html(get_the_title($postID)).'
                   </a>
 							</h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="'.get_permalink($postID).'" class="active">About '.get_the_title($postID).'</a>
+                                    <li><a href="'.wtg_esc_url(get_permalink($postID)).'" class="active">About '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li>
-									<!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.get_the_title($postID).'</a>
+									<!-- <li><a href="'.get_permalink($postID).'pictures" class="pictures">Images of '.wtg_esc_html(get_the_title($postID)).'</a>
                                     </li> -->
                             </div>
                         </div>
@@ -792,7 +792,7 @@ echo '</div>';
 											<ul>
 								';
 								foreach($regionIDs as $regionID){
-										echo '<li><a href="'.get_permalink($regionID).'" class="active">'.get_the_title($regionID).'</a></li>';
+										echo '<li><a href="'.wtg_esc_url(get_permalink($regionID)).'" class="active">'.wtg_esc_html(get_the_title($regionID)).'</a></li>';
 								}
 									echo '</ul>
 									</div>
@@ -816,7 +816,7 @@ echo '</div>';
 											<ul>
 								';
 								foreach($cityIDs as $cityID){
-										echo '<li><a href="'.get_permalink($cityID).'" class="active">'.get_the_title($cityID).'</a></li>';
+										echo '<li><a href="'.wtg_esc_url(get_permalink($cityID)).'" class="active">'.wtg_esc_html(get_the_title($cityID)).'</a></li>';
 								}
 									echo '</ul>
 									</div>
@@ -840,7 +840,7 @@ echo '</div>';
 											<ul>
 								';
 								foreach($airportIDs as $airportID){
-										echo '<li><a href="'.get_permalink($airportID).'" class="active">'.get_the_title($airportID).'</a></li>';
+										echo '<li><a href="'.wtg_esc_url(get_permalink($airportID)).'" class="active">'.wtg_esc_html(get_the_title($airportID)).'</a></li>';
 								}
 									echo '</ul>
 									</div>
@@ -864,7 +864,7 @@ echo '</div>';
 											<ul>
 								';
 								foreach($skiIDs as $skiID){
-										echo '<li><a href="'.get_permalink($skiID).'" class="active">'.get_the_title($skiID).'</a></li>';
+										echo '<li><a href="'.wtg_esc_url(get_permalink($skiID)).'" class="active">'.wtg_esc_html(get_the_title($skiID)).'</a></li>';
 								}
 									echo '</ul>
 									</div>
@@ -888,7 +888,7 @@ echo '</div>';
 											<ul>
 								';
 								foreach($beachIDs as $beachID){
-										echo '<li><a href="'.get_permalink($beachID).'" class="active">'.get_the_title($beachID).'</a></li>';
+										echo '<li><a href="'.wtg_esc_url(get_permalink($beachID)).'" class="active">'.wtg_esc_html(get_the_title($beachID)).'</a></li>';
 								}
 									echo '</ul>
 									</div>
@@ -912,7 +912,7 @@ echo '</div>';
 											<ul>
 								';
 								foreach($cruiseIDs as $cruiseID){
-										echo '<li><a href="'.get_permalink($cruiseID).'" class="active">'.get_the_title($cruiseID).'</a></li>';
+										echo '<li><a href="'.wtg_esc_url(get_permalink($cruiseID)).'" class="active">'.wtg_esc_html(get_the_title($cruiseID)).'</a></li>';
 								}
 									echo '</ul>
 									</div>

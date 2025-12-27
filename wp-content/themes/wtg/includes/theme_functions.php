@@ -1,5 +1,34 @@
 <?php
 
+// --- WTG hardening helpers (Patch set A) ---
+if (!function_exists('wtg_esc_url')) {
+	function wtg_esc_url($url) { return esc_url($url); }
+}
+if (!function_exists('wtg_esc_html')) {
+	function wtg_esc_html($text) { return esc_html($text); }
+}
+if (!function_exists('wtg_kses_post')) {
+	function wtg_kses_post($html) { return wp_kses_post($html); }
+}
+if (!function_exists('wtg_sanitize_fpage')) {
+	/**
+	 * Sanitize and optionally validate the custom fpage query var.
+	 *
+	 * @param string[]|null $allowed
+	 * @param string $default
+	 */
+	function wtg_sanitize_fpage($allowed = null, $default = '') {
+		$raw = get_query_var('fpage');
+		$key = sanitize_key(is_string($raw) ? $raw : '');
+		if (is_array($allowed) && !empty($allowed)) {
+			return in_array($key, $allowed, true) ? $key : $default;
+		}
+		return $key ?: $default;
+	}
+}
+// --- end helpers ---
+
+
 function wtg_test()
 {
 	echo 'it works!';
@@ -769,11 +798,13 @@ function wtg_sponsor_guide()
 	<style> a.bannerlink:hover {text-decoration:none; opacity:0.5} </style>
 <?php
 	$postID = get_the_ID();
+	$language = function_exists('get_field') ? get_field('language','options') : '';
+	if (!$language) { $language = 'en'; }
 	// $url = basename (get_the_permalink());
 	$url = get_the_permalink();
-	$url  = basename($url);
+	$url  = rawurlencode(basename($url));
 	$sponsorHTML = get_post_meta($postID, 'sponsor_a_guide', true);
-	$sponsorHTML = '<a target+"_blank" class="bannerlink" href="https://worldtravelguide.trips.tourradar.com/d/'.$url.'"><h2 style="color:white">
+	$sponsorHTML = '<a target="_blank" rel="noopener noreferrer" class="bannerlink" href="https://worldtravelguide.trips.tourradar.com/d/'.$url.'"><h2 style="color:white">
 		<img style="width:100%" src="'.get_template_directory_uri().'/images/main-banner1.jpg"></h2></a>';
 //$language = get_field('language','options');
 	switch ($language)
