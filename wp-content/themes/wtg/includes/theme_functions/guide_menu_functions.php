@@ -1,5 +1,97 @@
 <?php
 
+
+/**
+ * Patch Set B: guide menu context + provider/renderer separation.
+ * Keep hook/markup contracts stable while reducing inline scripting and duplicative state handling.
+ */
+if (!function_exists('wtg_get_guide_context')) {
+	function wtg_get_guide_context($post_id, $guide_type = '') {
+		return array(
+			'post_id'   => (int) $post_id,
+			'guide_type'=> (string) $guide_type,
+			'fpage'     => function_exists('wtg_sanitize_fpage') ? wtg_sanitize_fpage() : '',
+			'permalink' => wtg_esc_url(get_permalink($post_id)),
+			'title'     => wtg_esc_html(get_the_title($post_id)),
+		);
+	}
+}
+
+if (!function_exists('wtg_build_menu_items')) {
+	/**
+	 * Build a simple list of menu items for the left guide menu.
+	 *
+	 * @param array $ctx Context from wtg_get_guide_context()
+	 * @param array $items Each item: ['path' => 'history', 'label' => 'History', 'class' => 'history']
+	 *                    If 'path' is empty, base permalink is used.
+	 */
+	function wtg_build_menu_items(array $ctx, array $items) {
+		$built = array();
+		$fpage = isset($ctx['fpage']) ? (string) $ctx['fpage'] : '';
+		$base  = isset($ctx['permalink']) ? (string) $ctx['permalink'] : '';
+		foreach ($items as $it) {
+			$path  = isset($it['path']) ? (string) $it['path'] : '';
+			$label = isset($it['label']) ? (string) $it['label'] : '';
+			$class = isset($it['class']) ? (string) $it['class'] : '';
+			$url   = $base . ($path !== '' ? $path : '');
+			$active = ($path === '' && $fpage === '') || ($class !== '' && $class === $fpage);
+			$built[] = array(
+				'url'    => wtg_esc_url($url),
+				'label'  => $label, // label escaped at render time for flexibility
+				'class'  => $class,
+				'active' => $active,
+			);
+		}
+		return $built;
+	}
+}
+
+if (!function_exists('wtg_render_accordion_menu')) {
+	/**
+	 * Render a single-panel Bootstrap accordion menu with a UL.
+	 */
+	function wtg_render_accordion_menu($heading, array $items, $accordion_id = null, $collapse_id = null) {
+		// Ensure IDs are unique per rendered menu instance to avoid Bootstrap collapse collisions.
+		static $wtg_acc_i = 0;
+		$wtg_acc_i++;
+
+		if (empty($accordion_id)) {
+			$accordion_id = 'wtg-accordion-' . $wtg_acc_i;
+		}
+		if (empty($collapse_id)) {
+			$collapse_id = 'wtg-collapse-' . $wtg_acc_i;
+		}
+		$heading_id = 'wtg-heading-' . $wtg_acc_i;
+
+		$accordion_id = preg_replace('/[^a-zA-Z0-9_-]/', '', (string) $accordion_id);
+		$collapse_id  = preg_replace('/[^a-zA-Z0-9_-]/', '', (string) $collapse_id);
+		$heading_id   = preg_replace('/[^a-zA-Z0-9_-]/', '', (string) $heading_id);
+
+		echo '<div class="panel-group" id="' . esc_attr($accordion_id) . '" role="tablist" aria-multiselectable="true">';
+		echo '<div class="panel panel-default">';
+		echo '<div class="panel-heading" role="tab" id="' . esc_attr($heading_id) . '">';
+		echo '<h4 class="panel-title">';
+		echo '<a role="button" data-toggle="collapse" data-parent="#' . esc_attr($accordion_id) . '" href="#' . esc_attr($collapse_id) . '" aria-expanded="true" aria-controls="' . esc_attr($collapse_id) . '">';
+		echo wtg_esc_html($heading);
+		echo '</a>';
+		echo '</h4>';
+		echo '</div>';
+		echo '<div id="' . esc_attr($collapse_id) . '" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="' . esc_attr($heading_id) . '">';
+		echo '<div class="panel-body"><ul>';
+
+		foreach ($items as $it) {
+			$url    = isset($it['url']) ? $it['url'] : '';
+			$label  = isset($it['label']) ? $it['label'] : '';
+			$class  = isset($it['class']) ? $it['class'] : '';
+			$active = !empty($it['active']) ? ' active' : '';
+			echo '<li><a href="' . wtg_esc_url($url) . '" class="' . esc_attr($class . $active) . '">' . wtg_esc_html($label) . '</a></li>';
+		}
+
+		echo '</ul></div></div></div></div>';
+	}
+}
+
+
 function wtg_guide_menu($postid, $guideType)
 {
 	switch ($guideType) {
@@ -522,6 +614,7 @@ function wtg_guide_menu_city($postID)
 }
 
 
+
 function wtg_guide_menu_airport($postID)
 {
 	$current_fp = wtg_sanitize_fpage();
@@ -574,6 +667,7 @@ function wtg_guide_menu_airport($postID)
 }
 
 
+
 function wtg_guide_menu_ski($postID)
 {
 	$current_fp = wtg_sanitize_fpage();
@@ -621,6 +715,7 @@ function wtg_guide_menu_ski($postID)
 
 
 
+
 function wtg_guide_menu_cruise($postID)
 {
 	
@@ -645,6 +740,7 @@ function wtg_guide_menu_cruise($postID)
                 </div>';
 		
 }
+
 
 function wtg_guide_menu_beach($postID)
 {
@@ -672,6 +768,7 @@ function wtg_guide_menu_beach($postID)
 		
 		
 }
+
 
 function wtg_region_places($postid)
 {
